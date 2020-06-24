@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html>
+<title>personal Details</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<script src="https://code.jscharting.com/latest/jscharting.js"></script>
+            <script type="text/javascript" src="https://code.jscharting.com/latest/modules/types.js"></script>
+<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+   
+    .container {
+  width: 100%;
+  background-color: #ddd;
+}
+   
+#i1{
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+  text-align: center;
+  color: #006699;
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  background-color: #eee;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+
+.skills {
+  text-align: right;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: white;
+}
+
+.html {width: 90%; background-color: #4CAF50;}
+.css {width: 80%; background-color: #2196F3;}
+.js {width: 65%; background-color: #f44336;}
+.php {width: 60%; background-color: #808080;}
+    </style>
+  
+   
+    <body class="w3-light-grey">
+    
+    <!-- Top container -->
+    <div class="w3-bar w3-top" style="z-index:3;background-color: #006699">
+      <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+      <span class="w3-bar-item w3-right" style="color: #fff">Admin Dashboard</span>
+    </div>
+    
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:296px;" id="mySidebar"><br>
+      <div class="w3-container w3-row">
+        <div class="w3-col s4">
+        
+          <img src="hr1.jpg" class="w3-circle w3-margin-right" style="width:60px;">
+        </div>
+        <div class="w3-col s8 w3-bar">
+          <br>
+          <span style="font-size: 17px;"><strong>   Mr.Admin</strong></span><br>
+          <span style="font-size: 13px;"><strong>  <i class="fa fa-user-secret"></i>  Boss</strong></span><br>
+        <!--   <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a> -->
+          <br>
+        </div>
+      </div>
+      
+      <div class="w3-container">
+       
+              
+              
+              
+        <i class="fa fa-facebook-official w3-hover-opacity" id="i1"></i>
+        <i class="fa fa-instagram w3-hover-opacity" id="i1"></i>
+       <i class="fa fa-snapchat w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-twitter w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-linkedin w3-hover-opacity" id="i1"></i>
+                 
+               
+              
+              </div>
+      </div>
+      <hr>
+      <div class="w3-bar-block">
+        <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+        <a href="Admin.html" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-user fa-fw"></i>Dashboard</a>
+        <a href="Admin_personal.html" class="w3-bar-item w3-button w3-padding" style="background-color:#006699;color: #fff"><i class="fa fa-address-book fa-fw"></i> Personal Details</a>
+        <a href="Manage_data.html" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-users fa-fw"></i> Manage Employees Data</a>
+        <a href="Admin_attendance.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-card fa-fw"></i>  Attendence & Leaves </a>
+        <!-- <div class="w3-dropdown-hover">
+        
+          <div class="w3-dropdown-content w3-bar-block w3-border">
+            <a href="Dash_proj.html" class="w3-bar-item w3-button">Project Dashboard</a>
+            <a href="Deadline.html" class="w3-bar-item w3-button" style="background-color:#006699;color: #fff">DeadLine Notifier</a>
+            <a href="#" class="w3-bar-item w3-button">Project Report Submission</a>
+          </div> -->
+        <a href="Admin_project1.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-laptop fa-fw"></i>  Projects</a>
+        <!-- <div class="w3-dropdown-click">
+            <div class="w3-bar-item w3-button w3-padding" onclick="myFunction()" ><i class="fa fa-laptop fa-fw"></i>Projects</div>
+            <div id="Demo9" class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="Project.html" class="w3-bar-item w3-button">Your Project Details</a>
+              <a href="Dash_proj.html" class="w3-bar-item w3-button">Ongoing Project Dashboard</a>
+              <a href="Deadline.html" class="w3-bar-item w3-button">Deadline Notifier</a>
+              <a href="report_pro.html" class="w3-bar-item w3-button">Project Report Submission</a>
+            </div>
+          </div> -->
+          <a href="hr.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-male fa-fw"></i>HR Department</a>
+          <!-- <div class="w3-dropdown-click">
+            <div class="w3-bar-item w3-button w3-padding" onclick="myFunction1()"><i class="fa fa-male fa-fw"></i>  HR</div>
+            <div id="Demo10" class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="Project.html" class="w3-bar-item w3-button">HR Dashboard</a>
+              <a href="Dash_proj.html" class="w3-bar-item w3-button">Recruitment</a>
+              <a href="Deadline.html" class="w3-bar-item w3-button">Interview</a>
+              <a href="report_pro.html" class="w3-bar-item w3-button">Training</a>
+            </div>
+          </div> -->
+ 
+        <a href="Admin_Notification.html" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-bell fa-fw" ></i>  Notifications</a>
+        <a href="Admin_daily_details.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-pencil fa-fw"></i>  Daily Details & Report </a>
+        <a href="Accounting1.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-inr fa-fw"></i>  Accounting Department</a> 
+        <a href="client.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-money fa-fw"></i>  Client Management</a> 
+        <a href="Daily_log.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-clock-o fa-fw"></i>  Log History</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Logout</a>
+        <br><br><br>
+       
+    </nav>
+    
+    
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    <div class="w3-main" style="margin-left:300px;margin-top:43px;"><div class="w3-container w3-white w3-margin w3-padding">
+<br>
+
+
+
+  <div class="w3-container w3-margin w3-white">
+    <table class="w3-table">
+      <tr><td><label for="fname">Full Name</label></td>
+
+      <td> <input type="text" id="fname" name="firstname"value="Vipasha Vaghela"></td> 
+    </tr>
+    <tr>
+      <td><label for="lname">Employee_id</label></td>
+      <td><input type="text" id="lname" name="lastname" value="32017" disabled></td>
+    </tr>
+        <tr>
+          <td>
+            <label for="lname">Department</label>
+          </td>
+          <td><input type="text" id="lname" name="lastname" value="Web-Developement"></td>
+        </tr>
+        <tr>
+          <td> <label for="lname">Department_id</label></td>
+          <td>
+            <input type="text" id="lname" name="lastname" value="01"></td>
+        </tr>
+        <tr>
+          <td>
+            <label for="lname">Hire Date</label>
+          </td>
+          <td>
+            <input type="text" id="lname" name="lastname" value="26/11/2014" disabled>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="lname">Date Of Birth</label>
+          </td>
+          <td>
+            <input type="text" id="lname" name="lastname" value="03/02/1991">
+          </td>
+        </tr>
+        <tr>
+          <td><label for="lname">BirthPlace</label></td>
+          <td> <input type="text" id="lname" name="lastname" value="Baroda"></td>
+        </tr>
+        <tr>
+          <td>
+            <label for="lname">Address</label>
+          </td>
+          <td>
+            <input type="text" id="lname" name="lastname" value="60,Darshan Bunglous,Bopal">
+          </td>
+        </tr>
+        <tr>
+<td>
+<label for="lname">City</label>
+</td>
+<td>
+
+<input type="text" id="lname" name="lastname" value="Ahemedabad">
+</td>
+        </tr>
+        <tr>
+          <td>
+            <label for="subject">phone_num</label>             
+          </td>
+          <td>
+            <input type="text" id="lname" name="lastname" value="8160992702">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="subject">Email_id</label>
+          </td>
+          <td>
+            <input type="text" id="lname" name="lastname" value="vips3201v@gmail.com">
+          </td>
+        </tr>
+      </table>
+    </div></div></div>
+  
+ 
+  
+ 
+<script>
+    // Get the Sidebar
+    var mySidebar = document.getElementById("mySidebar");
+    
+    // Get the DIV with overlay effect
+    var overlayBg = document.getElementById("myOverlay");
+    
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+    function w3_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+      } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+      }
+    }
+    
+    // Close the sidebar with the close button
+    function w3_close() {
+      mySidebar.style.display = "none";
+      overlayBg.style.display = "none";
+    }
+    </script>
+  
+
+  <script>
+    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+    var myConfig = {
+      "layout": "1x3",
+      "graphset": [{
+          "type": "nestedpie",
+          "series": [{
+              "values": [59, 55, 30]
+            },
+            {
+              "values": [60, 50, 35]
+            },
+            {
+              "values": [50, 40, 30]
+            }
+          ]
+        },
+        {
+          "type": "nestedpie",
+          "title": {
+            "text": "Experience & Skills"
+          },
+          "series": [{
+              "values": [59, 55, 30]
+            },
+            {
+              "values": [60, 50, 35]
+            },
+            {
+              "values": [50, 40, 30]
+            }
+          ]
+        },
+        {
+          "type": "nestedpie",
+          "series": [{
+              "values": [59, 55, 30]
+            },
+            {
+              "values": [60, 50, 35]
+            },
+            {
+              "values": [50, 40, 30]
+            }
+          ]
+        }
+      ]
+    };
+  
+    zingchart.render({
+      id: 'myChart',
+      data: myConfig,
+      height: 352,
+      width: "100%"
+    });
+  </script>
+</body>
+</html>

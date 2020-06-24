@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<title>Notifications</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<script src="https://code.jscharting.com/latest/jscharting.js"></script>
+            <script type="text/javascript" src="https://code.jscharting.com/latest/modules/types.js"></script>
+<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    html,body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+    #i1{
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 19px;
+      text-align: center;
+      color: #006699;
+    }
+
+
+.closebtn {
+  /* padding-left: 10px; */
+  color: #888;
+  font-weight: bold;
+  float: right;
+  font-size: 25px;
+  cursor: pointer;
+  right: 0;
+}
+
+.closebtn:hover {
+  color: #000;
+}
+    </style>
+  
+   
+    <body class="w3-white">
+    
+    <!-- Top container -->
+    <div class="w3-bar w3-top" style="z-index:3;background-color: #006699">
+      <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+      <span class="w3-bar-item w3-right" style="color: #fff"><i class="fa fa-bell fa-fw" ></i></span>
+    </div>
+    
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:286px;" id="mySidebar"><br>
+      <div class="w3-container w3-row">
+        <div class="w3-col s4">
+        
+          <img src="hr1.jpg" class="w3-circle w3-margin-right" style="width:60px;">
+        </div>
+        <div class="w3-col s8 w3-bar">
+          <br>
+          <span style="font-size: 17px;"><strong>   Mr.Admin</strong></span><br>
+          <span style="font-size: 13px;"><strong>  <i class="fa fa-user-secret"></i>  Boss</strong></span><br>
+        <!--   <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a> -->
+          <br>
+        </div>
+      </div>
+      
+      <div class="w3-container">
+       
+              
+              
+              
+        <i class="fa fa-facebook-official w3-hover-opacity" id="i1"></i>
+        <i class="fa fa-instagram w3-hover-opacity" id="i1"></i>
+       <i class="fa fa-snapchat w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-twitter w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-linkedin w3-hover-opacity" id="i1"></i>
+                 
+               
+              
+              </div>
+      </div>
+      <hr>
+      <div class="w3-bar-block">
+        <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+        <a href="Admin.html" class="w3-bar-item w3-button w3-padding" style="background-color:#006699;color: #fff"><i class="fa fa-user fa-fw"></i>Dashboard</a>
+        <a href="Admin_personal.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-book fa-fw"></i> Personal Details</a>
+        <a href="Manage_data.html" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-users fa-fw"></i> Manage Employees Data</a>
+        <a href="Admin_attendance.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-card fa-fw"></i>  Attendence & Leaves </a>
+        <!-- <div class="w3-dropdown-hover">
+        
+          <div class="w3-dropdown-content w3-bar-block w3-border">
+            <a href="Dash_proj.html" class="w3-bar-item w3-button">Project Dashboard</a>
+            <a href="Deadline.html" class="w3-bar-item w3-button" style="background-color:#006699;color: #fff">DeadLine Notifier</a>
+            <a href="#" class="w3-bar-item w3-button">Project Report Submission</a>
+          </div> -->
+        <a href="Admin_project1.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-laptop fa-fw"></i>  Projects</a>
+        <!-- <div class="w3-dropdown-click">
+            <div class="w3-bar-item w3-button w3-padding" onclick="myFunction()" ><i class="fa fa-laptop fa-fw"></i>Projects</div>
+            <div id="Demo9" class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="Project.html" class="w3-bar-item w3-button">Your Project Details</a>
+              <a href="Dash_proj.html" class="w3-bar-item w3-button">Ongoing Project Dashboard</a>
+              <a href="Deadline.html" class="w3-bar-item w3-button">Deadline Notifier</a>
+              <a href="report_pro.html" class="w3-bar-item w3-button">Project Report Submission</a>
+            </div>
+          </div> -->
+          <a href="hr.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-male fa-fw"></i>HR Department</a>
+          <!-- <div class="w3-dropdown-click">
+            <div class="w3-bar-item w3-button w3-padding" onclick="myFunction1()"><i class="fa fa-male fa-fw"></i>  HR</div>
+            <div id="Demo10" class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="Project.html" class="w3-bar-item w3-button">HR Dashboard</a>
+              <a href="Dash_proj.html" class="w3-bar-item w3-button">Recruitment</a>
+              <a href="Deadline.html" class="w3-bar-item w3-button">Interview</a>
+              <a href="report_pro.html" class="w3-bar-item w3-button">Training</a>
+            </div>
+          </div> -->
+ 
+        <a href="Admin_Notification.html" class="w3-bar-item w3-button w3-padding" style="background-color:#006699;color: #fff"><i class="fa fa-bell fa-fw" ></i>  Notifications</a>
+        <a href="Admin_daily_details.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-pencil fa-fw"></i>  Daily Details & Report </a>
+        <a href="Accounting1.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-inr fa-fw"></i>  Accounting Department</a> 
+        <a href="client.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-money fa-fw"></i>  Client Management</a> 
+        <a href="Daily_log.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-clock-o fa-fw"></i>  Log History</a>
+
+        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Logout</a>
+        <br><br><br>
+       
+    </nav>
+    
+    
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    <div class="w3-main" style="margin-left:290px;margin-top:43px;">
+        <nav class="w3-sidebar w3-bar-block w3-collapse w3-white w3-animate-left w3-card " style="z-index:3;width:220px;" id="mySidebar1">
+            <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom w3-large"><i class="fa fa-bell fa-fw" ></i>Notifications</a>
+            <a href="javascript:void(0)" onclick="w3_close1()" title="Close Sidemenu" 
+            class="w3-bar-item w3-button w3-hide-large w3-large">Close <i class="fa fa-remove"></i></a>
+            <a href="javascript:void(0)" class="w3-bar-item w3-button  w3-button w3-hover-black w3-left-align" style="background-color: #006699;color:#fff;" onclick="document.getElementById('id01').style.display='block'">New Message <i class="w3-padding fa fa-pencil"></i></a>
+            <a id="myBtn1" onclick="myFunc('Demo1')" href="javascript:void(0)" class="w3-bar-item w3-button"><i class="fa fa-inbox w3-margin-right"></i>Inbox (3)<i class="w3-margin-left fa fa-caret-down"></i></a>
+            <div id="Demo1" class="w3-hide w3-animate-left">
+              <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('Borge');w3_close1();" id="firstTab">
+                <div class="w3-container">
+                  <img class="w3-round w3-margin-right" src="vips.png" style="width:25%;"><span class="w3-opacity w3-large">vipasha</span>
+                  <h6>Leave Request</h6>
+                  <!-- <p>Hello, i just wanted to let you know that i'll not be Able to come</p> -->
+                </div>
+              </a>
+               <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('Jane');w3_close1();" id="sectab">
+                <div class="w3-container">
+                  <img class="w3-round w3-margin-right" src="avatar_blank.jpg" style="width:25%;"><span class="w3-opacity w3-large">Diyu</span>
+                  <p>JOB Application</p>
+                </div>
+              </a>
+              <a href="javascript:void(0)" class="w3-bar-item w3-button w3-border-bottom test w3-hover-light-grey" onclick="openMail('John');w3_close1();">
+                <div class="w3-container">
+                  <img class="w3-round w3-margin-right" src="avatar2.png" style="width:25%;"><span class="w3-opacity w3-large">Mr.yz</span>
+                  <p>JOB Resign Application</p>
+                </div>
+              </a>
+            </div>
+            <a id="myBtn10" class="w3-bar-item w3-button" style="background-color: #006699;color:#fff;"><i class="fa fa-inbox w3-margin-right"></i>OLD (3)<i class="w3-margin-left fa fa-caret-down"></i></a><hr>
+            <div class="w3-container">
+              <img class="w3-round w3-margin-right" src="client.png" style="width:20%;"><span class="w3-opacity"></span><span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+              <p>Deal Proposal accepted</p>
+            </div><hr>
+            <div class="w3-container">
+              <img class="w3-round w3-margin-right" src="hrdepartment.jpg" style="width:20%;"><span class="w3-opacity"></span><span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+              <p>Hr Department Report Submission</p>
+            </div><hr>
+            <div class="w3-container">
+              <img class="w3-round w3-margin-right" src="avatar2.png" style="width:20%;"><span class="w3-opacity"></span><span class="closebtn" onclick="this.parentElement.style.display='none'">&times;</span>
+              <p>Deal Proposal accepted</p>
+            </div><hr>
+            <!-- <div class="chip" id="c"> 
+              <img src="submit.png" alt="Person">
+              <br>
+              Report submission Successfully
+             
+            </div> -->
+            <a href="#" class="w3-bar-item w3-button"><i class="fa fa-paper-plane w3-margin-right"></i>Sent</a>
+            <a href="#" class="w3-bar-item w3-button"><i class="fa fa-hourglass-end w3-margin-right"></i>Drafts</a>
+            <a href="#" class="w3-bar-item w3-button"><i class="fa fa-trash w3-marghin-right"></i>Trash</a>
+          </nav>
+          
+          <!-- Modal that pops up when you click on "New Message" -->
+          <div id="id01" class="w3-modal" style="z-index:4">
+            <div class="w3-modal-content w3-animate-zoom">
+              <div class="w3-container w3-padding w3-red">
+                 <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-right w3-xxlarge"><i class="fa fa-remove"></i></span>
+                <h2>Send Mail</h2>
+              </div>
+              <div class="w3-panel">
+                <label>To</label>
+                <input class="w3-input w3-border w3-margin-bottom" type="text">
+                <label>From</label>
+                <input class="w3-input w3-border w3-margin-bottom" type="text">
+                <label>Subject</label>
+                <input class="w3-input w3-border w3-margin-bottom" type="text">
+                <input class="w3-input w3-border w3-margin-bottom" style="height:150px" placeholder="What's on your mind?">
+                <div class="w3-section">
+                  <a class="w3-button w3-red" onclick="document.getElementById('id01').style.display='none'">Cancel  <i class="fa fa-remove"></i></a>
+                  <a class="w3-button w3-right" onclick="document.getElementById('id01').style.display='none'">Send  <i class="fa fa-paper-plane"></i></a> 
+                </div>    
+              </div>
+            </div>
+          </div>
+          
+          <!-- Overlay effect when opening the side navigation on small screens -->
+          <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close1()" style="cursor:pointer" title="Close Sidemenu" id="myOverlay1"></div>
+          
+          <!-- Page content -->
+          <div class="w3-main" style="margin-left:240px;">
+          <i class="fa fa-bars w3-button w3-white w3-hide-large w3-xlarge w3-margin-top" onclick="w3_open1()"></i>
+          <a href="javascript:void(0)" class="w3-hide-large w3-red w3-button w3-right w3-margin-top w3-margin-right" onclick="document.getElementById('id01').style.display='block'"><i class="fa fa-pencil"></i></a>
+          
+          <div id="Borge" class="w3-container person">
+            <br>
+            <img class="w3-round  w3-animate-top" src="vips.png" style="width:8%;">
+            <h5 class="w3-opacity">Subject:Leave Request</h5>
+            <h4><i class="fa fa-clock-o"></i> From Vipasha Vaghela, Sep 27, 2015.</h4>
+            <a class="w3-button" href="#">Reply<i class="w3-padding fa fa-mail-reply"></i></a>
+            <a class="w3-button" href="#">Forward<i class="w3-padding fa fa-arrow-right"></i></a>
+           <p>EID:32017</p>
+           <p>WEB DEVELOPMENT Department</p>
+       <p>Leave Type:DA</p>
+                    <p>leave- 20/2 to 22/2<br>
+                    </p>
+                    <p>Hello, i just wanted to let you know that i'll be home at lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+                    <p>Best Regards, <br>vipasha Vaghela</p>
+                  
+                  <button class="w3-button w3-block" style="background-color: #006699;color: #fff;width:50%;float: left;" onclick="acc2()" id="a3">+ ACCEPT</button>
+                  <button class="w3-button w3-block" style="background-color: red;color: #fff;width:50%;float: left;" onclick="acc3()" id="a4">- REJECT</button>
+               <br><br><br><br>
+                  <embed src="https://docs.google.com/document/d/1LPxxcS7hIJfigJx_K0-wCYlZDCOA5ztcdyPdondtq9I/edit?usp=sharing" style="width:100%;height:200px" id="c1"></embed>
+         
+          </div>
+          <div id="Jane" class="w3-container person">
+            <br>
+            <img class="w3-round w3-animate-top" src="avatar_blank.jpg" style="width:10%;">
+            <h5 class="w3-opacity">Subject: None</h5>
+            <h4><i class="fa fa-clock-o"></i> From Diyu Vaghela, Mar 25, 2020.</h4>
+            <a class="w3-button">Reply<i class="w3-padding fa fa-mail-reply"></i>
+            <a class="w3-button">Forward<i class="w3-padding fa fa-arrow-right"></i></a>
+           <p>Full Name:Diyu Vaghela</p>
+           <p>Age:21</p>
+           <p>Email Id:diyu@gmail.com</p>
+           <p>Education:ME(IT)</p>
+           <a href="https://docs.google.com/document/d/e/2PACX-1vQbxgpLtSFkXxe4VceMFsVaI_siLmFzqZeFRfbNQ1awEaBQmaLF9o86j9pLGOkNO_btwA0zoWjtniPL/pub">VIEW CV</a>
+           <br>
+           <br>
+           <a href="https://docs.google.com/spreadsheets/d/13Da1Y9MmzlHe9h1LX_lgwVcla4WpXchvVpteO9Lw9p0/edit?usp=sharing"><button class="w3-button w3-block" style="background-color: #006699;color: #fff;width:50%;float: left;" onclick="acc5()" id="a5">+ ACCEPT</button></a>
+           <button class="w3-button w3-block" style="background-color: red;color: #fff;width:50%;float: left;" onclick="acc6()" id="a6">- REJECT</button>
+          </div>
+          
+          <div id="John" class="w3-container person">
+            <br>
+            <img class="w3-round w3-animate-top" src="avatar2.png" style="width:15%;">
+            <h5 class="w3-opacity">Subject: None</h5>
+            <h4><i class="fa fa-clock-o"></i> From John Doe, Sep 23, 2015.</h4>
+            <a class="w3-button">Reply<i class="w3-padding fa fa-mail-reply"></i></a>
+            <a class="w3-button">Forward<i class="w3-padding fa fa-arrow-right"></i></a>
+            <hr>
+            <p>Welcome.</p>
+            <p>That's it!</p>
+          </div>
+               
+          </div>
+        
+  </div>
+  
+  
+ 
+<script>
+    // Get the Sidebar
+    var mySidebar = document.getElementById("mySidebar");
+    
+    // Get the DIV with overlay effect
+    var overlayBg = document.getElementById("myOverlay");
+    
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+    function w3_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+      } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+      }
+    }
+    
+    // Close the sidebar with the close button
+    function w3_close() {
+      mySidebar.style.display = "none";
+      overlayBg.style.display = "none";
+    }
+    </script>
+   
+<script>
+    var openInbox = document.getElementById("myBtn1");
+    openInbox.click();
+    
+    function w3_open1() {
+      document.getElementById("mySidebar1").style.display = "block";
+      document.getElementById("myOverlay1").style.display = "block";
+    }
+    
+    function w3_close1() {
+      document.getElementById("mySidebar1").style.display = "none";
+      document.getElementById("myOverlay1").style.display = "none";
+    }
+    
+    function myFunc(id) {
+      var x = document.getElementById(id);
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show"; 
+        x.previousElementSibling.className += " w3-red";
+      } else { 
+        x.className = x.className.replace(" w3-show", "");
+        x.previousElementSibling.className = 
+        x.previousElementSibling.className.replace(" w3-red", "");
+      }
+    }
+    
+    openMail("Borge")
+    function openMail(personName) {
+      var i;
+      var x = document.getElementsByClassName("person");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x = document.getElementsByClassName("test");
+      for (i = 0; i < x.length; i++) {
+        x[i].className = x[i].className.replace(" w3-light-grey", "");
+      }
+      document.getElementById(personName).style.display = "block";
+      event.currentTarget.className += " w3-light-grey";
+    }
+    openMail("Jane")
+    function openMail(personName) {
+      var i;
+      var x = document.getElementsByClassName("person");
+      for (i = 0; i < x.length; i++) {
+        x[i].style.display = "none";
+      }
+      x = document.getElementsByClassName("test");
+      for (i = 0; i < x.length; i++) {
+        x[i].className = x[i].className.replace(" w3-light-grey", "");
+      }
+      document.getElementById(personName).style.display = "block";
+      event.currentTarget.className += " w3-light-grey";
+    }
+    </script>
+    
+    <script>
+    var openTab = document.getElementById("firstTab");
+    openTab.click();
+    </script>
+    <script>
+     function acc2(){
+        alert('successfully accepted');
+        document.getElementById('a3').innerHTML="apprroved";
+        document.getElementById('a3').style.backgroundColor='green'; 
+        document.getElementById('a3').style.width='100%'; 
+        document.getElementById('a4').style.display='none'; 
+    }
+    function acc3(){
+        alert('Request rejected');
+        document.getElementById('a4').innerHTML="declined";
+        document.getElementById('a4').style.backgroundColor='red'; 
+        document.getElementById('a4').style.width='100%'; 
+        document.getElementById('a3').style.display='none'; 
+    }
+</script>
+<script>
+   function acc5(){
+        alert('successfully accepted');
+        document.getElementById('a5').innerHTML="apprroved";
+        document.getElementById('a5').style.backgroundColor='green'; 
+        document.getElementById('a5').style.width='100%'; 
+        document.getElementById('a6').style.display='none'; 
+        // var x=confirm('send mail for confirmation?');
+        // if(x==true){
+        //   window.open('https://mail.google.com/mail/u/0/#inbox');
+        // }
+        // else{
+        //   window.open('leave_request.html');
+        // }
+
+        
+    }
+    function acc6(){
+        alert('Request rejected');
+        document.getElementById('a6').innerHTML="declined";
+        document.getElementById('a6').style.backgroundColor='red'; 
+        document.getElementById('a6').style.width='100%'; 
+        
+        document.getElementById('a5').style.display='none'; 
+    }
+</script>
+</body>
+</html>

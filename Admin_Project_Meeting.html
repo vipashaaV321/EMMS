@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html>
+<title>Project Meetings</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<script src="https://code.jscharting.com/latest/jscharting.js"></script>
+            <script type="text/javascript" src="https://code.jscharting.com/latest/modules/types.js"></script>
+<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    #i1{
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 19px;
+      text-align: center;
+      color: #006699;
+    }
+  input[type=text],input[type=textarea]{
+      padding: 5px;
+  }
+    </style>
+  
+   
+    <body class="w3-light-grey">
+    
+    <!-- Top container -->
+    <div class="w3-bar w3-top" style="z-index:3;background-color: #006699">
+      <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+      <span class="w3-bar-item w3-right" style="color: #fff"><i class="fa fa-video-camera" aria-hidden="true"></i>  Project Meetings</span>
+    </div>
+    
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:296px;" id="mySidebar"><br>
+      <div class="w3-container w3-row">
+        <div class="w3-col s4">
+        
+          <img src="hr1.jpg" class="w3-circle w3-margin-right" style="width:60px;">
+        </div>
+        <div class="w3-col s8 w3-bar">
+          <br>
+          <span style="font-size: 17px;"><strong>   Mr.Admin</strong></span><br>
+          <span style="font-size: 13px;"><strong>  <i class="fa fa-user-secret"></i>  Boss</strong></span><br>
+        <!--   <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a> -->
+          <br>
+        </div>
+      </div>
+      
+      <div class="w3-container">
+       
+              
+              
+              
+        <i class="fa fa-facebook-official w3-hover-opacity" id="i1"></i>
+        <i class="fa fa-instagram w3-hover-opacity" id="i1"></i>
+       <i class="fa fa-snapchat w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-twitter w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-linkedin w3-hover-opacity" id="i1"></i>
+                 
+               
+              
+              </div>
+      </div>
+      <hr>
+      <div class="w3-bar-block">
+        <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+        <a href="Admin.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw"></i>Dashboard</a>
+        <a href="Admin_personal.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-book fa-fw"></i> Personal Details</a>
+        <a href="Manage_data.html" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-users fa-fw"></i> Manage Employees Data</a>
+        <a href="Admin_attendance.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-card fa-fw"></i>  Attendence & Leaves </a>
+        <!-- <div class="w3-dropdown-hover">
+        
+          <div class="w3-dropdown-content w3-bar-block w3-border">
+            <a href="Dash_proj.html" class="w3-bar-item w3-button">Project Dashboard</a>
+            <a href="Deadline.html" class="w3-bar-item w3-button" style="background-color:#006699;color: #fff">DeadLine Notifier</a>
+            <a href="#" class="w3-bar-item w3-button">Project Report Submission</a>
+          </div> -->
+        <!-- <a href="Admin_project1.html" class="w3-bar-item w3-button w3-padding" style="background-color:#006699;color: #fff"><i class="fa fa-laptop fa-fw"></i>  Projects</a> -->
+        <!-- <div class="w3-dropdown-click">
+            <div class="w3-bar-item w3-button w3-padding" onclick="myFunction()" ><i class="fa fa-laptop fa-fw"></i>Projects</div>
+            <div id="Demo9" class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="Project.html" class="w3-bar-item w3-button">Your Project Details</a>
+              <a href="Dash_proj.html" class="w3-bar-item w3-button">Ongoing Project Dashboard</a>
+              <a href="Deadline.html" class="w3-bar-item w3-button">Deadline Notifier</a>
+              <a href="report_pro.html" class="w3-bar-item w3-button">Project Report Submission</a>
+            </div>
+          </div> -->
+          <div class="w3-dropdown-click">
+            <div class="w3-bar-item w3-button w3-padding" onclick="myFunction()"style="background-color:#006699;color: #fff" ><i class="fa fa-laptop fa-fw"></i>Projects</div>
+            <div id="Demo" class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="Admin_project1.html" class="w3-bar-item w3-button">Project_dashboard</a>
+              <a href="Admin_Project2.html" class="w3-bar-item w3-button">Ongoing Projects</a>
+              <a href="Admin_Project_Evaluation.html" class="w3-bar-item w3-button">Project Evalution</a>
+              <a href="Admin_Team_mem_proj.html" class="w3-bar-item w3-button">Project & Team Registration</a>
+              <a href="Admin_Project_Meeting.html" class="w3-bar-item w3-button">Meeting Details</a>
+              <a href="WorkAssignment_pro.html" class="w3-bar-item w3-button">Task Assignment</a>
+              <a href="Admin_proj_repo_noti.html" class="w3-bar-item w3-button">Notifications</a>
+            </div>
+          </div>
+          <a href="hr.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-male fa-fw"></i>HR Department</a>
+          <!-- <div class="w3-dropdown-click">
+            <div class="w3-bar-item w3-button w3-padding" onclick="myFunction1()"><i class="fa fa-male fa-fw"></i>  HR</div>
+            <div id="Demo10" class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="Project.html" class="w3-bar-item w3-button">HR Dashboard</a>
+              <a href="Dash_proj.html" class="w3-bar-item w3-button">Recruitment</a>
+              <a href="Deadline.html" class="w3-bar-item w3-button">Interview</a>
+              <a href="report_pro.html" class="w3-bar-item w3-button">Training</a>
+            </div>
+          </div> -->
+ 
+        <a href="Admin_Notification.html" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-bell fa-fw" ></i>  Notifications</a>
+        <a href="Admin_daily_details.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-pencil fa-fw"></i>  Daily Details & Report </a>
+        <a href="Accounting1.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-inr fa-fw"></i>  Accounting Department</a> 
+        <a href="client.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-money fa-fw"></i>  Client Management</a> 
+        <a href="Daily_log.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-clock-o fa-fw"></i>  Log History</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Logout</a>
+        <br><br><br>
+       
+    </nav>
+    
+    
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    <div class="w3-main" style="margin-left:300px;margin-top:43px;">
+        <div class="w3-container w3-white w3-margin w3-padding">
+            <center>
+                
+                <h3>Project Meeting Details</h3><br>
+        <form action="mailto:vipashavaghela321@gmail.com" method="post" enctype="text/plain">
+            <input type="text" name="id" size="60" id="m" placeholder="EMPLOYEE_ID"><br><br>
+            
+            <input type="text" name="name" size="60" id="m" placeholder="EMPLOYEE_NAME"><br><br>
+            
+            <input type="text" name="mail" id="m" size="60" placeholder="E-MAIL_ID"><br><br>
+            
+             <input type="text" name="PROJECT_NAME" size="60" id="m" placeholder="PROJECT_NAME"><br><br>
+             <input type="text" name="COMPANY" id="m" size="60" placeholder="COMPANY & CLIENTS"><br><br>
+             <input type="textarea" name="TEAM_MEMBERS" id="m" size="60" rows="3" placeholder="TEAM_MEMBERS" style="height: 60px;"><br><br>
+             <input type="text" name="TEAM_ID" id="m" size="60" placeholder="TEAM_ID"><br><br>
+             <input type="text" name="TEAM_LEADER" id="m" size="60" placeholder="TEAM_LEADER"><br><br>
+             <input type="text" name="MEETING_TYPE" id="m" size="60" placeholder="MEETING_TYPE"><br><br>
+             <input type="text" name="MEETING_DATE" id="m" size="60" placeholder="MEETING_DATE"><br><br>
+             <input type="text" name="MEETING_TIME" id="m" size="60" placeholder="MEETING_TIME"><br><br>
+            <input type="submit" value="SEND_MAIL" id="b1" style="color: #fff;background-color: #006699;padding: 5px;border: none;margin: 5px;">
+            <input type="reset" value="RESET" id="b1"  style="color: #fff;background-color: #006699;padding: 5px;border: none;">
+            </form>
+        </center>
+        </div>
+        <div class="w3-container w3-white w3-margin w3-padding">
+          <h4 style="text-align:center">Upcoming Meeting Details</h4>
+          <div class="w3-responsive">
+            <table class="w3-table-all">
+            <tr>
+              <th>Project_ID</th>
+              <th>PROJECT_NAME</th>
+              <th>TEAM_ID</th>
+              <th>TEAM_LEADER</th>
+              <th>TEAM_MEMBERS</th>
+              <th>PREVIOUS MEETING_DATE</th>
+              <th>START MEETING</th>
+            
+            </tr>
+            <tr>
+              <td>01</td>
+              <td>EMMS</td>
+              <td>01</td>
+              <td>Vipasha Vaghela</td>
+              <td><li>Saakshi Desai</li>
+              <li>Charmi Daftari</li></td>
+              <td>20/3/2020</td>
+              <td><a href="skype:echo123?call"><div class="w3-tag w3-round" style="background-color: #006699;"><i class="fa fa-video-camera" aria-hidden="true"></i>  Start</div></a></td>
+              
+            </tr>
+            <tr>
+              <td>01</td>
+              <td>EMMS</td>
+              <td>01</td>
+              <td>Vipasha Vaghela</td>
+              <td><li>Saakshi Desai</li>
+              <li>Charmi Daftari</li></td>
+              <td>20/3/2020</td>
+              <td><a href="skype:echo123?call"><div class="w3-tag w3-round" style="background-color: #006699;"><i class="fa fa-video-camera" aria-hidden="true"></i>  Start</div></a></td>
+              </tr>
+            </table>
+            </div>
+            </div>
+            <div class="w3-container">
+              <h4 style="text-align: center;">Generate Project report</h4>
+              <embed src="https://docs.google.com/document/d/16CgItd7oxIAE6EXjIhiZd3Zi_BQ9KFrtYk_QzrNGuYE/edit?usp=sharing" style="width: 100%;height:500px">
+            </div>
+  </div>
+  
+ 
+  
+ 
+<script>
+    // Get the Sidebar
+    var mySidebar = document.getElementById("mySidebar");
+    
+    // Get the DIV with overlay effect
+    var overlayBg = document.getElementById("myOverlay");
+    
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+    function w3_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+      } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+      }
+    }
+    
+    // Close the sidebar with the close button
+    function w3_close() {
+      mySidebar.style.display = "none";
+      overlayBg.style.display = "none";
+    }
+    </script>
+<script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
+<script>
+  var config = {
+    version: '<my App>/1.0.0', 
+    apiKey: 'a42fcebd-5b43-4b89-a065-74450fb91255', // SDK 
+    apiKeyCC: '9c967f6b-a846-4df2-b43d-5167e47d81e1' // SDK+CC 
+};
+Skype.initialize({ apiKey: config.apiKeyCC }, function (api) {
+    app = api.UIApplicationInstance;
+    //...
+});
+app.conversationsManager.conversations.added(function (conversation) {
+    //...
+});
+app.conversationsManager.conversations.added(function (conversation) {
+    var options = {};
+
+    if (conversation.isGroupConversation()) {
+        options.conversationId = conversation.uri();
+    }
+    else {
+        var participants = [];
+        participants.push(conversation.participants(0).person.id());
+        options.participants = participants;
+    }
+    options.modalities = ['Chat'];
+
+    api.renderConversation('#content', options).then(function (conversation) {
+        // Resolved promise when conversation is correctly rendered
+        console.log('Conversation rendered successfully', conversation);
+
+        // Get notified when Conversation Control receives an incoming call
+        conversation.selfParticipant.audio.state.changed(function (newValue, reason, oldValue) {
+        // 'Notified' indicates that there is an incoming call
+            if (newValue === 'Notified') {
+                if (confirm("Would you like to accept this incoming call?")) {
+                    setTimeout(function() {
+                        // This accepts an incoming call with audio
+                        conversation.audioService.accept();
+
+                        // To accept an incoming call with video enabled call
+                        // conversation.videoService.accept()
+                    }, 0);
+                } else {
+                    // Reject the incoming call
+                    conversation.audioService.reject();
+                }
+            }
+        });
+
+        // Add additional listeners for other modalities (Chat, Video)
+    });
+});       
+renderConversation(document.querySelector('#container'));
+renderConversation('#container', {
+     modalities: ['Chat']
+});
+renderConversation('#container', {
+     participants: ['live:.cid.4e480c64452053af']
+});
+renderConversation('#container', {
+     conversation: conversation,
+     modalities: ['Chat']
+});
+// Get the uri of an existing group conversation
+// eg. sip:user@contoso.com;gruu;opaque=app:conf:focus:id:EXAMPLE
+var uri = conversation.uri();
+
+renderConversation('#container', {
+     conversationId: uri,
+     modalities: ['Chat']
+});
+var conversationsManager = app.conversationsManager;
+var conversation;
+var id1 = document.querySelector('.sip1').value;
+var id2 = document.querySelector('.sip2').value;
+var participants = [];
+
+if (id1 !== '') {
+    participants.push(id1);
+}
+if (id2 !== '') {
+    participants.push(id2);
+}
+if (!id1 && !id2) {
+    alert('error, must specify at least 1 SIP Address');
+    return;
+}
+
+var div = document.createElement('div');
+var control = document.querySelector('.conversationContainer');
+control.appendChild(div);
+
+api.renderConversation(div, {
+    modalities: ['Chat'],
+    participants: participants
+}).then(function (conversation) {
+    // Conversation Control was rendered successfully
+
+    // Add additional listeners for changes to conversation state here (see below section)
+
+    conversation.chatService.start().then(function () {
+        // chatService started successfully
+    }, function (error) {
+        // error starting chatService
+    });
+}, function (error) {
+    // error rendering Conversation Control
+});
+</script>     
+<script>
+  function myFunction() {
+    var x = document.getElementById("Demo");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,738 @@
+<!DOCTYPE html>
+<html>
+<title>Admin_Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<script src="https://code.jscharting.com/latest/jscharting.js"></script>
+<script type="text/javascript" src="https://code.jscharting.com/latest/modules/types.js"></script>
+<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    #i1{
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 19px;
+      text-align: center;
+      color: #006699;
+    }
+    .chart--container {
+      min-height: 530px;
+      width: 100%;
+      height: 100%;
+    }
+
+    .zc-ref {
+      display: none;
+    }
+    </style>
+  
+   
+    <body class="w3-light-grey">
+    
+    <!-- Top container -->
+    <div class="w3-bar w3-top" style="z-index:3;background-color: #006699">
+      <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+      <span class="w3-bar-item w3-right" style="color: #fff">Admin Dashboard</span>
+    </div>
+    
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:296px;" id="mySidebar"><br>
+      <div class="w3-container w3-row">
+        <div class="w3-col s4">
+        
+          <img src="hr1.jpg" class="w3-circle w3-margin-right" style="width:60px;">
+        </div>
+        <div class="w3-col s8 w3-bar">
+          <br>
+          <span style="font-size: 17px;"><strong>   Mr.Admin</strong></span><br>
+          <span style="font-size: 13px;"><strong>  <i class="fa fa-user-secret"></i>  Boss</strong></span><br>
+        <!--   <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a> -->
+          <br>
+        </div>
+      </div>
+      
+      <div class="w3-container">
+       
+              
+              
+              
+        <i class="fa fa-facebook-official w3-hover-opacity" id="i1"></i>
+        <i class="fa fa-instagram w3-hover-opacity" id="i1"></i>
+       <i class="fa fa-snapchat w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-twitter w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-linkedin w3-hover-opacity" id="i1"></i>
+                 
+               
+              
+              </div>
+      </div>
+      <hr>
+      <div class="w3-bar-block">
+        <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+        <a href="Admin.html" class="w3-bar-item w3-button w3-padding" style="background-color:#006699;color: #fff"><i class="fa fa-user fa-fw"></i>Dashboard</a>
+        <a href="Admin_personal.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-book fa-fw"></i> Personal Details</a>
+        <a href="Manage_data.html" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-users fa-fw"></i> Manage Employees Data</a>
+        <a href="Attendance1.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-card fa-fw"></i>  Attendence & Leaves </a>
+        <!-- <div class="w3-dropdown-hover">
+        
+          <div class="w3-dropdown-content w3-bar-block w3-border">
+            <a href="Dash_proj.html" class="w3-bar-item w3-button">Project Dashboard</a>
+            <a href="Deadline.html" class="w3-bar-item w3-button" style="background-color:#006699;color: #fff">DeadLine Notifier</a>
+            <a href="#" class="w3-bar-item w3-button">Project Report Submission</a>
+          </div> -->
+        <a href="Admin_project1.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-laptop fa-fw"></i>  Projects</a>
+        <!-- <div class="w3-dropdown-click">
+            <div class="w3-bar-item w3-button w3-padding" onclick="myFunction()" ><i class="fa fa-laptop fa-fw"></i>Projects</div>
+            <div id="Demo9" class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="Project.html" class="w3-bar-item w3-button">Your Project Details</a>
+              <a href="Dash_proj.html" class="w3-bar-item w3-button">Ongoing Project Dashboard</a>
+              <a href="Deadline.html" class="w3-bar-item w3-button">Deadline Notifier</a>
+              <a href="report_pro.html" class="w3-bar-item w3-button">Project Report Submission</a>
+            </div>
+          </div> -->
+          <a href="hr.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-male fa-fw"></i>HR Department</a>
+          <!-- <div class="w3-dropdown-click">
+            <div class="w3-bar-item w3-button w3-padding" onclick="myFunction1()"><i class="fa fa-male fa-fw"></i>  HR</div>
+            <div id="Demo10" class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="Project.html" class="w3-bar-item w3-button">HR Dashboard</a>
+              <a href="Dash_proj.html" class="w3-bar-item w3-button">Recruitment</a>
+              <a href="Deadline.html" class="w3-bar-item w3-button">Interview</a>
+              <a href="report_pro.html" class="w3-bar-item w3-button">Training</a>
+            </div>
+          </div> -->
+ 
+        <a href="Admin_Notification.html" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-bell fa-fw" ></i>  Notifications</a>
+        <a href="Admin_daily_details.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-pencil fa-fw"></i>  Daily Details & Report </a>
+        <a href="Accounting1.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-inr fa-fw"></i>  Accounting Department</a> 
+        <a href="client.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-money fa-fw"></i>  Client Management</a> 
+        <a href="Daily_log.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-clock-o fa-fw"></i>  Log History</a> 
+        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Logout</a>
+        <br><br><br>
+       
+    </nav>
+    
+    
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    <div class="w3-main" style="margin-left:300px;margin-top:43px;">
+      <header class="w3-container" style="padding-top:22px">
+        <h5><b><i class="fa fa-dashboard"></i> My Dashboard</b></h5>
+      </header>
+    
+      <div class="w3-row-padding w3-margin-bottom">
+        <div class="w3-quarter">
+          <div class="w3-container w3-amber w3-padding-16 w3-text-white" style="border: 1px solid #000;border-radius: 4%;">
+            <div class="w3-left"><i class="fa fa-user w3-xxxlarge"></i></div>
+            <div class="w3-right">
+              <h3>8</h3>
+            </div>
+            <div class="w3-clear"></div>
+            <h4>Client Deals</h4>
+          </div>
+        </div>
+        <div class="w3-quarter">
+          <div class="w3-container w3-indigo w3-padding-16" style="border: 1px solid #000;border-radius: 4%;">
+            <div class="w3-left"><i class="fa fa-laptop w3-xxxlarge"></i></div>
+            <div class="w3-right">
+              <h3>5</h3>
+            </div>
+            <div class="w3-clear"></div>
+            <h4>Ongoing Projects</h4>
+          </div>
+        </div>
+        <div class="w3-quarter">
+          <div class="w3-container w3-green w3-padding-16" style="border: 1px solid #000;border-radius: 4%;">
+            <div class="w3-left"><i class="fa fa-percent w3-xxxlarge"></i></div>
+            <div class="w3-right">
+              <h3>97</h3>
+            </div>
+            <div class="w3-clear"></div>
+    
+            <h4> Avg. Attendence</h4>
+          </div>
+        </div>
+        <div class="w3-quarter">
+          <div class="w3-container w3-red w3-padding-16" style="border: 1px solid #000;border-radius: 4%;">
+            <div class="w3-left"><i class="fa fa-inr w3-xxxlarge" ></i></div>
+            <div class="w3-right">
+              <h3>125k</h3>
+            </div>
+            <div class="w3-clear"></div>
+            <h4>Profit / Revenue</h4>
+          </div>
+        </div>
+      </div>
+      <div class="w3-container w3-white w3-margin">
+        <div class="w3-responsive">
+          <h4 style="text-align: center;">Company Finance</h4>
+        <div id="chartContainer" style="width: 100%; height: 300px;"></div></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+      </div>
+      <div class="w3-container w3-padding w3-margin w3-white">
+        <h4 style="text-align: center;">Company's progres</h4>
+        <div id="chartDiv" style="max-width: 740px;height: 300px;margin: 0px auto"></div>
+        <!-- <div id="chartDiv" style="max-width: 740px;height: 300px;margin: 0px auto"></div> -->
+    </div>
+   <b><h4 style="text-align: center;">Department Analysis</h4></b> 
+     <div id="myChart" class="chart--container">
+   
+  </div>
+    
+    <div class="w3-container w3-white w3-margin">
+      <h4 style="text-align: center;">Managers' Details</h4>
+      <table class="w3-table w3-striped w3-white">
+        <tr>
+          <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
+          <td>MID</td>
+          <td>EID</td>
+          <td>Name</td>
+          <td>DID</td>
+          <td>Department</td>
+        </tr>
+        <tr>
+          <td><i><img src="vips.png" style="width: 25px;height: 25px;border-radius: 50%;"></i></td>
+          <td>01</td>
+          <td>32017</td>
+          <td>Vipasha Vaghela</td>
+          <td>01</td>
+          <td>Web-Dev , backend</td>
+        </tr>
+       <tr>
+          <td><i><img src="avatar1.png" style="width: 25px;height: 25px;border-radius: 50%;"></i></td>
+          <td>02</td>
+          <td>3217</td>
+          <td>Mr xyz</td>
+          <td>02</td>
+          <td>Managing</td>
+        </tr> <tr>
+          <td><i><img src="avatar2.png" style="width: 25px;height: 25px;border-radius: 50%;"></i></td>
+          <td>03</td>
+          <td>317</td>
+          <td>mr pqr</td>
+          <td>03</td>
+          <td>Accounting</td>
+        </tr> <tr>
+          <td><i><img src="avatar3.png" style="width: 25px;height: 25px;border-radius: 50%;"></i></td>
+          <td>04</td>
+          <td>17</td>
+          <td>mr zy</td>
+          <td>04</td>
+          <td>HR</td>
+        </tr> <tr>
+          <td><i><img src="avatar5.png" style="width: 25px;height: 25px;border-radius: 50%;"></i></td>
+          <td>05</td>
+          <td>3017</td>
+          <td>Miss Xyz</td>
+          <td>05</td>
+          <td>Project</td>
+        </tr> <tr>
+          <td><i><img src="avatar6.png" style="width: 25px;height: 25px;border-radius: 50%;"></i></td>
+          <td>06</td>
+          <td>327</td>
+          <td>Miss pqr</td>
+          <td>06</td>
+          <td>R&D, Robotics, AI</td>
+        </tr>
+      </table> 
+    </div>
+  </div>
+      <script>
+        ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+        let chartConfig = {
+          backgroundColor: '#eee',
+          graphset: [{
+              type: 'null',
+              backgroundColor: '#fff',
+              borderColor: '#384653',
+              borderRadius: '4px',
+              borderWidth: '1px',
+              width: '31%',
+              height: '25%',
+              x: '2%',
+              y: '3%',
+              title: {
+                text: 'Departments',
+                backgroundColor: 'none',
+                fontColor: '#384653',
+                fontSize: '12px',
+                height: '70px',
+                textAlign: 'center'
+              },
+              subtitle: {
+                text: '9',
+                paddingTop: '25%',
+                bold: true,
+                fontColor: '#006699',
+                fontSize: '24px',
+                height: '40px',
+                textAlign: 'center'
+              }
+            },
+            {
+              type: 'null',
+              backgroundColor: '#fff',
+              borderColor: '#384653',
+              borderRadius: '4px',
+              borderWidth: '1px',
+              width: '31%',
+              height: '25%',
+              x: '34.6%',
+              y: '3%',
+              title: {
+                text: 'New Joined Employees',
+                backgroundColor: 'none',
+                fontColor: '#384653',
+                fontSize: '12px',
+                height: '70px',
+                textAlign: 'center'
+              },
+              subtitle: {
+                text: '4',
+                paddingTop: '25%',
+                bold: true,
+                fontColor: '#006699',
+                fontSize: '24px',
+                height: '40px',
+                textAlign: 'center'
+              }
+            },
+            {
+              type: 'null',
+              backgroundColor: '#fff',
+              borderColor: '#384653',
+              borderRadius: '4px',
+              borderWidth: '1px',
+              width: '31%',
+              height: '25%',
+              x: '67%',
+              y: '3%',
+              title: {
+                text: 'Total Employees',
+                backgroundColor: 'none',
+                fontColor: '#104053',
+                fontSize: '12px',
+                height: '70px',
+                textAlign: 'center'
+              },
+              subtitle: {
+                text: '110',
+                paddingTop: '25%',
+                bold: true,
+                fontColor: '#006699',
+                fontSize: '24px',
+                height: '40px',
+                textAlign: 'center'
+              }
+            },
+            {
+              type: 'bar',
+              backgroundColor: '#fff',
+              borderColor: '#384653',
+              borderRadius: '4px',
+              borderWidth: '1px',
+              width: '96%',
+              height: '68%',
+              x: '2%',
+              y: '30%',
+              legend: {
+                margin: 'auto auto 10% auto',
+                backgroundColor: '#FFFFFF',
+                borderColor: '#FFFFFF',
+                borderRadius: '4px',
+                layout: 'float',
+                shadow: false,
+                toggleAction: 'remove'
+              },
+              plotarea: {
+                margin: '45px 40px 90px 60px'
+              },
+              scaleX: {
+                values: ['% Working Employees', '% Attendence', '% Ongoing Tasks', '% Meetings', '% Managers', '% Revenue Generation'],
+                guide: {
+                  visible: false
+                },
+                item: {
+                  fontColor: '#384653'
+                },
+                lineColor: '#b0aaab',
+                lineWidth: '1px',
+                tick: {
+                  visible: false
+                }
+              },
+              scaleY: {
+                values: '0:100:10',
+                guide: {
+                  lineStyle: 'solid',
+                  visible: true
+                },
+                item: {
+                  paddingRight: '5%',
+                  fontColor: '#384653'
+                },
+                lineColor: '#FFFFFF',
+                lineWidth: '1px',
+                tick: {
+                  visible: false
+                }
+              },
+              tooltip: {
+                text: '%v %k in %t',
+                borderRadius: '4px',
+                shadow: false
+              },
+              series: [{
+                  text: 'Managing',
+                  values: [11,100, 7, 44, 100, 70],
+                  backgroundColor: '#E41B17',
+                  legendMarker: {
+                    borderColor: '#4cc2bb'
+                  }
+                },
+                {
+                  text: 'HR',
+                  values: [9, 31, 12, 38, 19, 34],
+                  backgroundColor: 'DarkOrange',
+                  legendMarker: {
+                    borderColor: '#4c707e'
+                  }
+                },
+                {
+                  text: 'Project',
+                  values: [9, 31, 12, 38, 19, 34],
+                  backgroundColor: 'dodgerblue',
+                  legendMarker: {
+                    borderColor: '#4c707e'
+                  }
+                },
+                {
+                  text: 'R&D',
+                  values: [9, 31, 12, 38, 19, 34],
+                  backgroundColor: '#151B8D',
+                  legendMarker: {
+                    borderColor: '#4c707e'
+                  }
+                },
+                {
+                  text: 'Account',
+                  values: [9, 31, 12, 38, 19, 34],
+                  backgroundColor: 'green',
+                  legendMarker: {
+                    borderColor: '#4c707e'
+                  }
+                },
+                {
+                  text: 'Web-Dev',
+                  values: [39, 65, 12, 58, 39, 24],
+                  backgroundColor: 'deeppink',
+                  legendMarker: {
+                    borderColor: '#dd655f'
+                  }
+                },
+                {
+                  text: 'Scripting/Database',
+                  values: [39, 65, 12, 58, 39, 24],
+                  backgroundColor: 'darkorchid',
+                  legendMarker: {
+                    borderColor: '#dd655f'
+                  }
+                },
+                {
+                  text: 'AI-Ml',
+                  values: [39, 65, 12, 58, 39, 24],
+                  backgroundColor: 'DarkRed',
+                  legendMarker: {
+                    borderColor: '#dd655f'
+                  }
+                },
+                {
+                  text: 'Robotics',
+                  values: [11, 21, 17, 44, 22, 16],
+                  backgroundColor: '#FDD017',
+                  legendMarker: {
+                    borderColor: '#88a0a9'
+                  }
+                }
+              ]
+            }
+          ]
+        };
+    
+        zingchart.render({
+          id: 'myChart',
+          data: chartConfig,
+          height: '100%',
+          width: '100%',
+        });
+      </script>
+  
+ 
+  
+ 
+<script>
+    // Get the Sidebar
+    var mySidebar = document.getElementById("mySidebar");
+    
+    // Get the DIV with overlay effect
+    var overlayBg = document.getElementById("myOverlay");
+    
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+    function w3_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+      } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+      }
+    }
+    
+    // Close the sidebar with the close button
+    function w3_close() {
+      mySidebar.style.display = "none";
+      overlayBg.style.display = "none";
+    }
+    </script>
+     <script>
+        function myFunction() {
+          var x = document.getElementById("Demo9");
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+          } else { 
+            x.className = x.className.replace(" w3-show", "");
+          }
+        }
+       
+        </script>
+        <script>
+          window.onload = function () {
+          
+          var chart = new CanvasJS.Chart("chartContainer", {
+            theme: "light1", // "light1", "ligh2", "dark1", "dark2"
+            animationEnabled: true,
+            title: {
+              text: ""
+            },
+            axisY: {
+              title: "Amount (in INR)",
+              prefix: "",
+              lineThickness: 0,
+              suffix: "k"
+            },
+            data: [{
+              type: "waterfall",
+              indexLabel: "{y}",
+              indexLabelFontColor: "#EEEEEE",
+              indexLabelPlacement: "inside",
+              yValueFormatString: "#,##0k",
+              dataPoints: [
+                { label: "Sales",  y: 1273 },
+                { label: "Service", y: 623 },
+                { label: "Total Revenue", isIntermediateSum: true},
+                { label: "Research", y: -150 },
+                { label: "Marketing",  y: -226 },
+                { label: "Salaries", y: -632 },
+                { label: "Operating Income", isCumulativeSum: true },
+                { label: "Taxes",  y: -264 },
+                { label: "Net Income",  isCumulativeSum: true }
+              ]
+            }]
+          });
+          chart.render();
+          
+          }
+          </script>
+           <!-- <script type="text/javascript">
+            var chart,
+                selectedDates = [],
+                selectorColor='#d2c7ed',
+                chartConfig = {
+                    debug: true,
+                    type: 'calendar month solid',
+                    defaultTooltip_enabled: false,
+                    defaultAnnotation_style_fontWeight: 'bold',
+                    annotations: [
+                        { label_text: 'Monthly Attendance And Absence Report (All Branches)', position: 'top left' },
+                        { id: 'an1', label_text: 'Click two points', position: 'top right' }
+                    ],
+                    highlights: [
+                        {
+                            //Highlight weekends
+                            pattern: { weekday: [0, 6] },
+                            fill: '#ffedc4',
+                            opacity:.5,
+                            outline_color: '#eeeeee'
+                        }
+                    ],
+                    defaultSeries: {
+                        shape_innerPadding: .1,
+                        opacity: .7,
+                        defaultPoint: {
+                            events: {
+                                click: pointClick,
+                                mouseOver: pointOver
+                            },
+                            states: {
+                                hover: {						outline_width: 2					}
+                            }
+                        }
+                    }
+                };
+            
+            loadData(makeChart);
+            
+            function pointClick() {
+                var point = this;
+                var clickedDate = point.tokenValue('%date');
+                if (selectedDates.length === 2) {		selectedDates = [];	}
+                selectedDates.push(clickedDate);
+                //Allow selecting end date first.
+                selectedDates.sort();
+                //Passing this date when count is 1 will remove animation
+                highlightDates(selectedDates.length === 1 ? clickedDate : undefined);
+                updateAnnotation();
+            
+                //Disable any default point click behavior.
+                return false;
+            }
+            
+            function pointOver() {
+                var point = this;
+                var pointDate = point.tokenValue('%date');
+            
+                //If another point is hovered while only one date is selected, update the highlight
+                if (selectedDates.length < 2) {		highlightDates(pointDate);	}
+            
+            }
+            
+            function updateAnnotation() {
+                var ann = chart.annotations('an1');
+                var dates = selectedDates;
+                var dCountToText = [
+                    'Click two points',
+                    'Click another point',
+                    'Selected Range: ' + dates.map(function(d) {			return JSC.formatDate(d, 'd')		}).join(' - ')
+                ];
+            
+                ann.options({ label_text: dCountToText[dates.length] }, {animation:false});
+            }
+            
+            function getHighlightCfg(hoverDate) {
+                var dates = selectedDates.slice(0);
+                hoverDate && dates.push(hoverDate) && dates.sort();
+                var isFinalRange = selectedDates.length === 2;
+                var cfg = {
+                    id: 'selection',
+                    fill: isFinalRange ? selectorColor : 'none',
+                    outline: { color: selectorColor, dashStyle: isFinalRange ? 'solid' : 'dash' }
+                };
+                var dateVal = dates.length === 1 ? dates[0] : { range: dates }
+                if (dates.length) {		cfg.pattern = { date: dateVal };	}
+                return cfg;
+            }
+            
+            function highlightDates(hoverDate) {
+                var hl, dates = selectedDates,
+                    updateOptions = hoverDate ? { animation: { duration: 0 } } : {};
+                hl = chart.highlights('selection');
+            
+                if (dates.length) {
+                    let config = getHighlightCfg(hoverDate);
+                    if (hl) {			hl.options(config, updateOptions);		} else {
+                        chart.highlights.add(config, updateOptions);
+                    }
+                } else if (hl) {		hl.remove();	}
+            }
+            
+            function loadData(cb) {
+                var start = new Date('1/1/2018'),
+                    startNum = start.getTime(),
+                    end = new Date('5/1/2018'),
+                    endNum = end.getTime();
+                var ret = [];
+                var date = start.getTime();
+                var step = 1000*60*60;// oneHour;
+                var _i = 0;
+                var rand = function(mul) {		var v = Math.random() * 50;		return (v * mul);	}
+                function mapValue(toStart, toEnd, fromStart, fromEnd, value) {
+                    return toStart + (value - fromStart) / (fromEnd - fromStart) * (toEnd - toStart);
+                }
+                function mapToMul(dateNum) {
+                    var hourOfDay = new Date(dateNum).getHours();
+                    var timeOfDayMod = Math.sin(mapValue(0, 3, 0, 23, hourOfDay));
+                    return Math.sin(mapValue(0, 4, startNum, endNum, dateNum)) * timeOfDayMod
+                }
+                while (date < end) {
+                    ret.push([new Date(date), rand(mapToMul(date))])
+                    date = date + step;
+                    if (_i > 100000) {			break;		}
+                }
+                cb(ret)
+            }
+            
+            function makeChart(data) {
+                chartConfig.data = data;
+                chart = JSC.chart('chartDiv', chartConfig);
+            }</script>  -->
+            <script>
+            var chart = JSC.chart('chartDiv', {
+              debug: true,
+              type: 'calendar hourMinutes solid',
+              defaultBox_boxVisible: false,
+              annotations: [{ position: 'top', label_text: 'weekly View' }],
+              palette_colorBar_axis_formatString: '',
+              data: generateRandomData(),
+              xAxis: {
+                //Custom ticks
+                scale_interval: 1,
+                defaultTick: { enabled: true, label_text: '+:0%value' }
+              },
+              legend: {
+                defaultEntry: {
+                  events_click: function() {
+                    var date = this.target.tokenValue('%date');
+                    this.chart.annotations(0).options({ label_text: JSC.formatDate(date, 't') + ' Daily Report' })
+                  }
+                }
+              },
+              //Specify currency format for heatmap values.
+              zAxis_formatString: ''
+            });
+            
+            function generateRandomData() {
+              var dataRange = ['1/1/2018 09:00', '1/1/2018 20:00'];
+              var start = new Date(dataRange[0]),
+                startNum = start.getTime(),
+                end = new Date(dataRange[1]),
+                endNum = end.getTime();
+              var ret = [];
+              var date = startNum;
+              var step = 1000 * 60 / 20;
+            
+              var rand = function(mul) {		var v = Math.random() * 50;		return (v * mul);	}
+            
+              function mapToMul(dateNum) {
+                var minOfHour = new Date(dateNum).getMinutes() + 1;
+                var timeOfDayMod = Math.sin(mapValue(0, 3, 0, 60, minOfHour));
+                return Math.sin(mapValue(0, 4, startNum, endNum, dateNum)) * timeOfDayMod
+              }
+            
+              var _i = 0;
+              while (date < end) {
+                ret.push([new Date(date).getTime(), rand(mapToMul(date))])
+                date = date + step;
+                if (_i > 100) {			break;		}
+              }
+              return ret;
+            
+              function mapValue(toStart, toEnd, fromStart, fromEnd, value) {
+                return toStart + (value - fromStart) / (fromEnd - fromStart) * (toEnd - toStart);
+              }
+            }</script>
+</body>
+</html>

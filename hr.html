@@ -1,0 +1,1181 @@
+<!DOCTYPE html>
+<html>
+<title>HR DASHBOARD</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+<script src="https://code.jscharting.com/latest/jscharting.js"></script>
+<script type="text/javascript" src="https://code.jscharting.com/latest/modules/types.js"></script>
+<script type="text/javascript" src="https://code.jscharting.com/latest/modules/toolbar.js"></script>
+<script src="https://code.jscharting.com/latest/jscharting.js"></script>
+<script type="text/javascript" src="https://code.jscharting.com/latest/modules/types.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    #i1{
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 19px;
+      text-align: center;
+      color: #006699;
+    }
+    .chart--container {
+      min-height: 450px;
+      width: 100%;
+      height: 300px;
+    }
+
+    .zc-ref {
+      display: none;
+    }
+    </style>
+  
+   
+    <body class="w3-light-grey">
+    
+    <!-- Top container -->
+    <div class="w3-bar w3-top" style="z-index:3;background-color: #006699">
+      <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+      <span class="w3-bar-item w3-right" style="color: #fff">Admin Dashboard</span>
+    </div>
+    
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:296px;" id="mySidebar"><br>
+      <div class="w3-container w3-row">
+        <div class="w3-col s4">
+        
+          <img src="hr1.jpg" class="w3-circle w3-margin-right" style="width:60px;">
+        </div>
+        <div class="w3-col s8 w3-bar">
+          <br>
+          <span style="font-size: 17px;"><strong>   Mr.Admin</strong></span><br>
+          <span style="font-size: 13px;"><strong>  <i class="fa fa-user-secret"></i>  Boss</strong></span><br>
+        <!--   <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a> -->
+          <br>
+        </div>
+      </div>
+      
+      <div class="w3-container">
+       
+              
+              
+              
+        <i class="fa fa-facebook-official w3-hover-opacity" id="i1"></i>
+        <i class="fa fa-instagram w3-hover-opacity" id="i1"></i>
+       <i class="fa fa-snapchat w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-twitter w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-linkedin w3-hover-opacity" id="i1"></i>
+                 
+               
+              
+              </div>
+      </div>
+      <hr>
+      <div class="w3-bar-block">
+        <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+        <a href="Admin.html" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-user fa-fw"></i>Dashboard</a>
+        <a href="Admin_personal.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-book fa-fw"></i> Personal Details</a>
+        <a href="Manage_data.html" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-users fa-fw"></i> Manage Employees Data</a>
+        <a href="Admin_attendance.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-card fa-fw"></i>  Attendence & Leaves </a>
+        <!-- <div class="w3-dropdown-hover">
+        
+          <div class="w3-dropdown-content w3-bar-block w3-border">
+            <a href="Dash_proj.html" class="w3-bar-item w3-button">Project Dashboard</a>
+            <a href="Deadline.html" class="w3-bar-item w3-button" style="background-color:#006699;color: #fff">DeadLine Notifier</a>
+            <a href="#" class="w3-bar-item w3-button">Project Report Submission</a>
+          </div> -->
+        <a href="Admin_project1.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-laptop fa-fw"></i>  Projects</a>
+        <!-- <div class="w3-dropdown-click">
+            <div class="w3-bar-item w3-button w3-padding" onclick="myFunction()" ><i class="fa fa-laptop fa-fw"></i>Projects</div>
+            <div id="Demo9" class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="Project.html" class="w3-bar-item w3-button">Your Project Details</a>
+              <a href="Dash_proj.html" class="w3-bar-item w3-button">Ongoing Project Dashboard</a>
+              <a href="Deadline.html" class="w3-bar-item w3-button">Deadline Notifier</a>
+              <a href="report_pro.html" class="w3-bar-item w3-button">Project Report Submission</a>
+            </div>
+          </div> -->
+          <a href="hr.html" class="w3-bar-item w3-button w3-padding" style="background-color:#006699;color: #fff"><i class="fa fa-male fa-fw"></i>HR Department</a>
+          <!-- <div class="w3-dropdown-click">
+            <div class="w3-bar-item w3-button w3-padding" onclick="myFunction1()"><i class="fa fa-male fa-fw"></i>  HR</div>
+            <div id="Demo10" class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="Project.html" class="w3-bar-item w3-button">HR Dashboard</a>
+              <a href="Dash_proj.html" class="w3-bar-item w3-button">Recruitment</a>
+              <a href="Deadline.html" class="w3-bar-item w3-button">Interview</a>
+              <a href="report_pro.html" class="w3-bar-item w3-button">Training</a>
+            </div>
+          </div> -->
+ 
+        <a href="Admin_notification.html" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-bell fa-fw" ></i>  Notifications</a>
+        <a href="Admin_daily_details.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-pencil fa-fw"></i>  Daily Details & Report </a>
+        <a href="Accounting1.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-inr fa-fw"></i>  Accounting Department</a> 
+        <a href="client.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-money fa-fw"></i>  Client Management</a> 
+        <a href="Daily_log.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-clock-o fa-fw"></i>  Log History</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Logout</a>
+        <br><br><br>
+       
+    </nav>
+    
+    
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    <div class="w3-main" style="margin-left:300px;margin-top:43px;">
+      <div class="w3-container w3-white w3-margin">
+  
+        <div class="w3-responsive">
+          <center>
+      <div id="myChart" class="chart--container"></div>
+      </center>
+      </div>
+        </div>
+<!-- <div class="w3-container w3-margin w3-white">
+    <div id="chartDiv" style="width:100%;height: 320px; margin-top:13px"></div>
+</div> -->
+
+<!-- <div class="w3-container w3-margin w3-white">
+   <div class="w3-twothird  w3-white">
+    <div id="chartDiv13" style="max-width: 740px;height: 370px;"></div> -->
+   <!-- </div>
+   <div class="w3-third w3-white">
+     <div id="chartDiv21" style="max-width: 440px;height: 350px;margin: 0px auto"></div>
+  </div> -->
+   <!-- <div class="w3-third w3-margin w3-white"></div>
+  </div> -->
+  <div class="w3-container  w3-margin w3-white">
+    <div class="w3-half  w3-white "><h5>Recruitment Analysis</h5><div id="piechart_3d" style="width: 100%; height: 300px;"></div></div>
+    <div class="w3-half   w3-white">
+      <!-- <div id="chartDiv41" style="max-width: 100%;height: 300px;margin: 0px auto"></div> -->
+    <div id="chartDivm" style="max-width: 740px;height: 400px;margin: 0px auto"></div></div>
+   
+
+
+<div class="w3-container w3-margin w3-white w3-padding">
+  <h4 style="text-align: center;">Recuritment Analysis Females & Males (2019-20)</h4>
+    <div id="chartDivi" style="max-width: 740px;height: 250px;margin: 0px auto"></div>
+</div>
+
+
+
+
+
+<div class="w3-container w3-white w3-margin">
+<h4 style="text-align: center;">Females/Males Working Ratio</h4><br>
+<div id="chartDiv12" style="max-width: 700px;height: 300px;margin: 0px auto"></div>
+</div> 
+
+  <div class="w3-container w3-white w3-margin">
+    <div class="w3-responsive">
+  <div class="w3-half"> 
+    <h4>Human Resources Analysis</h4>
+     <div id="chart_div14" style="width:100%;height: 400px;"></div>
+</div>
+<div class="w3-half">
+ 
+<h4>KPI Overview</h4> <h5>((headcounts of freshers & job Leavers</h5><br>
+  <div id="chartDiviv" style="max-width: 740px;height: 300px;margin: 0px auto">
+</div>
+</div>
+</div>
+ </div>
+  
+ 
+<script>
+    // Get the Sidebar
+    var mySidebar = document.getElementById("mySidebar");
+    
+    // Get the DIV with overlay effect
+    var overlayBg = document.getElementById("myOverlay");
+    
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+    function w3_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+      } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+      }
+    }
+    
+    // Close the sidebar with the close button
+    function w3_close() {
+      mySidebar.style.display = "none";
+      overlayBg.style.display = "none";
+    }
+    </script>
+ <script>
+     var dt17 = {
+	items: [
+		{			id: 'HR',			count: 793		},
+		{			id: 'Managing',			count: 437		},
+		{			id: 'Accounts',			count: 326		},
+		{			id: 'R&D',			count: 317		},
+		{			id: 'Webdev',			count: 189		},
+
+		{			id: 'AI_ML',			count: 90		},
+		{			id: 'Robotics',			count: 67		},
+		{			id: 'Backend',			count: 24		}
+	
+	]
+};
+var dt18 = {
+	items: [
+  {			id: 'HR',			count: 903		},
+		{			id: 'Managing',			count: 337		},
+		{			id: 'Accounts',			count: 226		},
+		{			id: 'R&D',			count: 1017		},
+		{			id: 'Webdev',			count: 189		},
+
+		{			id: 'AI_ML',			count: 80		},
+		{			id: 'Robotics',			count: 97		},
+		{			id: 'Backend',			count: 42		}
+	
+	]
+};
+var dt19 = {
+	items: [
+  {			id: 'HR',			count: 793		},
+		{			id: 'Managing',			count: 437		},
+		{			id: 'Accounts',			count: 326		},
+		{			id: 'R&D',			count: 317		},
+		{			id: 'Webdev',			count: 189		},
+
+		{			id: 'AI_ML',			count: 90		},
+		{			id: 'Robotics',			count: 67		},
+		{			id: 'Backend',			count: 24		}
+	
+	]
+};
+var scaled = false;
+
+var colors = ['#3E7ADF', '#E84614', '#D1C32D', '#19A023', '#BF4BA2'];
+var chart = JSC.Chart('chartDiv', {
+	type: 'line spline',
+	palette: colors,
+	legend_visible: false,
+	annotations: [{
+		label: {
+			text: 'Top Employees Recruited Department',
+			style_fontSize: '18px'
+		},
+
+		position: 'top left'
+	}],
+	defaultAxis_defaultTick_label_style: {		fontWeight: 'bold',		fontSize: '13px'	},
+	yAxis: [
+		{
+			id: 'y1',
+			defaultTick: { line_visible:false, gridLine_visible: false, enabled: false },
+			scale: {				invert: true,				range_padding: 0.15			}
+		},
+		{
+			id: 'y2',
+			defaultTick: { line_visible:false, gridLine_visible: false, enabled: false },
+			orientation: 'opposite',
+			scale: {				syncWith: 'y1'			}
+		}
+	],
+	xAxis: [
+		{
+			id: 'x1',
+			scale: {				interval: 1,				range_padding: 0.08			}
+		},
+		{
+			orientation: 'opposite',
+			scale: {				syncWith: 'x1',				interval: 1			}
+		}
+	],
+	defaultSeries: {
+		line_width: 3,
+		line_tension: .5,
+		firstPoint: {
+			yAxisTick: {
+				axisId: 'y1',
+				label_text: '<span color=%color><b>%seriesname</b></span>'
+			}
+		},
+		lastPoint: {
+			yAxisTick: {
+				axisId: 'y2',
+				label_text: '<span color=%color><b>%seriesname</b></span>'
+			}
+		},
+		states: {			hover_line: { width: 8 }		},
+		defaultPoint: {
+			marker: {
+				type: 'circle',
+				size: 34,
+				outline: { width: 3 },
+				fill: 'white'
+			},
+			label: {
+				color: '#555',
+				autoHide: false,
+				text: '<b>{%perc*100:n0}%</b>',
+				align: 'center',
+				verticalAlign: 'middle',
+				style_fontSize:'11px'
+			},
+			tooltip: '<b>#%rank</b> for  %xValue:<br><b>%seriesName</b><br> With {%perc*100:n0}% of employees'
+		}
+	},
+	series: getSeries(),
+	toolbar_items: {
+		Scaled: {
+			type: 'toggle',
+			position: 'top right',
+			value: false,
+			events_change: function(val) {
+				scaled = val;
+				chart.options({
+					defaultPoint: {
+						marker_size: val ? 10 : 34,
+						label_visible: val ? false : true
+					},
+					series: getSeries(),
+					yAxis_scale_invert: !val
+				});
+				console.log(this);
+			}
+		},
+		export_visible: false
+	}
+});
+
+function getSeries() {
+	var years = [
+		processYearItems(dt17),
+		processYearItems(dt18),
+		processYearItems(dt19)
+	];
+	var selectiveLabeling = {
+		'HR': { name: 'HR', side: '' },
+		'Managing': { name: 'Managing', side: 'r' },
+		'Accounts': { name: 'Accounts', side: 'l' },
+		'R&D': { name: 'R&D', side: 'l' },
+		'webdev': { name: 'webdev', side: 'r' }
+	};
+	var series = [];
+
+	Object.keys(selectiveLabeling).forEach(function(key) {		series.push(getSeriesById(key));	});
+	return series;
+
+	function getSeriesById(serId) {
+		var result = {
+			name: selectiveLabeling[serId].name,
+			points: pointsById(serId, years)
+		};
+		if (scaled) {
+			var emptyTick = { yAxisTick_label_text: '', enabled: false };
+			var labelSide = selectiveLabeling[serId].side;
+			if (labelSide === 'r') {				result.firstPoint = emptyTick;			} else if (labelSide === 'l') {				result.lastPoint = emptyTick;			}
+		}
+		return result;
+	}
+}
+
+function processYearItems(year) {
+	var items = year.items;
+	var sum = JSC.sum(items, 'count');
+	items.forEach(function(item, i) {
+		item.percent = item.count / sum;
+		item.rank = i + 1;
+	});
+	return year;
+}
+
+function pointsById(id, years) {
+	var yearNumbers = [2017, 2018, 2019];
+
+	var perYear = [
+		years[0].items.find(function(entry) {			return entry.id == id;		}),
+		years[1].items.find(function(entry) {			return entry.id == id;		}),
+		years[2].items.find(function(entry) {			return entry.id == id;		})
+	];
+
+	return [indexToPoint(0), indexToPoint(1), indexToPoint(2)];
+
+	function indexToPoint(i) {
+		return {
+			id: yearNumbers[i] + id,
+			y: scaled ? perYear[i].percent : perYear[i].rank,
+			x: yearNumbers[i],
+			attributes: { perc: perYear[i].percent, rank: perYear[i].rank }
+		};
+	}
+}
+ </script>
+  
+ <!-- <script>
+     var chart = JSC.chart('chartDiv13', {
+  debug: true,
+  defaultSeries_type: 'column',
+  yAxis_scale_type: 'stacked',
+  title_label_text: 'Acme Tool Sales',
+  yAxis: { label_text: 'Units Sold'  },
+  xAxis_label_text: 'Quarter',
+  series: [
+    {
+      name: 'Saw',
+      id: 's1',
+      points: [
+        { x: 'Q1', y: 230  },
+        { x: 'Q2', y: 240  },
+        { x: 'Q3', y: 267  },
+        { x: 'Q4', y: 238  }
+      ]
+    },
+    {
+      name: 'Hammer',
+      points: [
+        { x: 'Q1', y: 325  },
+        { x: 'Q2', y: 367  },
+        { x: 'Q3', y: 382  },
+        { x: 'Q4', y: 371  }
+      ]
+    },
+    {
+      name: 'Grinder',
+      points: [
+        { x: 'Q1', y: 285  },
+        { x: 'Q2', y: 292  },
+        { x: 'Q3', y: 267  },
+        { x: 'Q4', y: 218  }
+      ]
+    },
+    {
+      name: 'Drill',
+      points: [
+        { x: 'Q1', y: 185  },
+        { x: 'Q2', y: 192  },
+        { x: 'Q3', y: 198  },
+        { x: 'Q4', y: 248  }
+      ]
+    }
+  ]
+},function(c){	c.series.add(getSumSeries1(c));});
+
+
+function getSumSeries(c) {
+	var cat,sum,result = {name:'Sum',type:'marker',defaultPoint_label_visible:true,defaultPoint_marker:{size:20},points:[]};
+	//Get categories of the x axis.
+	var cats = c.axes('x').getCategories();
+	for (var i = 0, iLen = cats.length; i < iLen; i++) {
+		cat = cats[i];
+		sum = 0;
+		c.series().points({x: cat}).each(function (p) {			sum += p.options('y')		});
+		result.points.push({x:cat,y:sum});
+	}
+	return result;
+}
+ </script> -->
+ <!-- <script>
+     var chart = JSC.chart('chartDiv21',{
+  debug: true,
+  type: 'gauge',
+  yAxis_scale: { range: [0,100000 ]  },
+  legend: { position: 'bottom'  },
+  defaultTooltip_enabled: false,
+  series: [
+    {
+      palette: 'default',
+      name: 'Basic Pay(Monthly)',
+      shape: {
+        label: { text: 'Basic Pay(Monthly)', verticalAlign: 'top'  }
+      },
+      defaultPoint_tooltip: '<b>%name</b> %yValue',
+      points: [
+        {
+          name: 'workers',
+          y: 20000,
+          
+/*The marker length value specifies needle length with a value between 0 and 1.*/
+          marker_length: [0.2,0.6 ]
+        },
+        {
+          name: 'parttime',
+          y: 30000,
+          
+/*The marker length value specifies needle length with a value between 0 and 1.*/
+          marker_length: 0.6
+        },
+        {
+          name: 'full-time',
+          y: 50000,
+          
+/*The marker length value can also specify a range.*/
+          marker_length: [0,0.8 ]
+        },
+        {
+          name: 'Authorization staff',
+          y: 60000,
+          
+/*The marker length value can also specify a range.*/
+          marker_length: [0.5,0.8 ]
+        }
+      ]
+    }
+  ]
+});
+ </script>-->
+
+<script type="text/javascript">
+    google.charts.load("current", {packages:["corechart"]});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['EMPLOYEE', 'COUNTS'],
+        ['job Applications',     100],
+        ['Approved',      95],
+        ['Reject',  5],
+        ['Interview Taken', 95],
+        ['Selected Candidate',    30]
+      ]);
+
+      var options = {
+        title: '',
+        is3D: true,
+      };
+
+      var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+      chart.draw(data, options);
+    }
+  </script> 
+  <script src="https://code.jscharting.com/latest/jscharting.js"></script>
+  <script type="text/javascript" src="https://code.jscharting.com/latest/modules/types.js"></script>
+  <!-- <script>
+      var chart = JSC.chart('chartDiv41',{
+  debug: true,
+  title: {
+    label_text: 'Linear Column Guides',
+    position: 'center'
+  },
+  legend_visible: false,
+  yAxis: [
+    {line_visible: true,scale_range: [  0,  100] },
+    {id: 'y2',line_width: 0,scale_range: [  0,  100] },
+    {id: 'y3',line_width: 0,scale_range: [  0,  100] },
+    {
+      id: 'y4',
+      line_width: 0,
+      defaultTick_gridLine_width: 1,
+      scale_range: [  0,  100]
+    }
+  ],
+  xAxis: [
+    {
+      defaultTick_gridLine_width: 0,
+      
+/*Reduces column size to pad against axis line.*/
+      spacingPercentage: 0.15
+    },
+    {
+      id: 'x2',
+      defaultTick_gridLine: {  onTop: true,  width: 3,  dashStyle: 'dot'},
+      spacingPercentage: 0.15
+    },
+    {
+      id: 'x3',
+      defaultTick_gridLine_width: 'column',
+      spacingPercentage: 0.15
+    }
+  ],
+  defaultSeries: {
+    type: 'gauge linear column roundCaps',
+    shape: {label: [  { text: '%name'  }] }
+  },
+  series: [
+    {name: 'Axis Line',points: [  [ 'value', 25  ]] },
+    {
+      name: 'Dashed Grid onTop',
+      yAxis: 'y2',
+      xAxis: 'x2',
+      points: [  [ 'value', 75  ]]
+    },
+    {
+      name: 'Column Width Grid',
+      yAxis: 'y3',
+      xAxis: 'x3',
+      points: [  [ 'value', 49  ]]
+    },
+    {
+      name: 'Y Grid Lines',
+      yAxis: 'y4',
+      points: [  [ 'value', 29  ]]
+    }
+  ]
+});
+  </script> -->
+   </script>
+  
+   <script src="https://code.jscharting.com/latest/jscharting.js"></script>
+   <script type="text/javascript" src="https://code.jscharting.com/latest/modules/types.js"></script>
+   <script type="text/javascript">/*
+Circular axis lines with smartPalette fills.
+Learn how to:
+
+- Use smartPalette to fill on axis lines.
+*/
+// JS
+var chart = JSC.chart('chartDivi',{
+debug: true,
+legend_visible: false,
+defaultTooltip_enabled: false,
+xAxis_spacingPercentage: 0.4,
+yAxis: [
+{
+id: 'ax1',
+defaultTick: {  padding: 10,  enabled: false},
+customTicks: [  35,  60,  70,  80,  85],
+line: {
+width: 10,
+
+/*Defining the option will enable it.*/
+breaks: {},
+
+/*Palette is defined at series level with an ID referenced here.*/
+color: 'smartPalette:pal1'
+},
+scale_range: [  0,  100]
+},
+{
+id: 'ax2',
+scale_range: [  0,  850],
+defaultTick: {  padding: 10,  enabled: false},
+customTicks: [  0,  300,  600,  700,  800,  850],
+line: {  width: 10,  color: 'smartPalette:pal2'}
+}
+],
+defaultSeries: {
+type: 'gauge column roundcaps',
+shape: {
+label: {
+text: '%value',
+align: 'center',
+verticalAlign: 'middle'
+}
+}
+},
+series: [
+{
+type: 'column roundcaps',
+name: 'Temperatures',
+yAxis: 'ax1',
+palette: {
+id: 'pal1',
+pointValue: '%yValue',
+ranges: [
+ {value: 10,color: '#FF5353' },
+ {value: 20,color: '#FFD221' },
+ {value: 30,color: '#77E6B4' },
+ {value: [  40,  50],color: '#21D683' }
+]
+},
+shape_label: {  style: { fontSize: 28  }},
+points: [  [ 'x', [10,100 ]  ]]
+},
+{
+yAxis: 'ax2',
+name: 'Temperatures',
+palette: {
+id: 'pal2',
+pointValue: '{%yValue/100}',
+colors: [
+ '#ffffd9',
+ '#edf8b0',
+ '#c7e9b4',
+ '#7fcdbb',
+ '#41b6c3',
+ '#1d91c0',
+ '#225ea8',
+ '#253494',
+ '#081d58'
+]
+},
+shape_label: {  text: '%value',  style: { fontSize: 28  }},
+points: [  [ 'x', 290 ]]
+}
+]
+});</script>
+
+
+
+
+<script>
+var chart = JSC.chart('chartDiv12', {
+ debug: true,
+ defaultSeries: {
+   type: 'pie donut',
+   palette: 'default',
+   pointSelection: true,
+   explodeOffset: 10
+ },
+ series: [
+   {
+     
+/*Labels*/
+     defaultPoint: {
+       label: {
+         visible: true,
+         placement: 'outside',
+         line: {color: '#cbcac9',width: 2 }
+       }
+     },
+     
+/*Positions*/
+     shape: {
+       center: '25%,45%',
+       size: '40%',
+       innerSize: '20%',
+       offset: '5%,5%'
+     },
+     name: 'Females',
+     points: [
+       [ 'Managing (f)', 15  ],
+       [ 'R&D(f)', 29  ],
+       [ 'Accounting(f)', 11  ],
+       [ 'HR(f)', 15 ]
+     ]
+   },
+   {
+     name: 'Males',
+     points: [
+       [ 'Managing(m)', 100  ],
+       [ 'R&D(m)', 80  ],
+       [ 'Accounting(m)', 20  ],
+       [ 'HR(m)', 50  ]
+     ]
+   }
+ ],
+ yAxis_label_text: 'NO Of Employee',
+ title_label_text: 'Count of Employees Department wise(Male/Female Ratio)',
+ yAxis_formatString: ''
+});</script> 
+
+<script>
+  ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+  var img = 'data:image/png;base64,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';
+
+  var plots = [{
+      text: 'Managing',
+      color: '#47AC1C',
+      employees: 1000,
+      medianpay: 9000
+    },
+    {
+      text: 'R&D',
+      color: '#301058',
+      employees: 5000,
+      medianpay: 7000
+    },
+    {
+      text: 'Accounts',
+      color: '#B2101D',
+      employees: 4200,
+      medianpay: 5000
+    },
+    {
+      text: 'HR',
+      color: '#9D7A00',
+      employees: 4490,
+      medianpay: 5000
+    },
+    {
+      text: 'WebDev',
+      color: '#DB00E3',
+      employees: 4130,
+      medianpay: 8000
+    },
+    {
+      text: 'Backend',
+      color: '#0023C6',
+      employees: 3770,
+      medianpay: 8000
+    },
+    {
+      text: 'AI-ML',
+      color: '#8113B0',
+      employees: 3660,
+      medianpay: 8000
+    },
+    {
+      text: 'Robotics',
+      color: '#3A5D0F',
+      employees: 3570,
+      medianpay: 7000
+    },
+    {
+      text: 'other Workers',
+      color: '#D90015',
+      employees: 345,
+      medianpay: 3002
+    },
+    {
+      text: 'Visitings',
+      color: '#296D62',
+      employees: 348,
+      medianpay: 2000
+    }
+  ];
+
+  var cols = 40,
+    rows = 10;
+
+  var cdata = {
+    graphset: [{
+        x: 0,
+        y: 0,
+        width: 18 * cols + 40,
+        height: '100%',
+        type: 'scatter',
+        title: {
+          text: 'Department Wise EMployees Ratio'
+        },
+        plotarea: {
+          maskTolerance: [99, 99],
+          margin: '50 20 100 20'
+        },
+        legend: {
+          offsetY: 10,
+          layout: '2x5',
+          margin: 'auto auto 0 auto',
+          height: 80,
+          borderWidth: 0,
+          marker: {
+            type: 'rectangle',
+            width: 16,
+            height: 32,
+            backgroundColor: 'none',
+            borderWidth: 0
+          }
+        },
+        scaleX: {
+          visible: false
+        },
+        scaleY: {
+          mirrored: true,
+          visible: false
+        },
+        tooltip: {
+          backgroundColor: '#eee',
+          borderColor: '#333',
+          fontSize: 17,
+          padding: 20,
+          fontWeight: null,
+          thousandsSeparator: ',',
+          text: '<b>%plot-text:</b> %data-employees employees (%data-percent%)'
+        },
+        plot: {
+          animation: {
+            speed: 150,
+            effect: 1,
+            method: 0,
+            sequence: 1
+          },
+          marker: {
+            backgroundColor: 'none',
+            type: 'rectangle',
+            width: 16,
+            height: 32
+          },
+          hoverMarker: {
+            type: 'none',
+            visible: false
+          }
+        },
+        series: []
+      },
+      {
+        x: 18 * cols + 40,
+        y: 0,
+        width: 300,
+        height: '100%',
+        type: 'hbar',
+        plotarea: {
+          margin: '20 20 70 100'
+        },
+        tooltip: {
+          visible: false
+        },
+        scaleX: {
+          visible: false
+        },
+        scaleY: {
+          lineWidth: 0,
+          guide: {
+            visible: false
+          },
+          item: {
+            visible: false
+          },
+          tick: {
+            visible: false
+          },
+          label: {
+            align: 'left',
+            text: 'pay',
+            padding: 0,
+            fontSize: 15,
+            color: '#000'
+          }
+        },
+       
+        plot: {
+          animation: {
+            speed: 150,
+            effect: 4,
+            method: 0,
+            sequence: 1
+          },
+          barSpace: 0.1,
+          barsSpaceLeft: 0.1,
+          barsSpaceRight: 0.1,
+          valueBox: [{
+              placement: 'top-out',
+              rules: [{
+                rule: '%node-value > 25000',
+                placement: 'top-in',
+                color: '#fff'
+              }],
+              thousandsSeparator: ',',
+              text: '$%node-value'
+            },
+            {
+              placement: 'bottom-out',
+              text: '%plot-text',
+              color: '#000'
+            }
+          ]
+        },
+        series: []
+      }
+    ]
+  };
+
+  // calculate number of items per plot
+  var total_employees = 0;
+  for (var p = 0; p < plots.length; p++) {
+    total_employees += plots[p].employees;
+  }
+  var total_items = 0
+  for (var p = 0; p < plots.length; p++) {
+    var pc = (plots[p].employees / total_employees);
+    var items = Math.round((cols * rows) * pc);
+    if (p === plots.length - 1) {
+      // avoid rounding conflicts
+      plots[p].items = (cols * rows) - total_items;
+    } else {
+      plots[p].items = items;
+    }
+    plots[p].dataPercent = (100 * pc).toFixed(2);
+    total_items += items;
+  }
+
+  var col = 0,
+    row = 0;
+  for (var p = 0; p < plots.length; p++) {
+    cdata.graphset[1].series.push({
+      text: plots[p].text,
+      values: [plots[p].medianpay],
+      backgroundColor: plots[p].color
+    });
+    cdata.graphset[0].series.push({
+      text: plots[p].text,
+      dataPercent: plots[p].dataPercent,
+      dataEmployees: plots[p].employees,
+      tooltip: {
+        color: plots[p].color
+      },
+      marker: {
+        backgroundRepeat: 'no-repeat',
+        backgroundImage: img,
+        backgroundPosition: -p * 16 + 'px 0px'
+      },
+      legendMarker: {
+        backgroundRepeat: 'no-repeat',
+        backgroundImage: img,
+        backgroundPosition: -p * 16 + 'px 0px'
+      },
+      values: []
+    });
+    for (var n = 0; n < plots[p].items; n++) {
+      cdata.graphset[0].series[p].values.push([col, row]);
+      col++;
+      if (col === cols) {
+        col = 0;
+        row++;
+      }
+    }
+  }
+
+  zingchart.render({
+    id: 'myChart',
+    width: '100%',
+    height: '100%',
+    output: 'svg',
+    data: cdata
+  });
+</script>
+
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+   google.charts.load("current", {packages:["corechart"]});
+   google.charts.setOnLoadCallback(drawChart);
+   function drawChart() {
+     var data = google.visualization.arrayToDataTable([
+       ['Analysis', 'Count'],
+       ['New Join Employees', 12.2],
+       ['Albertosaurus (Alberta lizard)', 9.1],
+       ['Allosaurus (other lizard)', 12.2],
+       ['Apatosaurus (deceptive lizard)', 22.9],
+       ['Archaeopteryx (ancient wing)', 0.9],
+       ['Argentinosaurus (Argentina lizard)', 36.6],
+       ['Baryonyx (heavy claws)', 9.1],
+       ['Brachiosaurus (arm lizard)', 30.5],
+       ['Ceratosaurus (horned lizard)', 6.1],
+       ['Coelophysis (hollow form)', 2.7],
+       ['Compsognathus (elegant jaw)', 0.9],
+       ['Deinonychus (terrible claw)', 2.7],
+       ['Diplodocus (double beam)', 27.1],
+       ['Dromicelomimus (emu mimic)', 3.4],
+       ['Gallimimus (fowl mimic)', 5.5],
+       ['Mamenchisaurus (Mamenchi lizard)', 21.0],
+       ['Megalosaurus (big lizard)', 7.9],
+       ['Microvenator (small hunter)', 1.2],
+       ['Ornithomimus (bird mimic)', 4.6],
+       ['Oviraptor (egg robber)', 1.5],
+       ['Plateosaurus (flat lizard)', 7.9],
+       ['Sauronithoides (narrow-clawed lizard)', 2.0],
+       ['Seismosaurus (tremor lizard)', 45.7],
+       ['Spinosaurus (spiny lizard)', 12.2],
+       ['Supersaurus (super lizard)', 30.5],
+       ['Tyrannosaurus (tyrant lizard)', 15.2],
+       ['Ultrasaurus (ultra lizard)', 30.5],
+       ['Velociraptor (swift robber)', 1.8]]);
+
+     var options = {
+       title: 'Employees Analysis Counts',
+       legend: { position: 'none' },
+     };
+
+     var chart = new google.visualization.Histogram(document.getElementById('chart_div14'));
+     chart.draw(data, options);
+   }
+ </script>
+ <script>
+   var options = {
+debug: true,
+xAxis_scale: { type: 'time', range_padding: 0.07  },
+legend_visible: false,
+defaultSeries: {
+  type: 'line',
+  defaultPoint_marker: {size: 20,type: 'none' }
+},
+series: [
+  {
+    name: 'Purchases',
+    color: 'gray',
+    points: [
+      { x: '6/1/2017', y: 29  },
+      { x: '12/1/2017', y: 11 },
+      { x: '1/1/2018', y: 56  },
+      { x: '4/1/2018', y: 81  },
+      { x: '8/1/2018', y: 77 },
+      { x: '12/1/2018', y: 16 },
+      { x: '4/1/2019', y: 89 },
+      { x: '8/1/2019', y: 66  },
+      { x: '12/1/2019', y: 89  },
+      { x: '1/1/2020', y: 11  },
+      { x: '2/1/2020', y: 87 },
+      { x: '3/1/2020', y: 11  },
+      { x: '4/1/2020', y: 85  }
+    ]
+  }
+]
+};
+var ascendingStyle = {marker_type:'arrow-up',color:'green'};
+var descendingStyle = {marker_type:'arrow-down',color:'red'};
+var previousPoint;
+
+var chart = JSC.chart('chartDiviv', options,function(c){
+c.series(0).points().reverse().each(function(p,i){
+  if(previousPoint && i){
+    var isAsc = (previousPoint.options('y')>p.options('y'));
+    p.options(isAsc?ascendingStyle:descendingStyle,true);
+  }else{			p.options({marker_visible:false},true)		}
+  previousPoint = p;
+});
+});
+</script>
+<script>
+
+ var chart = JSC.chart('chartDivm',{
+  debug: true,
+  title: {
+    label_text: 'HR Analysis',
+    position: 'center'
+  },
+  legend_visible: false,
+  yAxis: [
+    {line_visible: true,scale_range: [  0,  100] },
+    {id: 'y2',line_width: 0,scale_range: [  0,  100] },
+    {id: 'y3',line_width: 0,scale_range: [  0,  100] },
+    {
+      id: 'y4',
+      line_width: 0,
+      defaultTick_gridLine_width: 1,
+      scale_range: [  0,  100]
+    }
+  ],
+  xAxis: [
+    {
+      defaultTick_gridLine_width: 0,
+      
+/*Reduces column size to pad against axis line.*/
+      spacingPercentage: 0.15
+    },
+    {
+      id: 'x2',
+      defaultTick_gridLine: {  onTop: true,  width: 3,  dashStyle: 'dot'},
+      spacingPercentage: 0.15
+    },
+    {
+      id: 'x3',
+      defaultTick_gridLine_width: 'column',
+      spacingPercentage: 0.15
+    }
+  ],
+  defaultSeries: {
+    type: 'gauge linear column roundCaps',
+    shape: {label: [  { text: '%name'  }] }
+  },
+  series: [
+    {name: 'High paid Employees',points: [  [ 'value', 25  ]] },
+    {
+      name: 'Full Time Employees',
+      yAxis: 'y2',
+      xAxis: 'x2',
+      points: [  [ 'value', 85  ]]
+    },
+    {
+      name: 'Under Training/Internship',
+      yAxis: 'y3',
+      xAxis: 'x3',
+      points: [  [ 'value', 49  ]]
+    },
+    {
+      name: 'Retired (2019-20)',
+      yAxis: 'y4',
+      points: [  [ 'value', 19  ]]
+    }
+  ]
+});</script>
+</body>
+</html>

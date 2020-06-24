@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html>
+<title>Payroll generation</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<script src="https://code.jscharting.com/latest/jscharting.js"></script>
+            <script type="text/javascript" src="https://code.jscharting.com/latest/modules/types.js"></script>
+<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    html,body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+    #i1{
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 19px;
+      text-align: center;
+      color: #006699;
+    }
+    table{
+        border: none;
+        border-collapse: collapse;
+
+    }
+    td{
+        padding: 10px;
+    }
+    tr,th{
+        padding: 10px;
+    }
+    input{
+        padding:7px;
+        margin: 2px;
+    }
+    select{
+        padding: 8px;
+    }
+    input[type=submit]{
+        border: none;
+        color:#fff;
+        padding: 10px;
+        background-color: #006699;
+    }
+    </style>
+  
+   
+    <body class="w3-light-grey">
+    
+    <!-- Top container -->
+    <div class="w3-bar w3-top" style="z-index:3;background-color: #006699">
+      <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+      <span class="w3-bar-item w3-right" style="color: #fff"><i class="fa fa-inr"></i> Salary Management</span>
+    </div>
+    
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:296px;" id="mySidebar"><br>
+      <div class="w3-container w3-row">
+        <div class="w3-col s4">
+        
+          <img src="hr1.jpg" class="w3-circle w3-margin-right" style="width:60px;">
+        </div>
+        <div class="w3-col s8 w3-bar">
+          <br>
+          <span style="font-size: 17px;"><strong>   Mr.Admin</strong></span><br>
+          <span style="font-size: 13px;"><strong>  <i class="fa fa-user-secret"></i>  Boss</strong></span><br>
+        <!--   <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a> -->
+          <br>
+        </div>
+      </div>
+      
+      <div class="w3-container">
+       
+              
+              
+              
+        <i class="fa fa-facebook-official w3-hover-opacity" id="i1"></i>
+        <i class="fa fa-instagram w3-hover-opacity" id="i1"></i>
+       <i class="fa fa-snapchat w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-twitter w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-linkedin w3-hover-opacity" id="i1"></i>
+                 
+               
+              
+              </div>
+      </div>
+      <hr>
+      <div class="w3-bar-block">
+        <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+        <a href="Admin.html" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-user fa-fw"></i>Dashboard</a>
+        <a href="Admin_personal.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-book fa-fw"></i> Personal Details</a>
+        <a href="Manage_data.html" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-users fa-fw"></i> Manage Employees Data</a>
+        <a href="Admin_attendance.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-card fa-fw"></i>  Attendence & Leaves </a>
+        <!-- <div class="w3-dropdown-hover">
+        
+          <div class="w3-dropdown-content w3-bar-block w3-border">
+            <a href="Dash_proj.html" class="w3-bar-item w3-button">Project Dashboard</a>
+            <a href="Deadline.html" class="w3-bar-item w3-button" style="background-color:#006699;color: #fff">DeadLine Notifier</a>
+            <a href="#" class="w3-bar-item w3-button">Project Report Submission</a>
+          </div> -->
+        <a href="Admin_project1.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-laptop fa-fw"></i>  Projects</a>
+        <!-- <div class="w3-dropdown-click">
+            <div class="w3-bar-item w3-button w3-padding" onclick="myFunction()" ><i class="fa fa-laptop fa-fw"></i>Projects</div>
+            <div id="Demo9" class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="Project.html" class="w3-bar-item w3-button">Your Project Details</a>
+              <a href="Dash_proj.html" class="w3-bar-item w3-button">Ongoing Project Dashboard</a>
+              <a href="Deadline.html" class="w3-bar-item w3-button">Deadline Notifier</a>
+              <a href="report_pro.html" class="w3-bar-item w3-button">Project Report Submission</a>
+            </div>
+          </div> -->
+          <a href="hr.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-male fa-fw"></i>HR Department</a>
+          <!-- <div class="w3-dropdown-click">
+            <div class="w3-bar-item w3-button w3-padding" onclick="myFunction1()"><i class="fa fa-male fa-fw"></i>  HR</div>
+            <div id="Demo10" class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="Project.html" class="w3-bar-item w3-button">HR Dashboard</a>
+              <a href="Dash_proj.html" class="w3-bar-item w3-button">Recruitment</a>
+              <a href="Deadline.html" class="w3-bar-item w3-button">Interview</a>
+              <a href="report_pro.html" class="w3-bar-item w3-button">Training</a>
+            </div>
+          </div> -->
+ 
+        <a href="Admin_Notification.html" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-bell fa-fw" ></i>  Notifications</a>
+        <a href="Admin_daily_details.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-pencil fa-fw"></i>  Daily Details & Report </a>
+        <div class="w3-dropdown-click">
+          <div class="w3-bar-item w3-button w3-padding" onclick="myFunction()" style="background-color:#006699;color: #fff"><i class="fa fa-inr fa-fw"></i>Accounting Department</div>
+          <div id="Demo" class="w3-dropdown-content w3-bar-block w3-border">
+            <a href="Accounting1.html" class="w3-bar-item w3-button" >Accounting Desk</a>
+            <a href="Admin_sal_generate.html" class="w3-bar-item w3-button" style="background-color:#333;color: #fff">Employees' Payroll Details</a>
+            <!-- <a href="Deadline.html" class="w3-bar-item w3-button">Interview</a>
+            <a href="report_pro.html" class="w3-bar-item w3-button">Training</a> -->
+          </div>
+        </div>
+        <!-- <a href="Accounting1.html" class="w3-bar-item w3-button w3-padding" style="background-color:#006699;color: #fff"><i class="fa fa-inr fa-fw"></i>  Accounting Department</a>  -->
+        <a href="client.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-money fa-fw"></i>  Client Management</a> 
+        <a href="Daily_log.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-clock-o fa-fw"></i>  Log History</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Logout</a>
+        <br><br><br>
+       
+    </nav>
+    
+    
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    <div class="w3-main" style="margin-left:300px;margin-top:43px;"><div class="w3-container w3-white w3-margin w3-padding w3-responsive">
+        <center>
+            <div class="w3-table" border="0" cellpadding="10">
+               
+            <tr valign="middle"><td width="40%">
+            
+            <form name="inputValues" id="inputValues" action="" onSubmit="return calcValues();">
+                
+            <table cellpadding="1" cellspacing="1" style="border:1px solid #ccc;width:500px;"  >
+            <tr align="center" bgcolor="#eee"><th colspan="2">Input Payroll Data Here</th></tr>
+            
+            <tr align="center"><th>Employee Name</th><td><select name="employeeName" id="employeeName" onChange="insertDefaults()"><option selected>Vipasha Vaghela</option><option>Saakshi Deasi</option><option>Charmi daftari</option><option>Charmii daftari</option></select></td></tr>
+            
+            <tr align="center"><th>YTD Gross pay (before this check)</th><td> rs.<input type="text" size="8,1" name="ytdGross" id="ytdGross" style="font-size: 14px;" value="0"></td></tr>
+            
+            <tr align="center"><th>Gross for this pay period</th><td> rs.<input type="text" size="8,1" name="currentGross" id="currentGross" style="font-size: 14px;" value="5,000" ></td></tr>
+            
+            <tr align="center"><th>Federal Withholding this period</th><td> rs.<input type="text" size="8,1" name="fedWitholding" id="fedWitholding" style="font-size: 14px;" value="375" ></td></tr>
+            
+            <tr align="center"><th>State Withholding this period</th><td> rs.<input type="text" size="8,1" name="stateWithholding" id="stateWithholding" style="font-size: 14px;" value="120"></td></tr>
+            
+            <tr align="center"><th colspan="2"><input type="submit" name="calculate" id="calculate" value="Calculate"></th></tr>
+            
+            </table>
+            </form>
+   
+            
+            
+            </td><td width="60%">
+                <br>
+            <div class="w3-responsive">
+            
+            <table border="1" cellpadding="4" cellspacing="1" style="border: 1px solid #ccc;">
+            <tr align="center" bgcolor="#eee"><th colspan="3">Withholding Details</th></tr>
+            
+            <tr align="center" bgcolor="#eee"><th></th><th>Employee</th><th>Company</th></tr>
+            
+            
+            <tr align="center"><th>Social Security Witholding</th><td align="right"> <span name="ssEmployeeAmount" id="ssEmployeeAmount" style="font-size: 14px;">  (calculate)  </span></td><td align="right"> <span name="ssCompanyAmount" id="ssCompanyAmount" style="font-size: 14px;">  (calculate)  </span></td></tr>
+            
+            <tr align="center"><th>Medicare Withholding</th><td align="right"> <span name="medicareEmployeeAmount" id="medicareEmployeeAmount" style="font-size: 14px;">  (calculate)  </span></td><td align="right"> <span name="medicareCompanyAmount" id="medicareCompanyAmount" style="font-size: 14px;">  (calculate)  </span></td></tr>
+            
+            <tr align="center"><th>Federal Unemployment</th><td bgcolor="#999999"></td><td align="right"> <span name="futaCompanyAmount" id="futaCompanyAmount" style="font-size: 14px;">  (calculate)  </span></td></tr>
+            
+            <tr align="center"><th>State Unemployment Withholding</th><td align="right"> <span name="stateUnemployEmployeeAmount" id="stateUnemployEmployeeAmount" style="font-size: 14px;">  (calculate)  </span></td><td align="right"> <span name="stateUnemployCompanyAmount" id="stateUnemployCompanyAmount" style="font-size: 14px;">  (calculate)  </span></td></tr>
+            
+            <tr align="center"><th>Federal Withholding</th><td align="right"> <span name="federalWithheldAmount" id="federalWithheldAmount" style="font-size: 14px;">  (calculate)  </span></td><td bgcolor="#999999"></td></tr>
+            
+            <tr align="center"><th>State Withholding</th><td align="right"> <span name="stateWithheldAmount" id="stateWithheldAmount" style="font-size: 14px;">  (calculate)  </span></td><td bgcolor="#999999"></td></tr>
+            
+            <tr align="center"><th>Extra Leave Withholding</th><td align="right"> <span name="local1EmployeeAmount" id="local1EmployeeAmount" style="font-size: 14px;">  (calculate)  </span></td><td align="right"> <span name="local1CompanyAmount" id="local1CompanyAmount" style="font-size: 14px;">  (calculate)  </span></td></tr>
+            
+            <tr align="center"><th>Late Arrival Withholding</th><td align="right"> <span name="local2EmployeeAmount" id="local2EmployeeAmount" style="font-size: 14px;">  (calculate)  </span></td><td align="right"> <span name="local2CompanyAmount" id="local2CompanyAmount" style="font-size: 14px;">  (calculate)  </span></td></tr>
+            
+            <tr align="center"><th>Totals</th><td align="right"  style="border: 1px solid #000;background-color: rgb(253, 130, 155);"> <span name="netPaycheckAmount" id="netPaycheckAmount" style="font-size: 14px;background-color: rgb(253, 130, 155);">  (calculate)  </span></td><td align="right"> <span name="companyTotalExpenses" id="companyTotalExpenses" style="font-size: 14px;">  (calculate)  </span></td></tr>
+            
+            <tr align="center"><td colspan="3" align="center"><i>The Total under Employee is their net paycheck</i></td></tr>
+            </center>
+            </table>
+        </div>
+            </td></tr></table>
+            </center>
+            
+            
+            
+        
+            
+            
+            
+            <h2>Tax rates</h2>
+        
+            
+            
+            
+            <center>
+            <table border="0" cellpadding="10">
+            <tr valign="middle"><td>
+            
+            <form name="taxRates" id="taxRates">
+            <table border="1" cellpadding="1" cellspacing="1" style="background-color: #fff;border: 1px solid #ccc;">
+            
+            <tr align="center" bgcolor="#eee"><th>Tax Type</th><th>Employee share</th><th>Company share</th></tr>
+            
+            <tr align="center"><th>Social Security</th><td><input type="text" size="6,1" name="ssEmployeeRate" id="ssEmployeeRate" style="font-size: 14px;" value="6.2">%</td><td><input type="text" size="6,1" name="ssCompanyRate" id="ssCompanyRate" style="font-size: 14px;" value="6.2">%</td></tr>
+            
+            <tr align="center"><th colspan="2">Social Security Max Base</th><td> $<input type="text" size="10,1" name="ssMaxBase" id="ssMaxBase" style="font-size: 14px;" value="113,700"></td></tr>
+            
+            <tr align="center"><th>Medicare</th><td><input type="text" size="6,1" name="medicareEmployeeRate" id="medicareEmployeeRate" style="font-size: 14px;" value="1.45">%</td><td><input type="text" size="6,1" name="medicareCompanyRate" id="medicareCompanyRate" style="font-size: 14px;" value="1.45">%</td></tr>
+            
+            <tr align="center"><td colspan="3"><i>All income is subject to Medicare</i></td></tr>
+            
+            <tr align="center"><th>Local tax 1</th><td><input type="text" size="6,1" name="local1EmployeeRate" id="local1EmployeeRate" style="font-size: 14px;" value="0">%</td><td><input type="text" size="6,1" name="local1CompanyRate" id="local1CompanyRate" style="font-size: 14px;" value="0">%</td></tr>
+            
+            <tr align="center"><th>Local tax 2</th><td><input type="text" size="6,1" name="local2EmployeeRate" id="local2EmployeeRate" style="font-size: 14px;" value="0">%</td><td><input type="text" size="6,1" name="local2CompanyRate" id="local2CompanyRate" style="font-size: 14px;" value="0">%</td></tr>
+            
+            
+            <tr align="center"><th colspan="2">Local Tax 1 Max Base</th><td> $<input type="text" size="10,1" name="local1MaxBase" id="local1MaxBase" style="font-size: 14px;" value="999,999"></td></tr>
+            
+            <tr align="center"><th colspan="2">Local Tax 2 Max Base</th><td> $<input type="text" size="10,1" name="local2MaxBase" id="local2MaxBase" style="font-size: 14px;" value="999,999"></td></tr>
+            </table>
+            </form>
+            </td><td>
+            
+            <form name="unemployment" id="unemployment">
+            
+            <table border="1" cellpadding="1" cellspacing="1" style="background-color: #fff;border: 1px solid #ccc;">
+            <tr align="center" bgcolor="#eee"><th colspan="2">Unemployment Tax</th></tr>
+            
+            <tr align="center"><th>Federal Threshold</th><td>First $<input type="text" size="8,1" name="futaThreshold" id="futaThreshold" style="font-size: 14px;" value="7,000"> of income</td></tr>
+            
+            <tr align="center"><th>Federal 940 Multiplier</th><td><input type="text" size="6,1" name="futaRate" id="futaRate" style="font-size: 14px;" value="0.008"></td></tr>
+            
+            <tr align="center"><th>State Threshold</th><td>First $<input type="text" size="8,1" name="stateUnemployThreshold" id="stateUnemployThreshold" style="font-size: 14px;" value="30,900"> of income</td></tr>
+            
+            <tr align="center"><th>State Company Share</th><td><input type="text" size="6,1" name="stateUnemployCompanyRate" id="stateFutaCompany" style="font-size: 14px;" value="2.000">%</td></tr>
+            
+            <tr align="center"><th>State Employee Share</th><td><input type="text" size="6,1" name="stateUnemployEmployeeRate" id="stateFutaEmployee" style="font-size: 14px;" value="0.985">%</td></tr>
+            
+            </table>
+            </form>
+            </td></tr></table>
+            
+            </center>
+            
+            
+
+<br><br></div></div>
+  
+<script>
+  function myFunction() {
+    var x = document.getElementById("Demo");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+  </script>
+  
+ 
+<script>
+    // Get the Sidebar
+    var mySidebar = document.getElementById("mySidebar");
+    
+    // Get the DIV with overlay effect
+    var overlayBg = document.getElementById("myOverlay");
+    
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+    function w3_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+      } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+      }
+    }
+    
+    // Close the sidebar with the close button
+    function w3_close() {
+      mySidebar.style.display = "none";
+      overlayBg.style.display = "none";
+    }
+    </script>
+
+
+<script language="JavaScript">
+
+	
+	// You can store default values for the employee input table here.
+	// The order of this list should be the same as the order of the employee name list in the Input table.
+	// Each line holds an employee's Gross Pay, Federal Withholding, State Withholding in order.  Do not use $ or ,'s.
+	// If you have more employees, clone the last line and increment the number, e.g. employeeTable[3] = new Array ....
+	
+	var employeeTable = new Array();
+	
+	employeeTable[0] = new Array (5000,375,120);
+	employeeTable[1] = new Array (3000,200,87.54);
+	employeeTable[2] = new Array (1800,75.00,38.42);
+  employeeTable[3] = new Array (1800,75.00,38.42);
+	
+	// It is recommended that you not try to edit the remainder of this JavaScript...
+	
+function calcValues() {
+
+	// Notice how we use a function to strip out non-numeric characters rather then prohibit their entry.
+	// We really really really hate web sites that tell you not to enter spaces, dashes, commas etc for
+	// no reason other than programmer laziness or incompetence.
+	
+	// Get the YTD Earnings, Gross pay this period, and SS Max Base
+	var grossPayYtd = parseFloat(stripAlphaChars(document.inputValues.ytdGross.value));
+	var grossPayThisPeriod = parseFloat(stripAlphaChars(document.inputValues.currentGross.value));
+	var ssMaxBase = parseFloat(stripAlphaChars(document.taxRates.ssMaxBase.value));
+	
+	
+	// Social Security
+	
+		// read in rates
+			var ssCompanyRate = parseFloat(stripAlphaChars(document.taxRates.ssCompanyRate.value));
+			var ssEmployeeRate = parseFloat(stripAlphaChars(document.taxRates.ssEmployeeRate.value));
+	
+		// Look at the SS Max Base and decide what amount of this is taxable
+			var ssTaxableAmount = grossPayThisPeriod;
+			var newYtdGross =  grossPayYtd + grossPayThisPeriod;
+			if (newYtdGross >= ssMaxBase) {ssTaxableAmount = Math.max((ssMaxBase - grossPayYtd), 0);}
+			
+		// Calculate and insert company and employer SS expense
+			var ssEmployeeAmount = ssTaxableAmount * ssEmployeeRate/100;
+			var ssCompanyAmount = ssTaxableAmount * ssCompanyRate/100;
+			document.getElementById('ssEmployeeAmount').innerText = formatCurrency(ssEmployeeAmount);
+			document.getElementById('ssCompanyAmount').innerText = formatCurrency(ssCompanyAmount);
+
+
+	// Medicare
+
+		// Calculate and insert Company Medicare expense
+			var medicareCompanyRate = parseFloat(stripAlphaChars(document.taxRates.medicareCompanyRate.value));
+			var medicareCompanyAmount = grossPayThisPeriod * medicareCompanyRate/100;
+			document.getElementById('medicareCompanyAmount').innerText = formatCurrency(medicareCompanyAmount);
+	
+		// Calculate and insert employee Medicare expense
+			var medicareEmployeeRate = parseFloat(stripAlphaChars(document.taxRates.medicareEmployeeRate.value));
+			var medicareEmployeeAmount = grossPayThisPeriod * medicareEmployeeRate/100;
+			document.getElementById('medicareEmployeeAmount').innerText = formatCurrency(medicareEmployeeAmount);
+	
+	// Federal Unemployment
+	
+			var futaRate = parseFloat(stripAlphaChars(document.unemployment.futaRate.value));
+			var futaThreshold = parseFloat(stripAlphaChars(document.unemployment.futaThreshold.value));
+		
+		// Find out if the amount exceeds the FUTA threshold and insert result
+			var futaTaxableAmount = grossPayThisPeriod;
+			if (newYtdGross >= futaThreshold) {futaTaxableAmount = Math.max((futaThreshold - grossPayYtd), 0);}
+		 	var futaCompanyAmount = futaTaxableAmount * futaRate;
+		 	document.getElementById('futaCompanyAmount').innerText = formatCurrency(futaCompanyAmount);
+
+
+	// State Unemployment
+			var stateUnemployCompanyRate = parseFloat(stripAlphaChars(document.unemployment.stateFutaCompany.value));
+			var stateUnemployEmployeeRate = parseFloat(stripAlphaChars(document.unemployment.stateFutaEmployee.value));
+			var stateUnemployThreshold = parseFloat(stripAlphaChars(document.unemployment.stateUnemployThreshold.value));
+
+		// Find out if this exceeds the State Unemployment threshold and insert result
+			var stateUnemployTaxableAmount = grossPayThisPeriod;
+			if (newYtdGross >= stateUnemployThreshold) {stateUnemployTaxableAmount = Math.max((stateUnemployThreshold - grossPayYtd), 0);}
+			var stateUnemployEmployeeAmount = stateUnemployTaxableAmount * stateUnemployEmployeeRate/100;
+			document.getElementById('stateUnemployEmployeeAmount').innerText = formatCurrency(stateUnemployEmployeeAmount);
+			var stateUnemployCompanyAmount = stateUnemployTaxableAmount * stateUnemployCompanyRate/100;
+			document.getElementById('stateUnemployCompanyAmount').innerText = formatCurrency(stateUnemployCompanyAmount);
+
+
+	// State and Federal Withholding
+			var stateWithheldAmount = parseFloat(stripAlphaChars(document.inputValues.stateWithholding.value));
+			var federalWithheldAmount = parseFloat(stripAlphaChars(document.inputValues.fedWitholding.value));
+			document.getElementById('stateWithheldAmount').innerText = formatCurrency(stateWithheldAmount);
+			document.getElementById('federalWithheldAmount').innerText = formatCurrency(federalWithheldAmount);
+	
+
+	// Local 1 Withholding
+			var local1CompanyRate = parseFloat(stripAlphaChars(document.taxRates.local1CompanyRate.value));
+			var local1EmployeeRate = parseFloat(stripAlphaChars(document.taxRates.local1EmployeeRate.value));
+			var local1Threshold = parseFloat(stripAlphaChars(document.taxRates.local1MaxBase.value));
+
+		// Find out if this exceeds the salary threshold and insert result
+			var local1TaxableAmount = grossPayThisPeriod;
+			if (newYtdGross >= local1Threshold) {local1TaxableAmount = Math.max((local1Threshold - grossPayYtd), 0);}
+			var local1EmployeeAmount = local1TaxableAmount * local1EmployeeRate/100;
+			document.getElementById('local1EmployeeAmount').innerText = formatCurrency(local1EmployeeAmount);
+			var local1CompanyAmount = local1TaxableAmount * local1CompanyRate/100;
+			document.getElementById('local1CompanyAmount').innerText = formatCurrency(local1CompanyAmount);
+	
+	
+	// Local 2 Withholding
+			var local2CompanyRate = parseFloat(stripAlphaChars(document.taxRates.local2CompanyRate.value));
+			var local2EmployeeRate = parseFloat(stripAlphaChars(document.taxRates.local2EmployeeRate.value));
+			var local2Threshold = parseFloat(stripAlphaChars(document.taxRates.local2MaxBase.value));
+
+		// Find out if this exceeds the salary threshold and insert result
+			var local2TaxableAmount = grossPayThisPeriod;
+			if (newYtdGross >= local2Threshold) {local2TaxableAmount = Math.max((local2Threshold - grossPayYtd), 0);}
+				var local2EmployeeAmount = local2TaxableAmount * local2EmployeeRate/100;
+			document.getElementById('local2EmployeeAmount').innerText = formatCurrency(local2EmployeeAmount);
+			var local2CompanyAmount = local2TaxableAmount * local2CompanyRate/100;
+			document.getElementById('local2CompanyAmount').innerText = formatCurrency(local2CompanyAmount);
+
+
+
+	// Net paycheck - does not include Company items!
+			var netPaycheckAmount = grossPayThisPeriod - ssEmployeeAmount - medicareEmployeeAmount - stateUnemployEmployeeAmount - stateWithheldAmount - federalWithheldAmount - local1EmployeeAmount - local2EmployeeAmount;
+			document.getElementById('netPaycheckAmount').innerText = formatCurrency(netPaycheckAmount);
+
+	
+	// Company total expense - does not include Employee items!
+			var companyTotalExpenses = ssCompanyAmount + medicareCompanyAmount + futaCompanyAmount + local1CompanyAmount + local2CompanyAmount;
+			document.getElementById('companyTotalExpenses').innerText = formatCurrency(companyTotalExpenses);
+
+	return false;
+}
+
+
+function insertDefaults() {
+	// Use the arrays at the top of this script to enter default amounts for various employees
+	// This function will insert those when the Employee Name is changed
+	
+	var employeeNumber = document.getElementById('employeeName').selectedIndex;
+	document.getElementById('currentGross').value=employeeTable[employeeNumber][0];
+	document.getElementById('fedWitholding').value=employeeTable[employeeNumber][1];
+	document.getElementById('stateWithholding').value=employeeTable[employeeNumber][2];
+	return false;
+
+}
+
+	
+function stripAlphaChars(thisString) {
+
+	// This little guy is here so we don't have to nag people about commas, $ or other non-numerals
+	// Don't you hate web sites that tell you not to enter credit card numbers with dashes or spaces???
+	
+	var stripMe = new String(thisString);
+	stripMe = stripMe.replace(/[^0-9\.]/g, '');
+	return stripMe; 
+}
+
+
+function formatCurrency(num) {
+
+	// found all kinds of versions of this on the web, but it's not clear who to rightfully attribute it to.
+	num = num.toString();
+	if(isNaN(num))
+	num = "0";
+	sign = (num == (num = Math.abs(num)));
+	num = Math.floor(num*100+0.50000000001);
+	cents = num%100;
+	num = Math.floor(num/100).toString();
+	if(cents<10)
+	cents = "0" + cents;
+	for (var i = 0; i < Math.floor((num.length-(1+i))/3); i++)
+	num = num.substring(0,num.length-(4*i+3))+','+
+	num.substring(num.length-(4*i+3));
+	return (((sign)?'':'-') + ' rs' + num + '.' + cents);
+}
+	
+	
+// -->
+</script>
+</body>
+</html>

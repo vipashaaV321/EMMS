@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<title>Project Deadlines</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    html,body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+    #i1{
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 19px;
+      text-align: center;
+      color: #006699;
+    }
+    </style>
+  
+   
+    <body class="w3-light-grey">
+    
+    <!-- Top container -->
+    <div class="w3-bar w3-top" style="z-index:3;background-color: #006699">
+      <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+      <span class="w3-bar-item w3-right" style="color: #fff">Projects' Deadline</span>
+    </div>
+    
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:296px;" id="mySidebar"><br>
+      <div class="w3-container w3-row">
+        <div class="w3-col s4">
+        
+          <img src="vips.png" class="w3-circle w3-margin-right" style="width:67px;">
+        </div>
+        <div class="w3-col s8 w3-bar">
+          <br>
+          <span style="font-size: 17px;"><strong>   Vipasha Vaghela</strong></span><br>
+          <span style="font-size: 13px;"><strong>  <i class="fa fa-laptop"></i> Front-End Developer</strong></span><br>
+        <!--   <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a> -->
+          <br>
+        </div>
+      </div>
+      
+      <div class="w3-container">
+       
+              
+              
+              
+        <i class="fa fa-facebook-official w3-hover-opacity" id="i1"></i>
+        <i class="fa fa-instagram w3-hover-opacity" id="i1"></i>
+       <i class="fa fa-snapchat w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-twitter w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-linkedin w3-hover-opacity" id="i1"></i>
+                 
+               
+              
+              </div>
+      </div>
+      <hr>
+      <div class="w3-bar-block">
+        <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+        <a href="dashb.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw"></i>Dashboard</a>
+        <a href="personal.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-book fa-fw"></i> Personal Details</a>
+        <a href="Attendance1.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-card fa-fw"></i>  Attendence & Leaves </a>
+        <!-- <div class="w3-dropdown-hover">
+          <a href="Project.html" class="w3-bar-item w3-button w3-padding" style="background-color:#006699;color: #fff"><i class="fa fa-laptop fa-fw"></i>Projects</a>
+          <div class="w3-dropdown-content w3-bar-block w3-border">
+            <a href="Dash_proj.html" class="w3-bar-item w3-button">Project Dashboard</a>
+            <a href="Deadline.html" class="w3-bar-item w3-button" style="background-color:#006699;color: #fff">DeadLine Notifier</a>
+            <a href="#" class="w3-bar-item w3-button">Project Report Submission</a>
+          </div> -->
+        <!-- <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-laptop fa-fw"></i>  Projects</a> -->
+        <div class="w3-dropdown-click">
+            <div class="w3-bar-item w3-button w3-padding" onclick="myFunction()" style="background-color:#006699;color: #fff"><i class="fa fa-laptop fa-fw"></i>Projects</div>
+            <div id="Demo9" class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="Dash_proj.html" class="w3-bar-item w3-button">Your Project Dashboard</a>
+              <a href="Project.html" class="w3-bar-item w3-button">meeting details</a>
+              <a href="Deadline.html" class="w3-bar-item w3-button" style="background-color:#333;color: #fff">Deadline Notifier</a>
+              <a href="report_pro.html" class="w3-bar-item w3-button">Project Report Submission</a>
+              <a href="Team_leader_task_assign.html" class="w3-bar-item w3-button">Team Leader's Desk</a>
+            </div>
+          </div>
+        
+        <a href="Achievements.html" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-trophy fa-fw"></i> Achievements</a>
+        <a href="Notification.html" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-bell fa-fw" ></i>  Notifications</a>
+        <a href="Emp_Daily_report.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-pencil fa-fw"></i>  Daily Schedule & Report </a>
+        <a href="Payrol.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-inr fa-fw"></i>  Payroll Details</a> 
+        <a href="Emp_Training.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-book fa-fw"></i>  Training Details</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Logout</a>
+        <br><br><br>
+       
+    </nav>
+    
+    
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    <div class="w3-main" style="margin-left:300px;margin-top:43px;">
+<br>
+<div id="010" class="w3-container w3-display-container w3-border w3-border-green w3-pale-green w3-bottombar  w3-margin w3-padding">
+    <span onclick="this.parentElement.style.display='none'"
+    class="w3-button  w3-display-topright w3-border-right ">&times;</span>
+    <h5> A new project Assign to you <br>Project_id:01</h5>
+    <h5>Check Notifications for more Information</h5>
+   
+  </div>
+  <div id="01" class="w3-container w3-display-container w3-border w3-border-blue w3-pale-blue w3-bottombar  w3-margin w3-padding">
+    <span onclick="this.parentElement.style.display='none'"
+    class="w3-button  w3-display-topright w3-border-right ">&times;</span>
+    <h5>Project_id:01</h5>
+    <h5>DeadLine:20/10/2020</h5>
+    <p>
+      <div id="div1" class="fa" style="font-size:45px;color: #000;"></div></p>
+   <h3 id="demo"></h3>
+  </div>
+  <div id="02" class="w3-container w3-display-container w3-border w3-border-yellow w3-pale-yellow w3-bottombar  w3-margin w3-padding">
+    <span onclick="this.parentElement.style.display='none'"
+    class="w3-button  w3-display-topright ">&times;</span>
+    <h6>Project_id:02</h6>
+    <h6>DeadLine:21/04/2020</h6>
+    <h5>Danger!! Your Deadline Comes soon!!</h5>
+    <div id="div2" class="fa" style="font-size:45px;color: #000;"></div></p>
+   <h3 id="demo1"></h3>
+  </div>
+  <div id="03" class="w3-container w3-display-container w3-border w3-border-red w3-pale-red w3-bottombar  w3-margin w3-padding">
+    <span onclick="this.parentElement.style.display='none'"
+    class="w3-button  w3-display-topright ">&times;</span>
+    <h6>Project_id:03</h6>
+    <h6>DeadLine:19/03/2020</h6>
+   
+   <h5 id="demo2"></h5>
+  </div>
+</div>
+  <script>
+  // Set the date we're counting down to
+  var countDownDate1 = new Date("Apr 21, 2020 15:37:25").getTime();
+  
+  // Update the count down every 1 second
+  var x1 = setInterval(function() {
+  
+    // Get today's date and time
+    var now1 = new Date().getTime();
+  
+    // Find the distance between now and the count down date
+    var distance1 = countDownDate1 - now1;
+  
+    // Time calculations for days, hours, minutes and seconds
+    var days1 = Math.floor(distance1 / (1000 * 60 * 60 * 24));
+    var hours1 = Math.floor((distance1 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes1 = Math.floor((distance1 % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds1 = Math.floor((distance1 % (1000 * 60)) / 1000);
+  
+    // Display the result in the element with id="demo"
+    document.getElementById("demo1").innerHTML = days1 + "d " + hours1 + "h "
+    + minutes1 + "m " + seconds1 + "s "+"Left";
+  
+    // If the count down is finished, write some text 
+    if (distance1 < 0) {
+      clearInterval(x1);
+      document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+  }, 1000);
+  </script>
+  <script>
+  // Set the date we're counting down to
+  var countDownDate = new Date("Oct 20, 2020 15:37:25").getTime();
+  
+  // Update the count down every 1 second
+  var x = setInterval(function() {
+  
+    // Get today's date and time
+    var now = new Date().getTime();
+  
+    // Find the distance between now and the count down date
+    var distance = countDownDate - now;
+  
+    // Time calculations for days, hours, minutes and seconds
+    var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+    var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  
+    // Display the result in the element with id="demo"
+    document.getElementById("demo").innerHTML = days + "d " + hours + "h "
+    + minutes + "m " + seconds + "s ";
+  
+    // If the count down is finished, write some text 
+    if (distance < 0) {
+      clearInterval(x);
+      document.getElementById("demo").innerHTML = "EXPIRED";
+    }
+  }, 1000);
+  </script>
+  <script>
+  // Set the date we're counting down to
+  var countDownDate2 = new Date("Mar 19, 2020 15:37:25").getTime();
+  
+  // Update the count down every 1 second
+  var x2 = setInterval(function() {
+  
+    // Get today's date and time
+    var now2 = new Date().getTime();
+  
+    // Find the distance between now and the count down date
+    var distance2 = countDownDate2 - now2;
+  
+    // Time calculations for days, hours, minutes and seconds
+    var days2 = Math.floor(distance2 / (1000 * 60 * 60 * 24));
+    var hours2 = Math.floor((distance2 % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    var minutes2 = Math.floor((distance2 % (1000 * 60 * 60)) / (1000 * 60));
+    var seconds2 = Math.floor((distance2 % (1000 * 60)) / 1000);
+  
+    // Display the result in the element with id="demo"
+    document.getElementById("demo2").innerHTML = days2 + "d " + hours2 + "h "
+    + minutes2 + "m " + seconds2 + "s ";
+  
+    // If the count down is finished, write some text 
+    if (distance2 < 0) {
+      clearInterval(x2);
+      document.getElementById("demo2").innerHTML = "Your Deadline is EXPIRED!! You Missed It!!";
+    }
+  }, 1000);
+  </script>
+  
+  
+  
+ 
+<script>
+    // Get the Sidebar
+    var mySidebar = document.getElementById("mySidebar");
+    
+    // Get the DIV with overlay effect
+    var overlayBg = document.getElementById("myOverlay");
+    
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+    function w3_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+      } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+      }
+    }
+    
+    // Close the sidebar with the close button
+    function w3_close() {
+      mySidebar.style.display = "none";
+      overlayBg.style.display = "none";
+    }
+    </script>
+     <script>
+        function myFunction() {
+          var x = document.getElementById("Demo9");
+          if (x.className.indexOf("w3-show") == -1) {
+            x.className += " w3-show";
+          } else { 
+            x.className = x.className.replace(" w3-show", "");
+          }
+        }
+        </script>
+         <script>
+          function hourglass() {
+            var a;
+            a = document.getElementById("div1");
+            a.innerHTML = "&#xf251;";
+            setTimeout(function () {
+                a.innerHTML = "&#xf252;";
+              }, 1000);
+            setTimeout(function () {
+                a.innerHTML = "&#xf253;";
+              }, 2000);
+          }
+          hourglass();
+          setInterval(hourglass, 3000);
+          </script>
+           <script>
+            function hourglass() {
+              var a;
+              a = document.getElementById("div2");
+              a.innerHTML = "&#xf251;";
+              setTimeout(function () {
+                  a.innerHTML = "&#xf252;";
+                }, 1000);
+              setTimeout(function () {
+                  a.innerHTML = "&#xf253;";
+                }, 2000);
+            }
+            hourglass();
+            setInterval(hourglass, 3000);
+            </script>
+</body>
+</html>

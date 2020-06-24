@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html>
+<title>Attendence & leave Dashboard</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+<style>
+  .zc-body {
+    background: #ecf2f6;
+  }
+
+  .chart--container {
+    height: 100%;
+    width: 100%;
+    min-height: 530px;
+  }
+
+  .zc-ref {
+    display: none;
+  }
+
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+#i1{
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+  text-align: center;
+  color: #006699;
+}
+</style>
+<body class="w3-light-grey">
+
+<!-- Top container -->
+<div class="w3-bar w3-top" style="z-index:3;background-color: #006699">
+  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+  <span class="w3-bar-item w3-right" style="color: #fff">Attendence & Leave dashboard</span>
+</div>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container w3-row">
+    <div class="w3-col s4">
+      <img src="vips.png" class="w3-circle w3-margin-right" style="width:80px;">
+    </div>
+    <div class="w3-col s8 w3-bar">
+      <br>
+      <span style="font-size: 20px;"><strong>   Vipasha Vaghela</strong></span><br>
+      <span style="font-size: 15px;"><strong>  <i class="fa fa-laptop"></i> Front-End Developer</strong></span><br>
+    <!--   <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a> -->
+      <br><br>
+    </div>
+  </div>
+  
+  <div class="w3-container">
+   
+          
+          
+          
+    <i class="fa fa-facebook-official w3-hover-opacity" id="i1"></i>
+    <i class="fa fa-instagram w3-hover-opacity" id="i1"></i>
+   <i class="fa fa-snapchat w3-hover-opacity" id="i1"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity" id="i1"></i>
+  <i class="fa fa-twitter w3-hover-opacity" id="i1"></i>
+  <i class="fa fa-linkedin w3-hover-opacity" id="i1"></i>
+             
+           
+          
+          </div>
+  </div>
+  <hr>
+  <div class="w3-bar-block">
+    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+    <a href="dashb.html" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-user fa-fw"></i>Dashboard</a>
+    <a href="personal.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-book fa-fw"></i> Personal Details</a>
+    <div class="w3-dropdown-hover">
+      <a href="#" class="w3-bar-item w3-button w3-padding" style="background-color:#006699;color: #fff"><i class="fa fa-address-card fa-fw"></i>  Attendence & Leaves </a>
+      <div class="w3-dropdown-content w3-bar-block w3-border">
+        <a href="Attendance1.html" class="w3-bar-item w3-button" style="background-color:#566369;color: #fff">Attendence & Leave dashboard</a>
+        <a href="leave_app.html" class="w3-bar-item w3-button">Leave Applications</a>
+        <a href="Checkin-out.html" class="w3-bar-item w3-button">Check_in & CheckOut</a>
+      </div>
+    </div>
+   
+    <a href="Dash_proj.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-laptop fa-fw"></i>  Projects</a>
+     
+    <a href="Achievements.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-trophy fa-fw"></i> Achievements</a>
+    <a href="Notification.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i>  Notifications</a>
+    <a href="Emp_Daily_report.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-pencil fa-fw"></i>  Daily Schedule & Report </a>
+    <a href="Payrol.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-inr fa-fw"></i>  Payroll Details</a>
+    <a href="Emp_Training.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-book fa-fw"></i>  Training Details</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Logout</a><br><br>
+  </div>
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px;margin-top:43px;">
+  <div class="w3-row-padding w3-margin-bottom">
+    <div class="w3-quarter">
+      <div class="w3-container w3-red w3-padding-16">
+        <div class="w3-left"><i class="fa fa-edit w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <h3>3</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>Leave Balance</h4>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-blue w3-padding-16">
+        <div class="w3-left"><i class="fa fa-clock-o w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <h3>37</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>Leave Hours</h4>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-teal w3-padding-16">
+        <div class="w3-left"><i class="fa fa-percent w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <h3>97</h3>
+        </div>
+        <div class="w3-clear"></div>
+
+        <h4>Attendence</h4>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-orange w3-text-white w3-padding-16">
+        <div class="w3-left"><i class="fa fa-clock-o w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <h3>125</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>Total Working Hours</h4>
+      </div>
+    </div>
+  </div>
+  <div id="myChart" class="chart--container">
+    
+  </div>
+  <div class="w3-panel">
+    <div class="w3-row-padding" style="margin:0 -16px;">
+      <div class="w3-half">
+        <br>
+        <div id="chart_div" style="width: 100%; height: 400px;"></div>
+        <!-- <h5>Regions</h5>
+        <img src="pic1.jpg" style="width:100%" alt="Google Regional Map"> -->
+      </div>
+      <div class="w3-half">
+        <br>
+        <div id="chart_div3" style="width: 100%; height: 400px;"></div>
+        </div>
+      
+        </div>
+        </div>
+        </div>
+   </div>
+   <script>
+    // Get the Sidebar
+    var mySidebar = document.getElementById("mySidebar");
+    
+    // Get the DIV with overlay effect
+    var overlayBg = document.getElementById("myOverlay");
+    
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+    function w3_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+      } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+      }
+    }
+    
+    // Close the sidebar with the close button
+    function w3_close() {
+      mySidebar.style.display = "none";
+      overlayBg.style.display = "none";
+    }
+    </script>
+     <script>
+      ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+      let chartConfig = {
+        backgroundColor: '#ecf2f6',
+        graphset: [{
+            type: 'bar',
+            backgroundColor: '#fff',
+            borderWidth: '1px',
+            borderColor: '#dae5ec',
+            width: '96%',
+            height: '30%',
+            x: '2%',
+            y: '3%',
+            title: {
+              text: '% Attendance',
+              marginTop: '7px',
+              marginLeft: '13px',
+              backgroundColor: 'none',
+              fontColor: '#707d94',
+              fontFamily: 'raleway',
+              fontSize: '15px',
+              fontWeight: 'bold',
+              shadow: false,
+              textAlign: 'left'
+            },
+            plot: {
+              tooltip: {
+                padding: '5px 10px',
+                backgroundColor: '#707e94',
+                borderRadius: '6px',
+                fontColor: '#fff',
+                fontFamily: 'Arial',
+                fontSize: '11px',
+                shadow: false
+              },
+              animation: {
+                delay: 500,
+                effect: 'ANIMATION_SLIDE_BOTTOM'
+              },
+              barWidth: '33px',
+              hoverState: {
+                visible: false
+              }
+            },
+            plotarea: {
+              margin: '45px 20px 38px 45px'
+            },
+            scaleX: {
+              values: ['jan', 'feb', 'mar', 'apr', 'may', 'jun','jul','aug','sep','oct','nov','dec'],
+              guide: {
+                visible: false
+              },
+              item: {
+                paddingTop: '2px',
+                fontColor: '#8391a5',
+                fontFamily: 'Arial',
+                fontSize: '11px'
+              },
+              itemsOverlap: true,
+              lineColor: '#d2dae2',
+              maxItems: 100,
+              offsetY: '1px',
+              tick: {
+                lineColor: '#d2dae2',
+                visible: false
+              }
+            },
+            scaleY: {
+              values: '0:100:50',
+              guide: {
+                rules: [{
+                    lineWidth: '0px',
+                    rule: '%i == 0'
+                  },
+                  {
+                    alpha: 0.4,
+                    lineColor: '#d2dae2',
+                    lineStyle: 'solid',
+                    lineWidth: '1px',
+                    rule: '%i > 0'
+                  }
+                ]
+              },
+              item: {
+                paddingRight: '5px',
+                fontColor: '#8391a5',
+                fontFamily: 'Arial',
+                fontSize: '10px'
+              },
+              lineColor: 'none',
+              maxItems: 4,
+              maxTicks: 4,
+              tick: {
+                visible: false
+              }
+            },
+            series: [{
+              values: [90, 95, 73, 91, 85, 95, 62, 95,99,98,97,86],
+              styles: [{
+                  backgroundColor: '#4dbac0'
+                },
+                {
+                  backgroundColor: '#25a6f7'
+                },
+                {
+                  backgroundColor: '#ad6bae'
+                },
+                {
+                  backgroundColor: '#707d94'
+                },
+                {
+                  backgroundColor: '#f3950d'
+                },
+                {
+                  backgroundColor: '#e62163'
+                },
+                {
+                  backgroundColor: '#4e74c0'
+                },
+                {
+                  backgroundColor: '#9dc012'
+                },
+                {
+                  backgroundColor:'#006699'
+                },
+                {
+                  backgroundColor:'#ccc'
+                }
+              ]
+            }]
+          },
+          {
+            type: 'hbar',
+            backgroundColor: '#fff',
+            borderColor: '#dae5ec',
+            borderWidth: '1px',
+            width: '30%',
+            height: '63%',
+            x: '2%',
+            y: '35.2%',
+            title: {
+              text: 'Leave Balance',
+              marginTop: '7px',
+              marginLeft: '9px',
+              backgroundColor: 'none',
+              fontColor: '#707d94',
+              fontFamily: 'raleway',
+              fontSize: '15px',
+              shadow: false,
+              textAlign: 'left'
+            },
+            scaleY: {
+              guide: {
+                visible: false
+              },
+              item: {
+                visible: false
+              },
+              lineColor: 'none',
+              tick: {
+                visible: false
+              }
+            },
+            scaleX: {
+              values: ['DA', 'PA', 'CL', 'SL', 'AL', 'HL'],
+              guide: {
+                visible: false
+              },
+              item: {
+                paddingBottom: '8px',
+                fontColor: '#8391a5',
+                fontFamily: 'Arial',
+                fontSize: '11px',
+                offsetX: '206px',
+                offsetY: '-12px',
+                textAlign: 'left',
+                width: '200px'
+              },
+              lineColor: 'none',
+              tick: {
+                visible: false
+              }
+            },
+            plot: {
+              tooltip: {
+                padding: '5px 10px',
+                backgroundColor: '#707e94',
+                borderRadius: '6px',
+                fontColor: '#ffffff',
+                fontFamily: 'Arial',
+                fontSize: '11px',
+                shadow: false
+              },
+              animation: {
+                delay: 500,
+                effect: 'ANIMATION_EXPAND_LEFT'
+              },
+              barsOverlap: '100%',
+              barWidth: '12px',
+              hoverState: {
+                backgroundColor: '#707e94'
+              },
+              thousandsSeparator: ','
+            },
+            plotarea: {
+              margin: '50px 15px 10px 15px'
+            },
+            series: [{
+                values: [2, 1, 1, 1, 2, 3],
+                styles: [{
+                    backgroundColor: '#4dbac0'
+                  },
+                  {
+                    backgroundColor: '#FF0000'
+                  },
+                  {
+                    backgroundColor: '#F7D358'
+                  },
+                  {
+                    backgroundColor: '#B4045F'
+                  },
+                  {
+                    backgroundColor: '#9A2EFE'
+                  },
+                  {
+                    backgroundColor: '#0404B4'
+                  }
+                ],
+                tooltipText: '%node-value',
+                zIndex: 2
+              },
+              {
+                values: [5, 5, 5, 5, 5, 5],
+                valueBox: {
+                  text: '%data-rvalues',
+                  paddingBottom: '8px',
+                  fontColor: '#8391a5',
+                  fontFamily: 'Arial',
+                  fontSize: '11px',
+                  offsetX: '-54px',
+                  offsetY: '-12px',
+                  textAlign: 'right',
+                  visible: true
+                },
+                backgroundColor: '#d9e4eb',
+                dataRvalues: [2, 1, 1, 1, 2, 3],
+                maxTrackers: 0,
+                zIndex: 1
+              }
+            ]
+          },
+          {
+            type: 'line',
+            backgroundColor: '#fff',
+            borderColor: '#dae5ec',
+            borderWidth: '1px',
+            width: '64%',
+            height: '63%',
+            x: '34%',
+            y: '35.2%',
+            title: {
+              text: '',
+              marginTop: '7px',
+              marginLeft: '12px',
+              backgroundColor: 'none',
+              fontColor: '#707d94',
+              fontFamily: 'Arial',
+              fontSize: '11px',
+              shadow: false,
+              textAlign: 'left'
+            },
+            plot: {
+              animation: {
+                delay: 500,
+                effect: 'ANIMATION_SLIDE_LEFT'
+              }
+            },
+            plotarea: {
+              margin: '50px 25px 70px 46px'
+            },
+            scaleY: {
+              values: '0:100:25',
+              guide: {
+                alpha: 0.5,
+                lineColor: '#d2dae2',
+                lineStyle: 'solid',
+                lineWidth: '1px'
+              },
+              item: {
+                paddingRight: '5px',
+                fontColor: '#8391a5',
+                fontFamily: 'Arial',
+                fontSize: '10px'
+              },
+              lineColor: 'none',
+              tick: {
+                visible: false
+              }
+            },
+            scaleX: {
+              values: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
+              guide: {
+                visible: false
+              },
+              item: {
+                paddingTop: '5px',
+                fontColor: '#8391a5',
+                fontFamily: 'Arial',
+                fontSize: '10px'
+              },
+              lineColor: '#d2dae2',
+              lineWidth: '2px',
+              tick: {
+                lineColor: '#d2dae2',
+                lineWidth: '1px'
+              }
+            },
+            legend: {
+              margin: 'auto auto 15 auto',
+              backgroundColor: 'none',
+              borderWidth: '0px',
+              item: {
+                margin: '0px',
+                padding: '0px',
+                fontColor: '#707d94',
+                fontFamily: 'Arial',
+                fontSize: '9px'
+              },
+              layout: 'x4',
+              marker: {
+                type: 'match',
+                padding: '3px',
+                fontFamily: 'Arial',
+                fontSize: '10px',
+                lineWidth: '2px',
+                showLine: 'true',
+                size: 4
+              },
+              shadow: false
+            },
+            scaleLabel: {
+              padding: '5px 10px',
+              backgroundColor: '#707d94',
+              borderRadius: '5px',
+              fontColor: '#ffffff',
+              fontFamily: 'Arial',
+              fontSize: '10px'
+            },
+            crosshairX: {
+              lineColor: '#707d94',
+              lineWidth: '1px',
+              plotLabel: {
+                padding: '5px 10px',
+                alpha: 1,
+                borderRadius: '5px',
+                fontColor: '#000',
+                fontFamily: 'Arial',
+                fontSize: '10px',
+                shadow: false
+              }
+            },
+            tooltip: {
+              visible: false
+            },
+            series: [{
+                text: 'half Leave %',
+                values: [69, 68, 54, 48, 70, 74, 98, 70, 72, 68, 49, 69],
+                lineColor: '#4dbac0',
+                lineWidth: '2px',
+                marker: {
+                  backgroundColor: '#fff',
+                  borderColor: '#36a2a8',
+                  borderWidth: '1px',
+                  shadow: false,
+                  size: 3
+                },
+                palette: 0,
+                shadow: false
+              },
+              {
+                text: 'overtime hours %',
+                values: [51, 53, 47, 60, 48, 52, 75, 52, 55, 47, 60, 48],
+                lineColor: '#25a6f7',
+                lineWidth: '2px',
+                marker: {
+                  backgroundColor: '#fff',
+                  borderColor: '#1993e0',
+                  borderWidth: '1px',
+                  shadow: false,
+                  size: 3
+                },
+                palette: 1,
+                shadow: false,
+                visible: true
+              },
+              {
+                text: 'Project Meetings',
+                values: [42, 43, 30, 50, 31, 48, 55, 46, 48, 32, 50, 38],
+                lineColor: '#ad6bae',
+                lineWidth: '2px',
+                marker: {
+                  backgroundColor: '#fff',
+                  borderColor: '#975098',
+                  borderWidth: '1px',
+                  shadow: false,
+                  size: 3
+                },
+                palette: 2,
+                shadow: false,
+                visible: true
+              },
+              {
+                text: 'As Interview Observer',
+                values: [25, 15, 26, 21, 24, 26, 33, 25, 15, 25, 22, 24],
+                lineColor: '#f3950d',
+                lineWidth: '2px',
+                marker: {
+                  backgroundColor: '#fff',
+                  borderColor: '#d37e04',
+                  borderWidth: '1px',
+                  shadow: false,
+                  size: 3
+                },
+                palette: 3,
+                shadow: false
+              }
+            ]
+          }
+        ]
+      };
+  
+      zingchart.render({
+        id: 'myChart',
+        data: chartConfig,
+        height: '100%',
+        width: '100%'
+      });
+    </script>
+     <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+     <script type="text/javascript">
+       google.charts.load('current', {'packages':['corechart']});
+       google.charts.setOnLoadCallback(drawVisualization);
+ 
+       function drawVisualization() {
+         // Some raw data (not necessarily accurate)
+         var data = google.visualization.arrayToDataTable([
+           ['Month', 'Working', 'As manager', 'As observer', 'in Training', 'Project Meeting', 'Average'],
+           ['jan',  75,      98,         82,             99,           90,      90],
+           ['feb',  85,      90,        99,             68,          88,      68],
+           ['mar',  97,      67,        87,             87,           97,      99],
+           ['apr',  89,      100,        65,             98,           95,      88],
+           ['may',  76,      91,         69,             96,          66,      56]
+         ]);
+ 
+         var options = {
+           title : 'Attendance Analysis',
+           vAxis: {title: 'Attendance'},
+           hAxis: {title: 'Month'},
+           seriesType: 'bars',
+           series: {5: {type: 'line'}}        };
+ 
+         var chart = new google.visualization.ComboChart(document.getElementById('chart_div'));
+         chart.draw(data, options);
+       }
+     </script>
+      <script>
+        google.charts.load('current', {packages: ['corechart', 'bar']});
+        google.charts.setOnLoadCallback(drawMultSeries);
+        
+        function drawMultSeries() {
+              var data = google.visualization.arrayToDataTable([
+                ['Month', 'approved Leave Hours', 'Half Leave Hours'],
+                ['jan', 24,4],
+                ['feb', 32, 3],
+                ['mar',16 , 2],
+                ['apr', 40, 1],
+                ['may', 8, 5]
+              ]);
+        
+              var options = {
+                title: 'Leaves Analysis',
+                chartArea: {width: '50%'},
+                hAxis: {
+                  title: 'Hour count',
+                  minValue: 0
+                },
+                vAxis: {
+                  title: 'Month'
+                }
+              };
+        
+              var chart = new google.visualization.BarChart(document.getElementById('chart_div3'));
+              chart.draw(data, options);
+            }
+           </script>
+  </body>
+  
+  </html>
+

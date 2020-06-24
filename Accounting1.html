@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html>
+<title>Acconts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+<script src="https://code.jscharting.com/latest/jscharting.js"></script>
+<script type="text/javascript" src="https://code.jscharting.com/latest/modules/toolbar.js"></script>
+<script type="text/javascript" src="https://code.jscharting.com/latest/modules/types.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    #i1{
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 19px;
+      text-align: center;
+      color: #006699;
+    }
+    .chart--container {
+      min-height: 300px;
+      width: 100%;
+      height: 300px;
+    }
+
+    .zc-ref {
+      display: none;
+    }
+    </style>
+  
+   
+    <body class="w3-light-grey">
+    
+    <!-- Top container -->
+    <div class="w3-bar w3-top" style="z-index:3;background-color: #006699">
+      <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+      <span class="w3-bar-item w3-right" style="color: #fff">Admin Dashboard</span>
+    </div>
+    
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:286px;" id="mySidebar"><br>
+      <div class="w3-container w3-row">
+        <div class="w3-col s4">
+        
+          <img src="hr1.jpg" class="w3-circle w3-margin-right" style="width:60px;">
+        </div>
+        <div class="w3-col s8 w3-bar">
+          <br>
+          <span style="font-size: 17px;"><strong>   Mr.Admin</strong></span><br>
+          <span style="font-size: 13px;"><strong>  <i class="fa fa-user-secret"></i>  Boss</strong></span><br>
+        <!--   <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a> -->
+          <br>
+        </div>
+      </div>
+      
+      <div class="w3-container">
+       
+              
+              
+              
+        <i class="fa fa-facebook-official w3-hover-opacity" id="i1"></i>
+        <i class="fa fa-instagram w3-hover-opacity" id="i1"></i>
+       <i class="fa fa-snapchat w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-twitter w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-linkedin w3-hover-opacity" id="i1"></i>
+                 
+               
+              
+              </div>
+      </div>
+      <hr>
+      <div class="w3-bar-block">
+        <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+        <a href="Admin.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw"></i>Dashboard</a>
+        <a href="Admin_personal.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-book fa-fw"></i> Personal Details</a>
+        <a href="Achievements.html" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-users fa-fw"></i> Manage Employees Data</a>
+        <a href="Attendance1.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-card fa-fw"></i>  Attendence & Leaves </a>
+        <!-- <div class="w3-dropdown-hover">
+        
+          <div class="w3-dropdown-content w3-bar-block w3-border">
+            <a href="Dash_proj.html" class="w3-bar-item w3-button">Project Dashboard</a>
+            <a href="Deadline.html" class="w3-bar-item w3-button" style="background-color:#006699;color: #fff">DeadLine Notifier</a>
+            <a href="#" class="w3-bar-item w3-button">Project Report Submission</a>
+          </div> -->
+          <a href="hr.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-male fa-fw"></i>HR Department</a>
+        <a href="Admin_project1.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-laptop fa-fw"></i>  Projects</a>
+        <!-- <div class="w3-dropdown-click">
+            <div class="w3-bar-item w3-button w3-padding" onclick="myFunction()" ><i class="fa fa-laptop fa-fw"></i>Projects</div>
+            <div id="Demo9" class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="Project.html" class="w3-bar-item w3-button">Your Project Details</a>
+              <a href="Dash_proj.html" class="w3-bar-item w3-button">Ongoing Project Dashboard</a>
+              <a href="Deadline.html" class="w3-bar-item w3-button">Deadline Notifier</a>
+              <a href="report_pro.html" class="w3-bar-item w3-button">Project Report Submission</a>
+            </div>
+          </div> -->
+         
+ 
+        <a href="Admin_Notification.html" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-bell fa-fw" ></i>  Notifications</a>
+        <a href="Admin_daily_details.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-pencil fa-fw"></i>  Daily Details & Report </a>
+        <a href="client.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-money fa-fw"></i>  Client Management</a> 
+
+        <div class="w3-dropdown-click">
+          <div class="w3-bar-item w3-button w3-padding" onclick="myFunction()" style="background-color:#006699;color: #fff"><i class="fa fa-inr fa-fw"></i>Accounting Department</div>
+          <div id="Demo" class="w3-dropdown-content w3-bar-block w3-border">
+            <a href="Accounting1.html" class="w3-bar-item w3-button" style="background-color:#333;color: #fff">Accounting Desk</a>
+            <a href="Admin_sal_generate.html" class="w3-bar-item w3-button">Employees' Payroll Details</a>
+            <!-- <a href="Deadline.html" class="w3-bar-item w3-button">Interview</a>
+            <a href="report_pro.html" class="w3-bar-item w3-button">Training</a> -->
+          </div>
+        </div>
+        <a href="Daily_log.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-clock-o fa-fw"></i>  Log History</a> 
+        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Logout</a>
+        <br><br><br>
+       <br><br><br><br><br><br><br>
+    </nav>
+    
+    
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    <div class="w3-main" style="margin-left:290px;margin-top:43px;">
+        <div class="w3-container  w3-margin w3-white">
+          <h3>Company's Financial Analysis about deals,Revenue & Invest</h3>
+            <div id="chartDiv" style="max-width: 740px;height: 300px;margin: 0px auto"></div>
+           </div>
+          <br>
+          <div class="w3-container  w3-margin w3-white">
+            <br>
+            <div id="chartDiv11" style="max-width: 740px;height: 300px;margin: 0px auto"></div>
+            <!-- <div id="chartContainer" style="width: 100%; height: 250px;"></div>
+<script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script> -->
+        </div>
+        <br>
+           <div class="w3-container w3-margin w3-white">
+             <center>
+              <b><h5>Deals Analysis</h5></b> 
+              <div id="piechart_3d" style="width:100%;height: 290px;">
+              </center>
+             
+           </div>
+           <br>
+       
+      
+        <div class="w3-container">
+          <div id="myChart" class="chart--container">
+         </div>
+ </div>
+  
+ 
+<script>
+    // Get the Sidebar
+    var mySidebar = document.getElementById("mySidebar");
+    
+    // Get the DIV with overlay effect
+    var overlayBg = document.getElementById("myOverlay");
+    
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+    function w3_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+      } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+      }
+    }
+    
+    // Close the sidebar with the close button
+    function w3_close() {
+      mySidebar.style.display = "none";
+      overlayBg.style.display = "none";
+    }
+    </script>
+<!-- <script>
+    window.onload = function () {
+        
+    var chart = new CanvasJS.Chart("chartContainer", {
+        animationEnabled: true,
+        
+        title:{
+            text:"Fortune 500 Companies by Country"
+        },
+        axisX:{
+            interval: 1
+        },
+        axisY2:{
+            interlacedColor: "rgba(1,77,101,.2)",
+            gridColor: "rgba(1,77,101,.1)",
+            title: "Number of Companies"
+        },
+        data: [{
+            type: "bar",
+            name: "companies",
+            axisYType: "secondary",
+            color: "#006699",
+            dataPoints: [
+                { y: 3, label: "Sweden" },
+                { y: 7, label: "Taiwan" },
+                { y: 5, label: "Russia" },
+                { y: 9, label: "Spain" },
+                { y: 7, label: "Brazil" },
+                { y: 7, label: "India" },
+                { y: 9, label: "Italy" },
+                { y: 8, label: "Australia" },
+                { y: 11, label: "Canada" }
+               
+            ]
+        }]
+    });
+    chart.render();
+    
+    }
+    </script> -->
+    <script>
+      function myFunction() {
+        var x = document.getElementById("Demo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else { 
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+      </script>
+     <script>
+        ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+        let chartConfig = {
+          type: 'area',
+          stacked: true,
+          title: {
+            text: 'Analytics Comparison',
+            fontColor: '#4caee7'
+          },
+          subtitle: {
+            text: 'Company sales & expense ',
+            fontColor: '#cb8670'
+          },
+          plot: {
+            activeArea: true,
+            animation: {
+              delay: 50,
+              effect: 'ANIMATION_SLIDE_LEFT',
+              method: 'ANIMATION_REGULAR_EASE_OUT',
+              sequence: 'ANIMATION_NO_SEQUENCE',
+              speed: 1500
+            },
+            hoverMarker: {
+              size: '8px'
+            }
+          },
+          plotarea: {
+            backgroundColor: '#fff'
+          },
+          scaleX: {
+            lineColor: '#333',
+            maxItems: 6,
+            minValue: 2019,
+            step: 600000,
+            tick: {
+              lineColor: '#333'
+            },
+            transform: {
+              type: 'date',
+              all: '%D, %d %M<br>%h:%i %A',
+              item: {
+                visible: false
+              }
+            }
+          },
+          scaleY: {
+            item: {
+              padding: '4px'
+            },
+            lineColor: '#333',
+            tick: {
+              lineColor: '#333'
+            }
+          },
+          series: [{
+              values: ['11m', '36m', '7m', '44m', '11m', '28m', '42m', '26m', '13m', '32m', '12m', '24m', '16m', '11m', '43m', '39m'],
+              backgroundColor: '#cb8670',
+              lineColor: '#cb8670',
+              marker: {
+                backgroundColor: '#cb8670',
+                borderColor: '#fff',
+                borderWidth: '2px'
+              }
+            },
+            {
+              values: ['21m', '29m', '14m', '16m', '28m', '35m', '21m', '18m', '11m', '7m', '4m', '9m', '25m', '15m', '33m', '13m'],
+              backgroundColor: '#4caee7',
+              lineColor: '#4caee7',
+              marker: {
+                backgroundColor: '#4caee7',
+                borderColor: '#fff',
+                borderWidth: '2px'
+              }
+            }
+          ]
+        };
+    
+        zingchart.render({
+          id: 'myChart',
+          data: chartConfig,
+          height: '100%',
+          width: '100%'
+        });
+      </script>
+      <script>
+          var chart = JSC.chart('chartDiv', {
+  debug: true,
+  type: 'column',
+  title_visible: false,
+  legend_position: 'top',
+  xAxis_orientation: 'top',
+  yAxis_orientation: 'right',
+  toolbar_margin: 3,
+  toolbar_items: {
+    yAxis: {
+      type: 'option',
+      position: 'inside left',
+      label_text: 'Y Axis Orientation',
+      boxVisible: true,
+      value: true,
+      icon: {
+        name: 'system/default/zoom/arrow-right',
+        fill: '#cbc8c5',
+        outline_color: '#717370'
+      },
+      states_select_icon_name: 'system/default/zoom/arrow-left',
+      events_change: function(val){orient("y",val);}
+    },
+    xAxis: {
+      type: 'option',
+      position: 'inside top',
+      label_text: 'X Axis Orientation',
+      boxVisible: true,
+      value: true,
+      icon: {
+        name: 'system/default/zoom/arrow-up',
+        fill: '#cbc8c5',
+        outline_color: '#717370'
+      },
+      states_select_icon_name: 'system/default/zoom/arrow-down',
+      events_change: function(val){orient("x",val);}
+    }
+  },
+  yAxis: { label_text: 'Rs. in k.'  },
+  xAxis: { label_text: 'Accounts Analysis'  },
+  title_label_text: 'rs.',
+  series: [
+    {
+      name: '2017',
+      id: 's1',
+      points: [
+        [ 'deals', 23  ],
+        [ 'Invest', 240 ],
+        [ 'Profit', 279 ],
+        [ 'net worth', 238 ]
+      ]
+    },
+    {
+      name: '2018',
+      points: [
+        [ 'deals', 32 ],
+        [ 'Invest', 347  ],
+        [ 'Profit', 392  ],
+        [ 'net worth', 371  ]
+      ]
+    },
+    {
+      name: '2019',
+      points: [
+        [ 'deals', 25  ],
+        [ 'Invest', 292  ],
+        [ 'Profit', 327  ],
+        [ 'net worth', 158  ]
+      ]
+    },
+    {
+      name: '2020',
+      points: [
+        [ 'deals', 15  ],
+        [ 'Invest', 192  ],
+        [ 'Profit', 198  ],
+        [ 'net worth', 318  ]
+      ]
+    }
+  ]
+});
+
+function orient(ax,val){
+	chart && chart.axes(ax).options({orientation:val?"right":"left"});
+}
+      </script>
+      <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+      <script type="text/javascript">
+        google.charts.load("current", {packages:["corechart"]});
+        google.charts.setOnLoadCallback(drawChart);
+        function drawChart() {
+          var data = google.visualization.arrayToDataTable([
+            ['Month', 'No of Deal'],
+            ['Oct2019',     11],
+            ['Nov2019',      4],
+            ['Dec2019',  8],
+            ['Jan2020', 5],
+            ['Feb2020',    2]
+          ]);
+  
+          var options = {
+            title: 'DEALS ANALYSIS IN PAST 5 MONTH',
+            is3D: true,
+          };
+  
+          var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+          chart.draw(data, options);
+        }
+      </script>
+    
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript">
+      google.charts.load('current', {'packages':['bar']});
+      google.charts.setOnLoadCallback(drawChart);
+  
+      function drawChart() {
+        var data = google.visualization.arrayToDataTable([
+          ['Year', 'Payment', 'colaboration', 'Profit'],
+          ['2014', 1000, 400, 200],
+          ['2015', 1170, 460, 250],
+          ['2016', 660, 1120, 300],
+          ['2017', 1030, 540, 350]
+        ]);
+  
+        var options = {
+          chart: {
+            title: 'COMPANY BUSINESS',
+            subtitle: 'PAYMENT , COLABORATION & PROFIT (in K)',
+          },
+          bars: 'horizontal' // Required for Material Bar Charts.
+        };
+  
+        var chart = new google.charts.Bar(document.getElementById('barchart_material'));
+  
+        chart.draw(data, google.charts.Bar.convertOptions(options));
+      }
+    </script>
+    <script>
+      var chart = JSC.chart('chartDiv11',{
+  debug: true,
+  legend_visible: false,
+  annotations: [
+    {
+      margin_top: 5,
+      position: 'inside top',
+      label: {
+        text: 'Cost of Operation 2020 - 2021',
+        style_fontSize: 15
+      }
+    }
+  ],
+  
+/*These y axis settings  describe the point y values.*/
+  yAxis: { label_text: 'Cost', formatString: 'c'  },
+  defaultSeries: {
+    type: 'pyramid',
+    shape: {innerPadding: 4,padding: 0.4 },
+    defaultPoint: {
+      label: {
+        text: '%name (%percentOfSeries%)',
+        placement: 'outside'
+      }
+    }
+  },
+  series: [
+    {
+      name: '2020',
+      points: [
+        { name: 'R&D', y: 203  },
+        { name: 'Shipping', y: 90  },
+        { name: 'Marketing', y: 56  },
+        { name: 'Manufacturing', y: 50  },
+        { name: 'Retail', y: 40  }
+      ]
+    },
+    {
+      name: '2021',
+      points: [
+        { name: 'R&D', y: 183  },
+        { name: 'Shipping', y: 140  },
+        { name: 'Marketing', y: 136  },
+        { name: 'Manufacturing', y: 80  },
+        { name: 'Retail', y: 50  }
+      ]
+    }
+  ]
+});
+    </script>
+</body>
+</html>

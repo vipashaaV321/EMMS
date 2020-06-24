@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html>
+<title>Rating Employees</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<script src="https://code.jscharting.com/latest/jscharting.js"></script>
+            <script type="text/javascript" src="https://code.jscharting.com/latest/modules/types.js"></script>
+<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    html,body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+    #i1{
+      margin-left: 12px;
+      margin-right: 12px;
+      font-size: 19px;
+      text-align: center;
+      color: #006699;
+    }
+    .rating-star {
+    direction: rtl;
+    font-size: 40px;
+   
+    unicode-bidi: bidi-override;
+    display: inline-block;
+}
+.rating-star input {
+    opacity: 0;
+    position: relative;
+    left: -30px;
+    z-index: 2;
+    cursor: pointer;
+}
+.rating-star span.star:before {
+    color: #777777;
+}
+.rating-star span.star {
+    display: inline-block;
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+    position: relative;
+    z-index: 1;
+}
+.rating-star span {
+    margin-left: -30px;
+    margin: 3px;
+}
+.rating-star span.star:before {
+    color: #777777;
+    content:"\f006";
+}
+.rating-star input:hover + span.star:before, .rating-star input:hover + span.star ~ span.star:before, .rating-star input:checked + span.star:before, .rating-star input:checked + span.star ~ span.star:before {
+    color: #ffd100;
+    content:"\f005";
+    }
+ 
+.selected-rating{
+    color: #ffd100;
+    font-weight: bold;
+    font-size: 30px;
+}
+    </style>
+  
+   
+    <body class="w3-light-grey">
+    
+    <!-- Top container -->
+    <div class="w3-bar w3-top" style="z-index:3;background-color: #006699">
+      <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+      <span class="w3-bar-item w3-right" style="color: #fff">Employee profile</span>
+    </div>
+    
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:296px;" id="mySidebar"><br>
+      <div class="w3-container w3-row">
+        <div class="w3-col s4">
+        
+          <img src="hr1.jpg" class="w3-circle w3-margin-right" style="width:60px;">
+        </div>
+        <div class="w3-col s8 w3-bar">
+          <br>
+          <span style="font-size: 17px;"><strong>   Mr.Admin</strong></span><br>
+          <span style="font-size: 13px;"><strong>  <i class="fa fa-user-secret"></i>  Boss</strong></span><br>
+        <!--   <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a> -->
+          <br>
+        </div>
+      </div>
+      
+      <div class="w3-container">
+       
+              
+              
+              
+        <i class="fa fa-facebook-official w3-hover-opacity" id="i1"></i>
+        <i class="fa fa-instagram w3-hover-opacity" id="i1"></i>
+     
+      <i class="fa fa-pinterest-p w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-twitter w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-linkedin w3-hover-opacity" id="i1"></i>
+                 
+               
+              
+              </div>
+      </div>
+      <hr>
+      <div class="w3-bar-block">
+        <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+        <a href="Admin.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw"></i>Dashboard</a>
+        <a href="personal.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-book fa-fw"></i> Personal Details</a>
+        <a href="Manage_data.html" class="w3-bar-item w3-button w3-padding" style="background-color:#006699;color: #fff" ><i class="fa fa-users fa-fw" ></i> Manage Employees Data</a>
+        <a href="Admin_attendance.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-card fa-fw"></i>  Attendence & Leaves </a>
+        <!-- <div class="w3-dropdown-hover">
+        
+          <div class="w3-dropdown-content w3-bar-block w3-border">
+            <a href="Dash_proj.html" class="w3-bar-item w3-button">Project Dashboard</a>
+            <a href="Deadline.html" class="w3-bar-item w3-button" style="background-color:#006699;color: #fff">DeadLine Notifier</a>
+            <a href="#" class="w3-bar-item w3-button">Project Report Submission</a>
+          </div> -->
+        <a href="Admin_project1.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-laptop fa-fw"></i>  Projects</a>
+        <!-- <div class="w3-dropdown-click">
+            <div class="w3-bar-item w3-button w3-padding" onclick="myFunction()" ><i class="fa fa-laptop fa-fw"></i>Projects</div>
+            <div id="Demo9" class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="Project.html" class="w3-bar-item w3-button">Your Project Details</a>
+              <a href="Dash_proj.html" class="w3-bar-item w3-button">Ongoing Project Dashboard</a>
+              <a href="Deadline.html" class="w3-bar-item w3-button">Deadline Notifier</a>
+              <a href="report_pro.html" class="w3-bar-item w3-button">Project Report Submission</a>
+            </div>
+          </div> -->
+          <a href="hr.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-male fa-fw"></i>HR Department</a>
+          <!-- <div class="w3-dropdown-click">
+            <div class="w3-bar-item w3-button w3-padding" onclick="myFunction1()"><i class="fa fa-male fa-fw"></i>  HR</div>
+            <div id="Demo10" class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="Project.html" class="w3-bar-item w3-button">HR Dashboard</a>
+              <a href="Dash_proj.html" class="w3-bar-item w3-button">Recruitment</a>
+              <a href="Deadline.html" class="w3-bar-item w3-button">Interview</a>
+              <a href="report_pro.html" class="w3-bar-item w3-button">Training</a>
+            </div>
+          </div> -->
+ 
+        <a href="Admin_Notification.html" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-bell fa-fw" ></i>  Notifications</a>
+        <a href="Admin_daily_details.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-pencil fa-fw"></i>  Daily Details & Report </a>
+        <a href="Accounting1.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-inr fa-fw"></i>  Accounting Department</a> 
+        <a href="client.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-money fa-fw"></i>  Client Management</a> 
+        <a href="Daily_log.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-clock-o fa-fw"></i>  Log History</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Logout</a>
+        <br><br><br>
+       
+    </nav>
+    
+    
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    <div class="w3-main" style="margin-left:300px;margin-top:43px;"><div class="w3-container w3-margin w3-padding w3-white"><br>
+      <div class="w3-third w3-white w3-padding">
+          <center>
+           <img src="vips.png" style="width: 100px;height:100px">
+    <h5>Vipasha Vaghela</h5>
+<h5>Front-End Developer</h5>
+</center>
+      </div>
+<div class="w3-twothird w3-white w3-padding">
+    <center>
+        <h3>Give Star Rating (/5)</h3>
+    <form id="rating-form">
+        <span class="rating-star">
+        <input type="radio" name="rating" value="5"><span class="star"></span>
+         
+            <input type="radio" name="rating" value="4"><span class="star"></span>
+         
+            <input type="radio" name="rating" value="3"><span class="star"></span>
+         
+            <input type="radio" name="rating" value="2"><span class="star"></span>
+         
+            <input type="radio" name="rating" value="1"><span class="star"></span>
+        </span>
+        </form>
+             <span id="selected-rating" class="selected-rating" >0</span> Stars
+            </center>
+</div>
+</div>
+      
+<div class="w3-row-padding w3-margin-bottom">
+  <div class="w3-quarter">
+    <div class="w3-container w3-red w3-padding-16">
+      <div class="w3-left"><i class="fa fa-user w3-xxxlarge"></i></div>
+      <div class="w3-right">
+        <h3>Department</h3>
+      </div>
+      <div class="w3-clear"></div>
+      <h4>WebDevelopement</h4>
+    </div>
+  </div>
+  <div class="w3-quarter">
+    <div class="w3-container w3-blue w3-padding-16">
+      <div class="w3-left"><i class="fa fa-laptop w3-xxxlarge"></i></div>
+      <div class="w3-right">
+        <h3>37</h3>
+      </div>
+      <div class="w3-clear"></div>
+      <h4>Projects</h4>
+    </div>
+  </div>
+  <div class="w3-quarter">
+    <div class="w3-container w3-teal w3-padding-16">
+      <div class="w3-left"><i class="fa fa-percent w3-xxxlarge"></i></div>
+      <div class="w3-right">
+        <h3>97</h3>
+      </div>
+      <div class="w3-clear"></div>
+
+      <h4>Attendence</h4>
+    </div>
+  </div>
+  <div class="w3-quarter">
+    <div class="w3-container w3-orange w3-text-white w3-padding-16">
+      <div class="w3-left"><i class="fa fa-star w3-xxxlarge"></i></div>
+      <div class="w3-right">
+        <h3>125</h3>
+      </div>
+      <div class="w3-clear"></div>
+      <h4>Stars</h4>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="w3-panel">
+  <div class="w3-row-padding" style="margin:0 -16px">
+    <div class="w3-third">
+      <div id="piechart_3d" style="width: 300px;height: 280px "></div> 
+    </div>
+    <div class="w3-twothird">
+      <h5></h5>
+      <table class="w3-table w3-striped w3-white">
+        <tr>
+          <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
+          <td>Employee_id</td>
+          <td><i>32017</i></td>
+        </tr>
+        <tr>
+          <td><i class="fa fa-calendar w3-text-red w3-large"></i></td>
+          <td>Hire Date</td>
+          <td><i>26/11/2014</i></td>
+        </tr>
+        <tr>
+          <td><i class="fa fa-birthday-cake w3-text-yellow w3-large"></i></td>
+          <td>Date Of Birth</td>
+          <td><i>03/02/1994</i></td>
+        </tr>
+        <tr>
+          <td><i class="fa fa-building w3-text-red w3-large"></i></td>
+          <td>Branch</td>
+          <td><i>Bopal</i></td>
+        </tr>
+        <tr>
+          <td><i class="fa fa-map-marker w3-text-blue w3-large"></i></td>
+          <td>Residence</td>
+          <td><i>Ahemedabad</i></td>
+        </tr>
+        <tr>
+          <td><i class="fa fa-phone w3-text-red w3-large"></i></td>
+          <td>Contact Num.</td>
+          <td><i>8160992702</i></td>
+        </tr>
+        <tr>
+          <td><i class="fa fa-envelope w3-text-green w3-large"></i></td>
+          <td>Email Id</td>
+          <td><i>vips3201v@gmail.com</i></td>
+        </tr>
+        
+      </table>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="w3-panel ">
+  <h3>Leave Meter</h3>
+  <div id="myChart" class="chart--container"></div>
+  <!-- <div id="chartContainer" style="width: 100%; height: 400px"></div> -->
+</div>
+<div class="w3-container w3-white w3-margin w3-padding">
+  <h5><b><i class="fa fa-cog"></i>  Experience & Skills</b></h5>
+  <p>Angular WebDevelopement</p>
+  <div class="w3-grey" style="border-radius: 20px;">
+    <div class="w3-container w3-center w3-green" style="width:95%;border-radius: 20px;">95%</div>
+  </div>
+
+  <p>MEAN STACK</p>
+  <div class="w3-grey" style="border-radius: 20px;">
+    <div class="w3-container w3-center  w3-orange" style="width:50%;border-radius: 20px;">50%</div>
+  </div>
+
+  <p>FULL STACK</p>
+  <div class="w3-grey" style="border-radius: 20px;">
+    <div class="w3-container w3-center w3-red" style="width:75%;border-radius: 20px;">75%</div>
+  </div>
+   <p>MERN STACK</p>
+  <div class="w3-grey" style="border-radius: 20px;">
+    <div class="w3-container w3-center w3-blue" style="width:85%;border-radius: 20px;">85%</div>
+  </div>
+   <p>LAMP STACK</p>
+  <div class="w3-grey" style="border-radius: 20px;">
+    <div class="w3-container w3-center  w3-pink" style="width:75%;border-radius: 20px;">75%</div>
+  </div>
+  <br>
+</div>
+
+<div class="w3-panel">
+  <div class="w3-row-padding" style="margin:0 -16px">
+    <div class="w3-third">
+      <br>
+      <div id="donutchart" style="width: 100%; height: 300px;"></div>
+      <!-- <h5>Regions</h5>
+      <img src="pic1.jpg" style="width:100%" alt="Google Regional Map"> -->
+    </div>
+    <div class="w3-third">
+      <br>
+      <div id="piechart" style="width:100%; height: 300px;"></div></div>
+    <div class="w3-third">
+      <br>
+      <div id="donutchart1" style="width: 100%; height: 300px;"></div>
+      <!-- <h5></h5>
+      <table class="w3-table w3-striped w3-white">
+        <tr>
+          <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
+          <td>New record, over 90 views.</td>
+          <td><i>10 mins</i></td>
+        </tr>
+        <tr>
+          <td><i class="fa fa-bell w3-text-red w3-large"></i></td>
+          <td>Database error.</td>
+          <td><i>15 mins</i></td>
+        </tr>
+        <tr>
+          <td><i class="fa fa-users w3-text-yellow w3-large"></i></td>
+          <td>New record, over 40 users.</td>
+          <td><i>17 mins</i></td>
+        </tr>
+        <tr>
+          <td><i class="fa fa-comment w3-text-red w3-large"></i></td>
+          <td>New comments.</td>
+          <td><i>25 mins</i></td>
+        </tr>
+        <tr>
+          <td><i class="fa fa-bookmark w3-text-blue w3-large"></i></td>
+          <td>Check transactions.</td>
+          <td><i>28 mins</i></td>
+        </tr>
+        <tr>
+          <td><i class="fa fa-laptop w3-text-red w3-large"></i></td>
+          <td>CPU overload.</td>
+          <td><i>35 mins</i></td>
+        </tr>
+        <tr>
+          <td><i class="fa fa-share-alt w3-text-green w3-large"></i></td>
+          <td>New shares.</td>
+          <td><i>39 mins</i></td>
+        </tr>
+        
+      </table> -->
+    </div>
+  </div>
+</div>
+<hr>
+<!-- <div class="w3-container"> -->
+  <!-- <h5>Countries</h5>
+  <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
+    <tr>
+      <td>United States</td>
+      <td>65%</td>
+    </tr>
+    <tr>
+      <td>UK</td>
+      <td>15.7%</td>
+    </tr>
+    <tr>
+      <td>Russia</td>
+      <td>5.6%</td>
+    </tr>
+    <tr>
+      <td>Spain</td>
+      <td>2.1%</td>
+    </tr>
+    <tr>
+      <td>India</td>
+      <td>1.9%</td>
+    </tr>
+    <tr>
+      <td>France</td>
+      <td>1.5%</td>
+    </tr>
+  </table><br>
+  <button class="w3-button w3-dark-grey">More Countries  <i class="fa fa-arrow-right"></i></button> -->
+<!-- </div> -->
+
+<div class="w3-container">
+  <h5>Managers</h5>
+  <ul class="w3-ul w3-card-4 w3-white">
+    <li class="w3-padding-16">
+      <img src="avatar2.png" class="w3-left w3-circle w3-margin-right" style="width:35px">
+      <span class="w3-large">Mr. Xyz</span><br>
+      <span class="w3-large">Web-Developement Department</span><br>
+    </li>
+    <li class="w3-padding-16">
+      <img src="avatar5.png" class="w3-left w3-circle w3-margin-right" style="width:35px">
+      <span class="w3-large">Mr. pqr</span><br>
+      <span class="w3-large">Angular-Developement Department</span><br>
+     
+    </li>
+   
+  </ul>
+</div>
+<hr>
+
+<!-- <div class="w3-container">
+  <h5>Recent Comments</h5>
+  <div class="w3-row">
+    <div class="w3-col m2 text-center">
+      <img class="w3-circle" src="avatar3.png" style="width:96px;height:96px">
+    </div>
+    <div class="w3-col m10 w3-container">
+      <h4>John <span class="w3-opacity w3-medium">Sep 29, 2014, 9:12 PM</span></h4>
+      <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
+    </div>
+  </div>
+
+  <div class="w3-row">
+    <div class="w3-col m2 text-center">
+      <img class="w3-circle" src="avatar1.png" style="width:96px;height:96px">
+    </div>
+    <div class="w3-col m10 w3-container">
+      <h4>Bo <span class="w3-opacity w3-medium">Sep 28, 2014, 10:15 PM</span></h4>
+      <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
+    </div>
+  </div>
+</div>
+<br>
+<div class="w3-container w3-padding-32" style="background-color: aliceblue">
+  <div class="w3-row">
+    <div class="w3-container w3-third">
+      <h5 class="w3-bottombar w3-border-green">Demographic</h5>
+      <p>Language</p>
+      <p>Country</p>
+      <p>City</p>
+    </div>
+    <div class="w3-container w3-third">
+      <h5 class="w3-bottombar w3-border-red">System</h5>
+      <p>Browser</p>
+      <p>OS</p>
+      <p>More</p>
+    </div>
+    <div class="w3-container w3-third">
+      <h5 class="w3-bottombar w3-border-orange">Target</h5>
+      <p>Users</p>
+      <p>Active</p>
+      <p>Geo</p>
+      <p>Interests</p>
+    </div>
+  </div>
+</div>
+
+
+
+ End page content -->
+    
+ 
+    </div>
+  
+ 
+  
+ 
+<script>
+    // Get the Sidebar
+    var mySidebar = document.getElementById("mySidebar");
+    
+    // Get the DIV with overlay effect
+    var overlayBg = document.getElementById("myOverlay");
+    
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+    function w3_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+      } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+      }
+    }
+    
+    // Close the sidebar with the close button
+    function w3_close() {
+      mySidebar.style.display = "none";
+      overlayBg.style.display = "none";
+    }
+    </script>
+   
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>    
+      <script src="function.js" type="text/javascript"></script>
+      <script>
+      $('#rating-form').on('change','[name="rating"]',function(){
+      $('#selected-rating').text($('[name="rating"]:checked').val());
+      });
+      </script>
+      
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+  google.charts.load("current", {packages:["corechart"]});
+  google.charts.setOnLoadCallback(drawChart);
+  function drawChart() {
+    var data = google.visualization.arrayToDataTable([
+      ['Month', 'hours'],
+      ['Jan',     120],
+      ['Feb',      130],
+      ['Mar',  125],
+      ['Apr', 136],
+      ['May',    110],
+      ['Jun', 120],
+      ['Jul', 120],
+      ['Aug',  112],
+      ['Sep', 124],
+      ['Oct',  132],
+      ['Nov', 120],
+      ['Dec',  112],
+      
+    ]);
+
+    var options = {
+      title: 'Attendance',
+      is3D: true,
+    };
+
+    var chart = new google.visualization.PieChart(document.getElementById('piechart_3d'));
+    chart.draw(data, options);
+  }
+</script>
+ <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+ <script type="text/javascript">
+   google.charts.load("current", {packages:["corechart"]});
+   google.charts.setOnLoadCallback(drawChart);
+   function drawChart() {
+     var data = google.visualization.arrayToDataTable([
+       ['Task', 'Hours per Day'],
+       ['Full_Time',     90],
+       ['Part_time',      7],
+       ['Training/Intership',  3],
+       
+     ]);
+
+     var options = {
+       title: 'Headcount Points in Time',
+       pieHole: 0.8,
+     };
+
+     var chart = new google.visualization.PieChart(document.getElementById('donutchart1'));
+     chart.draw(data, options);
+   }
+ </script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load("current", {packages:["corechart"]});
+    google.charts.setOnLoadCallback(drawChart);
+    function drawChart() {
+      var data = google.visualization.arrayToDataTable([
+        ['Leaves', '%'],
+        ['DA',     11],
+        ['PA',      2],
+        ['AL',  2],
+        ['ADL', 2],
+        ['HL',  2],
+        ['CL', 2],
+        ['SL',    7]
+      ]);
+
+      var options = {
+        title: 'Leaves',
+        pieHole: 0.8,
+        // colors: ['dodgerblue', 'aliceblue', 'lightpink', 'pink', 'hotpink']
+      };
+
+      var chart = new google.visualization.PieChart(document.getElementById('donutchart'));
+      chart.draw(data, options);
+    }
+  </script>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script type="text/javascript">
+    google.charts.load('current', {'packages':['corechart']});
+    google.charts.setOnLoadCallback(drawChart);
+
+    function drawChart() {
+
+      var data = google.visualization.arrayToDataTable([
+        ['Year', 'Progress Ponit'],
+        ['2014',     20],
+        ['2015',      50],
+        ['2016',  70],
+        ['2017', 80],
+        ['2018',    85],
+        ['2019',    95],
+        ['2020',    90]
+      ]);
+
+      var options = {
+        title: 'Progress Report(2014-2020)',
+        //  colors: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6']
+      };
+
+      var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+
+      chart.draw(data, options);
+    }
+  </script>
+  
+  <script>
+    let chartConfig = {
+type: 'gauge',
+theme: 'classic',
+alpha: 1,
+backgroundColor: '#eee',
+plot: {
+backgroundColor: '#666'
+},
+plotarea: {
+margin: '0 0 0 0'
+},
+scale: {
+sizeFactor: 1.25,
+offsetY: '120px'
+},
+scaleR: {
+values: '0:100:10',
+backgroundColor: '#eeeeee,#b3b3b3',
+borderColor: '#b3b3b3',
+borderWidth: '2px',
+ring: {
+offsetR: '130px',
+rules: [
+{
+backgroundColor: '#348D00',
+rule: '%v >=0 && %v < 2'
+},
+{
+backgroundColor: '#B1AD00',
+rule: '%v >= 2 && %v < 4'
+},
+{
+backgroundColor: '#FAC100',
+rule: '%v >= 4 && %v < 6'
+},
+{
+backgroundColor: '#EC7928',
+rule: '%v >= 6 && %v < 11'
+},
+{
+backgroundColor: '#FB0A02',
+rule: '%v >= 12'
+}
+],
+size: '10px'
+}
+},
+labels: [
+{
+id: 'lbl1',
+text: '>12 Leaves',
+tooltip: {
+text: '< 12 <br>Units',
+padding: '10px',
+backgroundColor: '#ea0901',
+shadow: false
+},
+padding: '10px',
+anchor: 'c',
+backgroundColor: '#FB0A02',
+offsetX: '160px',
+textAlign: 'center',
+width: '80px',
+x: '50%',
+y: '90%'
+},
+{
+id: 'lbl2',
+text: '6-11 Leaves',
+tooltip: {
+text: '> 6< 11<br>Units',
+padding: '10px',
+backgroundColor: '#da6817',
+shadow: false
+},
+padding: '10px',
+anchor: 'c',
+backgroundColor: '#EC7928',
+offsetX: '80px',
+textAlign: 'center',
+width: '80px',
+x: '50%',
+y: '90%'
+},
+{
+id: 'lbl3',
+text: '4-6 Leaves',
+tooltip: {
+text: '> 4 < 6<br>Units',
+padding: '10px',
+backgroundColor: '#e9b000',
+shadow: false
+},
+padding: '10px',
+anchor: 'c',
+backgroundColor: '#FAC100',
+offsetX: '0px',
+textAlign: 'center',
+width: '80px',
+x: '50%',
+y: '90%'
+},
+{
+id: 'lbl4',
+text: '2-4 Leaves',
+tooltip: {
+text: '> 2 < 4<br>Units',
+padding: '10px',
+backgroundColor: '#a09c00',
+shadow: false
+},
+padding: '10px',
+anchor: 'c',
+backgroundColor: '#B1AD00',
+offsetX: '-80px',
+textAlign: 'center',
+width: '80px',
+x: '50%',
+y: '90%'
+},
+{
+id: 'lbl5',
+text: '<2 Leaves',
+tooltip: {
+text: '< 2<br>Leaves',
+padding: '10px',
+backgroundColor: '#237b00',
+shadow: false
+},
+padding: '10px',
+anchor: 'c',
+backgroundColor: '#348D00',
+offsetX: '-160px',
+textAlign: 'center',
+width: '80px',
+x: '50%',
+y: '90%'
+}
+],
+tooltip: {
+backgroundColor: 'black'
+},
+series: [
+{
+values: [90],
+animation: {
+effect: 'ANIMATION_EXPAND_VERTICAL',
+method: 'ANIMATION_REGULAR_EASE_OUT',
+speed: 2500
+}
+}
+]
+};
+
+zingchart.render({
+id: 'myChart',
+
+data: chartConfig,
+height: '90%',
+width: '100%',
+});
+  </script>
+</body>
+</html>

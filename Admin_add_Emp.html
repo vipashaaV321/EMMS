@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html>
+<title>Add users</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    #i1{
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 19px;
+      text-align: center;
+      color: #006699;
+    }
+    img#chart { margin: 0; background: #fff; 
+    /* border: 1px solid black; */
+     }
+     li{
+         padding: 30px;
+     }
+    </style>
+  
+   
+    <body class="w3-light-grey">
+    
+    <!-- Top container -->
+    <div class="w3-bar w3-top" style="z-index:3;background-color: #006699">
+      <!-- <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button> -->
+      <span class="w3-bar-item w3-right" style="color: #fff">Admin Dashboard</span>
+      <a href="Manage_data.html"><span class="w3-bar-item w3-left" style="color: #fff"><i class="fa fa-arrow-left"></i></span></a>
+    </div>
+    
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:296px;" id="mySidebar"><br>
+      <div class="w3-container w3-row">
+        <div class="w3-col s4">
+        
+          <img src="hr1.jpg" class="w3-circle w3-margin-right" style="width:60px;">
+        </div>
+        <div class="w3-col s8 w3-bar">
+          <br>
+          <span style="font-size: 17px;"><strong>   Mr.Admin</strong></span><br>
+          <span style="font-size: 13px;"><strong>  <i class="fa fa-user-secret"></i>  Boss</strong></span><br>
+        <!--   <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a> -->
+          <br>
+        </div>
+      </div>
+      
+      <div class="w3-container">
+       
+              
+              
+              
+        <i class="fa fa-facebook-official w3-hover-opacity" id="i1"></i>
+        <i class="fa fa-instagram w3-hover-opacity" id="i1"></i>
+       <i class="fa fa-snapchat w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-twitter w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-linkedin w3-hover-opacity" id="i1"></i>
+                 
+               
+              
+              </div>
+      </div>
+      <hr>
+      <div class="w3-bar-block">
+        <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+        <a href="Admin.html" class="w3-bar-item w3-button w3-padding" style="background-color:#006699;color: #fff"><i class="fa fa-user fa-fw"></i>Dashboard</a>
+        <a href="Admin_personal.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-book fa-fw"></i> Personal Details</a>
+        <!-- <a href="Achievements.html" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-users fa-fw"></i> Manage Employees Data</a> -->
+        <a href="Attendance1.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-card fa-fw"></i>  Attendence & Leaves </a>
+        <!-- <div class="w3-dropdown-hover">
+        
+          <div class="w3-dropdown-content w3-bar-block w3-border">
+            <a href="Dash_proj.html" class="w3-bar-item w3-button">Project Dashboard</a>
+            <a href="Deadline.html" class="w3-bar-item w3-button" style="background-color:#006699;color: #fff">DeadLine Notifier</a>
+            <a href="#" class="w3-bar-item w3-button">Project Report Submission</a>
+          </div> -->
+        <a href="Admin_project1.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-laptop fa-fw"></i>  Projects</a>
+        <div class="w3-dropdown-click">
+            <div class="w3-bar-item w3-button w3-padding" onclick="myFunction()" ><i class="fa fa-users fa-fw"></i>Manage Employees</div>
+            <div id="Demo9" class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="Admin_add_Emp.html" class="w3-bar-item w3-button">Add Employee</a>
+              <a href="Manage_data.html" class="w3-bar-item w3-button">Manage Data</a>
+            
+            </div>
+          </div>
+          <a href="hr.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-male fa-fw"></i>HR Department</a>
+          <!-- <div class="w3-dropdown-click">
+            <div class="w3-bar-item w3-button w3-padding" onclick="myFunction1()"><i class="fa fa-male fa-fw"></i>  HR</div>
+            <div id="Demo10" class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="Project.html" class="w3-bar-item w3-button">HR Dashboard</a>
+              <a href="Dash_proj.html" class="w3-bar-item w3-button">Recruitment</a>
+              <a href="Deadline.html" class="w3-bar-item w3-button">Interview</a>
+              <a href="report_pro.html" class="w3-bar-item w3-button">Training</a>
+            </div>
+          </div> -->
+ 
+        <a href="Admin_Notification.html" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-bell fa-fw" ></i>  Notifications</a>
+        <a href="Admin_daily_details.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-pencil fa-fw"></i>  Daily Details & Report </a>
+        <a href="Admin_sal_generate.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-inr fa-fw"></i>  Accounting Department</a> 
+        <a href="Daily_log.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-clock-o fa-fw"></i>  Log History</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Logout</a>
+        <br><br><br>
+       
+    </nav>
+    
+    
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    <div class="w3-main" style="margin-left:300px;margin-top:43px;"><div class="w3-container w3-white w3-margin w3-padding">
+       <h4 style="text-align: center;">ADD NEW EMPLOYEE</h4>
+
+            <div class="w3-ul" >
+               <center>
+        <li><input type="text" placeholder="name"><input type="text" placeholder="Department" name="Departments">
+        <input type="text" placeholder="Eid" name="Employee Id:"></li>
+              <li>
+        
+                <label for="size">Size</label>
+        
+                <select id="size" onchange="setChartImage()">
+        
+                  <option value="50x50">50x50</option>
+        
+                  <option value="75x75">75x75</option>
+        
+                  <option value="100x100">100x100</option>
+        
+                  <option value="150x150">150x150</option>
+        
+                  <option value="300x300">300x300</option>
+        
+                </select>
+        
+              </li>
+        
+              <li>
+        
+               
+        
+                  <legend>Error correction</legend>
+        
+                  <input type="radio" name="ec" id="ec-L" value="L" checked="checked" onclick="setChartImage()" /><label for="ec-L">7%</label>
+        
+                  <input type="radio" name="ec" id="ec-M" value="M" onclick="setChartImage()" /><label for="ec-M">15%</label>
+        
+                  <input type="radio" name="ec" id="ec-Q" value="Q" onclick="setChartImage()" /><label for="ec-Q">25%</label>
+        
+                  <input type="radio" name="ec" id="ec-H" value="H" onclick="setChartImage()" /><label for="ec-H">30%</label>
+        
+           
+              </li>
+              <form action="mailto:vipashavaghela321@outlook.com" method="post" enctype="text/plain">
+              <li>
+        
+                
+        
+                <textarea id="text" placeholder="Name,EID,Department" style="width: 100%;height: 20px;" name="Your Employee_id & Details"></textarea>
+        
+              </li>
+        
+              
+              
+        
+               
+              <br>
+                <div><img id="chart" src="" alt="QR code" />
+        
+                <input id="url" readonly="readonly" size="30" name="copy link to get your id"onclick="focus(); select();" style="width: 70%;"/></div>
+              <br>
+              
+        <li>      <input type="submit" value="send Details" style="margin: 8px;padding: 7px;color:#fff;background-color: #006699;border: none;"></li>
+      <hr>      </form></center>
+                 </ul><center>
+            <button onclick="setChartImage()" style="margin:10px;padding:7px;color:#fff;background-color: #006699;">Generate QR</button>
+        </center>
+              </div>
+        
+<br><br></div></div>
+  
+ 
+  
+  
+<script>
+    // Get the Sidebar
+    var mySidebar = document.getElementById("mySidebar");
+    
+    // Get the DIV with overlay effect
+    var overlayBg = document.getElementById("myOverlay");
+    
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+    function w3_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+      } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+      }
+    }
+    
+    // Close the sidebar with the close button
+    function w3_close() {
+      mySidebar.style.display = "none";
+      overlayBg.style.display = "none";
+    }
+    </script>
+      <script src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+      <script src="http://code.jquery.com/mobile/1.1.0/jquery.mobile-1.1.0.min.js"></script>
+  
+      <script type="text/javascript">
+  
+      function setChartImage() {
+  
+      var query = { cht: "qr", choe: "UTF-8", 
+  
+                chs: $("#size").val(), chld: $(":radio[name='ec']:checked").val(),
+  
+                chl: $("#text").val() };
+  
+      var url = "http://chart.apis.google.com/chart?" + $.param(query);
+  
+      
+  
+      $("#chart").attr('src', url);
+  
+      $("#url").val(url);
+  
+      $("#link").attr('href', url);
+  
+      }
+  
+      </script>
+   <script>
+    function myFunction() {
+      var x = document.getElementById("Demo");
+      if (x.className.indexOf("w3-show") == -1) {
+        x.className += " w3-show";
+      } else { 
+        x.className = x.className.replace(" w3-show", "");
+      }
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+<title>HR_Training_Details</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<script src="https://code.jscharting.com/latest/jscharting.js"></script>
+            <script type="text/javascript" src="https://code.jscharting.com/latest/modules/types.js"></script>
+<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    #i1{
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 19px;
+      text-align: center;
+      color: #006699;
+    }
+    
+    </style>
+  
+   
+    <body class="w3-light-grey">
+    
+    <!-- Top container -->
+    <div class="w3-bar w3-top" style="z-index:3;background-color: #006699">
+      <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+      <span class="w3-bar-item w3-right" style="color: #fff">Admin Dashboard</span>
+    </div>
+    
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:296px;" id="mySidebar"><br>
+      <div class="w3-container w3-row">
+        <div class="w3-col s4">
+        
+          <img src="hr1.jpg" class="w3-circle w3-margin-right" style="width:60px;">
+        </div>
+        <div class="w3-col s8 w3-bar">
+          <br>
+          <span style="font-size: 17px;"><strong>   Mr.Admin</strong></span><br>
+          <span style="font-size: 13px;"><strong>  <i class="fa fa-user-secret"></i>  Boss</strong></span><br>
+        <!--   <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a> -->
+          <br>
+        </div>
+      </div>
+      
+      <div class="w3-container">
+       
+              
+              
+              
+        <i class="fa fa-facebook-official w3-hover-opacity" id="i1"></i>
+        <i class="fa fa-instagram w3-hover-opacity" id="i1"></i>
+       <i class="fa fa-snapchat w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-twitter w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-linkedin w3-hover-opacity" id="i1"></i>
+                 
+               
+              
+              </div>
+      </div>
+      <hr>
+      <div class="w3-bar-block">
+        <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+        <a href="Admin.html" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-user fa-fw"></i>Dashboard</a>
+        <a href="Admin_personal.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-book fa-fw"></i> Personal Details</a>
+        <a href="Manage_data.html" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-users fa-fw"></i> Manage Employees Data</a>
+        <a href="Admin_attendance.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-card fa-fw"></i>  Attendence & Leaves </a>
+        <!-- <div class="w3-dropdown-hover">
+        
+          <div class="w3-dropdown-content w3-bar-block w3-border">
+            <a href="Dash_proj.html" class="w3-bar-item w3-button">Project Dashboard</a>
+            <a href="Deadline.html" class="w3-bar-item w3-button" style="background-color:#006699;color: #fff">DeadLine Notifier</a>
+            <a href="#" class="w3-bar-item w3-button">Project Report Submission</a>
+          </div> -->
+        <a href="Admin_project1.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-laptop fa-fw"></i>  Projects</a>
+        <!-- <div class="w3-dropdown-click">
+            <div class="w3-bar-item w3-button w3-padding" onclick="myFunction()" ><i class="fa fa-laptop fa-fw"></i>Projects</div>
+            <div id="Demo9" class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="Project.html" class="w3-bar-item w3-button">Your Project Details</a>
+              <a href="Dash_proj.html" class="w3-bar-item w3-button">Ongoing Project Dashboard</a>
+              <a href="Deadline.html" class="w3-bar-item w3-button">Deadline Notifier</a>
+              <a href="report_pro.html" class="w3-bar-item w3-button">Project Report Submission</a>
+            </div>
+          </div> -->
+          <!-- <a href="hr.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-male fa-fw"></i>HR Department</a> -->
+          <div class="w3-dropdown-click">
+            <div class="w3-bar-item w3-button w3-padding" onclick="myFunction()" style="background-color:#006699;color: #fff"><i class="fa fa-male fa-fw"></i> HR Management</div>
+            <div id="Demo" class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="hr.html" class="w3-bar-item w3-button">HR Dashboard</a>
+              <a href="recruitment.html" class="w3-bar-item w3-button">Recruitment</a>
+              <!-- <a href="" class="w3-bar-item w3-button">Interview</a> -->
+              <a href="HR_Training_Table.html" class="w3-bar-item w3-button" style="background-color:#333;color: #fff">Training</a>
+            </div>
+          </div>
+ 
+        <a href="Admin_Notification.html" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-bell fa-fw" ></i>  Notifications</a>
+        <a href="Admin_daily_details.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-pencil fa-fw"></i>  Daily Details & Report </a>
+        <a href="Accounting1.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-inr fa-fw"></i>  Accounting Department</a> 
+        <a href="client.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-money fa-fw"></i>  Client Management</a> 
+        <a href="Daily_log.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-clock-o fa-fw"></i>  Log History</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Logout</a>
+        <br><br><br>
+       
+    </nav>
+    
+    
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    <div class="w3-main" style="margin-left:300px;margin-top:43px;"><div class="w3-container w3-white w3-margin w3-padding">
+      <center>
+        <br>
+        <br>
+        <h4>Successfully completed Training</h4>
+    <form action="" style="text-align: center;">
+        Number of rows to show:
+        
+        <select onChange="setOption('pageSize', parseInt(this.value, 10))">
+          <option value="0">0</option>
+          <option value="3">3</option>
+          <option selected=selected value="5">5</option>
+          <option value="8">8</option>
+          <option value="-1">-1</option>
+        </select>
+      </form>
+      <br>
+      <div id="table"></div>
+    </center>
+<br></div></div>
+  
+ 
+  
+ 
+<script>
+    // Get the Sidebar
+    var mySidebar = document.getElementById("mySidebar");
+    
+    // Get the DIV with overlay effect
+    var overlayBg = document.getElementById("myOverlay");
+    
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+    function w3_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+      } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+      }
+    }
+    
+    // Close the sidebar with the close button
+    function w3_close() {
+      mySidebar.style.display = "none";
+      overlayBg.style.display = "none";
+    }
+    </script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+    <script type="text/javascript" src="tablequerywrapper.js"></script>
+    <script type="text/javascript">
+        google.charts.load('current', {'packages' : ['table']});
+        google.charts.setOnLoadCallback(init);
+    
+        var dataSourceUrl = 'https://docs.google.com/spreadsheets/d/1FDtnSQfW29b7WNSNzGrYyauHe90k0Hh2wK2c16TQ1JE/edit?usp=sharing';
+        // var dataSourceUrl = '';
+        var query, options, container;
+    
+        function init() {
+          query = new google.visualization.Query(dataSourceUrl);
+          container = document.getElementById("table");
+          options = {'pageSize': 5};
+          sendAndDraw();
+        }
+    
+        function sendAndDraw() {
+          query.abort();
+          var tableQueryWrapper = new TableQueryWrapper(query, container, options);
+          tableQueryWrapper.sendAndDraw();
+        }
+    
+        function setOption(prop, value) {
+          options[prop] = value;
+          sendAndDraw();
+        }
+    
+      </script>
+      <script>
+        var TableQueryWrapper = function(query, container, options) {
+    
+    this.table = new google.visualization.Table(container);
+    this.query = query;
+    this.sortQueryClause = '';
+    this.pageQueryClause = '';
+    this.container = container;
+    this.currentDataTable = null;
+    
+    var self = this;
+    var addListener = google.visualization.events.addListener;
+    addListener(this.table, 'page', function(e) {self.handlePage(e)});
+    addListener(this.table, 'sort', function(e) {self.handleSort(e)});
+    
+    options = options || {};
+    options = TableQueryWrapper.clone(options);
+    
+    options['sort'] = 'event';
+    options['page'] = 'event';
+    options['showRowNumber'] = true;
+    var buttonConfig = 'pagingButtonsConfiguration';
+    options[buttonConfig] = options[buttonConfig] || 'both';
+    options['pageSize'] = (options['pageSize'] > 0) ? options['pageSize'] : 10;
+    this.pageSize = options['pageSize'];
+    this.tableOptions = options;
+    this.currentPageIndex = 0;
+    this.setPageQueryClause(0);
+    };
+    
+    
+    /**
+    * Sends the query and upon its return draws the Table visualization in the
+    * container. If the query refresh interval is set then the visualization will
+    * be redrawn upon each refresh.
+    */
+    TableQueryWrapper.prototype.sendAndDraw = function() {
+    this.query.abort();
+    var queryClause = this.sortQueryClause + ' ' + this.pageQueryClause;
+    this.query.setQuery(queryClause);
+    this.table.setSelection([]);
+    var self = this;
+    this.query.send(function(response) {self.handleResponse(response)});
+    };
+    
+    
+    /** Handles the query response after a send returned by the data source. */
+    TableQueryWrapper.prototype.handleResponse = function(response) {
+    this.currentDataTable = null;
+    if (response.isError()) {
+      google.visualization.errors.addError(this.container, response.getMessage(),
+          response.getDetailedMessage(), {'showInTooltip': false});
+    } else {
+      this.currentDataTable = response.getDataTable();
+      this.table.draw(this.currentDataTable, this.tableOptions);
+    }
+    };
+    /** Handles a sort event with the given properties. Will page to page=0. */
+    TableQueryWrapper.prototype.handleSort = function(properties) {
+      var columnIndex = properties['column'];
+      var isAscending = properties['ascending'];
+      this.tableOptions['sortColumn'] = columnIndex;
+      this.tableOptions['sortAscending'] = isAscending;
+      // dataTable exists since the user clicked the table.
+      var colID = this.currentDataTable.getColumnId(columnIndex);
+      this.sortQueryClause = 'order by `' + colID + (!isAscending ? '` desc' : '`');
+      // Calls sendAndDraw internally.
+      this.handlePage({'page': 0});
+    };
+    
+    
+    /** Handles a page event with the given properties. */
+    TableQueryWrapper.prototype.handlePage = function(properties) {
+      var localTableNewPage = properties['page']; // 1, -1 or 0
+      var newPage = 0;
+      if (localTableNewPage != 0) {
+        newPage = this.currentPageIndex + localTableNewPage;
+      }
+      if (this.setPageQueryClause(newPage)) {
+        this.sendAndDraw();
+      }
+    };
+    
+    
+    /**
+     * Sets the pageQueryClause and table options for a new page request.
+     * In case the next page is requested - checks that another page exists
+     * based on the previous request.
+     * Returns true if a new page query clause was set, false otherwise.
+     */
+    TableQueryWrapper.prototype.setPageQueryClause = function(pageIndex) {
+      var pageSize = this.pageSize;
+    
+      if (pageIndex < 0) {
+        return false;
+      }
+      var dataTable = this.currentDataTable;
+      if ((pageIndex == this.currentPageIndex + 1) && dataTable) {
+        if (dataTable.getNumberOfRows() <= pageSize) {
+          return false;
+        }
+      }
+      this.currentPageIndex = pageIndex;
+      var newStartRow = this.currentPageIndex * pageSize;
+      // Get the pageSize + 1 so that we can know when the last page is reached.
+      this.pageQueryClause = 'limit ' + (pageSize + 1) + ' offset ' + newStartRow;
+      // Note: row numbers are 1-based yet dataTable rows are 0-based.
+      this.tableOptions['firstRowNumber'] = newStartRow + 1;
+      return true;
+    };
+    /** Performs a shallow clone of the given object. */
+    TableQueryWrapper.clone = function(obj) {
+      var newObj = {};
+      for (var key in obj) {
+        newObj[key] = obj[key];
+      }
+      return newObj;
+    };
+    </script>
+     <script>
+      function myFunction() {
+        var x = document.getElementById("Demo");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else { 
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+      </script>
+</body>
+</html>

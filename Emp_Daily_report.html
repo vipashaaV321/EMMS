@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html>
+<title>Employee Daily Report</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+#i1{
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+  text-align: center;
+  color: #006699;
+}
+.chart--container {
+      height: 100%;
+      width: 100%;
+      min-height: 500px;
+    }
+
+    .zc-ref {
+      display: none;
+    }
+</style>
+<body class="w3-light-grey">
+
+<!-- Top container -->
+<div class="w3-bar w3-top" style="z-index:3;background-color: #006699">
+  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+  <span class="w3-bar-item w3-right" style="color: #fff"><b style="margin-left: 8px;">   Employee Daily Report</b></span>
+</div>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container w3-row">
+    <div class="w3-col s4">
+      <img src="vips.png" class="w3-circle w3-margin-right" style="width:80px;">
+    </div>
+    <div class="w3-col s8 w3-bar">
+      <br>
+      <span style="font-size: 20px;"><strong>   Vipasha Vaghela</strong></span><br>
+      <span style="font-size: 15px;"><strong>  <i class="fa fa-laptop"></i> Front-End Developer</strong></span><br>
+    <!--   <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a> -->
+      <br><br>
+    </div>
+  </div>
+  
+  <div class="w3-container">
+   
+          
+          
+          
+    <i class="fa fa-facebook-official w3-hover-opacity" id="i1"></i>
+    <i class="fa fa-instagram w3-hover-opacity" id="i1"></i>
+   <i class="fa fa-snapchat w3-hover-opacity" id="i1"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity" id="i1"></i>
+  <i class="fa fa-twitter w3-hover-opacity" id="i1"></i>
+  <i class="fa fa-linkedin w3-hover-opacity" id="i1"></i>
+             
+           
+          
+          </div>
+  </div>
+  <hr>
+  <div class="w3-bar-block">
+    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+    <a href="dashb.html" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-user fa-fw"></i>Dashboard</a>
+    <a href="personal.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-book fa-fw"></i> Personal Details</a>
+    <a href="Attendance1.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-card fa-fw"></i>  Attendence & Leaves </a>
+    <a href="Project.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-laptop fa-fw"></i>  Projects</a>
+    <a href="Achievements.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-trophy fa-fw"></i> Achievements</a>
+    <a href="Notification.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i>  Notifications</a>
+    <a href="Emp_Daily_report.html" class="w3-bar-item w3-button w3-padding" style="background-color:#006699;color: #fff"><i class="fa fa-pencil fa-fw"></i>  Schedule & Report </a>
+    <a href="Payrol.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-inr fa-fw"></i>  Payroll Details</a>
+    <a href="Emp_Training.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-book fa-fw"></i>  Training Details</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Settings</a><br><br>
+  </div>
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px;margin-top:45px;">
+
+  <!-- Header -->
+  <div class="w3-container w3-center w3-white w3-margin w3-padding"> 
+    <br>
+    <h4>Daily Schedule & Work progress Report</h4><br>
+    <center>
+    <img src="Sceduling.jpg" ><br><br>
+    <button onclick="myFunction1('Demo1')" class="w3-btn w3-block w3-center-align" style="background-color:#27548f;color: #fff;">Generate Daily Schedule</button>
+<div id="Demo1" class="w3-container w3-hide">
+  <embed src="https://docs.google.com/spreadsheets/d/1GeStJ2FJiSs8OtcoUoW9__iuwi1RUF_CqCPQ4cjtkY4/edit?usp=sharing" style="width:100%;height:400px;">
+  </div>
+  <br>
+  <button onclick="myFunction1('Demo2')" class="w3-btn w3-block w3-center-align" style="background-color:#27548f;color: #fff;">Generate Daily Work Progress Report</button>
+<div id="Demo2" class="w3-container w3-hide">
+  <embed src="https://docs.google.com/spreadsheets/d/1H5FRj3T_9P1no4NgEntgEIQjNVFXOVLzrjy2k5GoHDE/edit?usp=sharing" style="width:100%;height:400px;">
+    </div>
+    <br>
+    
+    
+    <br></center>
+    </div>
+ 
+ 
+  <hr>
+  <div class="w3-container  w3-white w3-padding w3-margin">
+      <h4>Weekly Timeline</h4>
+    <div id="myChart" class="chart--container">
+      </div>
+    <!-- <h5>Countries</h5>
+    <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
+      <tr>
+        <td>United States</td>
+        <td>65%</td>
+      </tr>
+      <tr>
+        <td>UK</td>
+        <td>15.7%</td>
+      </tr>
+      <tr>
+        <td>Russia</td>
+        <td>5.6%</td>
+      </tr>
+      <tr>
+        <td>Spain</td>
+        <td>2.1%</td>
+      </tr>
+      <tr>
+        <td>India</td>
+        <td>1.9%</td>
+      </tr>
+      <tr>
+        <td>France</td>
+        <td>1.5%</td>
+      </tr>
+    </table><br>
+    <button class="w3-button w3-dark-grey">More Countries  <i class="fa fa-arrow-right"></i></button> -->
+  <!-- </div> -->
+
+  
+
+  <!-- <div class="w3-container">
+    <h5>Recent Comments</h5>
+    <div class="w3-row">
+      <div class="w3-col m2 text-center">
+        <img class="w3-circle" src="avatar3.png" style="width:96px;height:96px">
+      </div>
+      <div class="w3-col m10 w3-container">
+        <h4>John <span class="w3-opacity w3-medium">Sep 29, 2014, 9:12 PM</span></h4>
+        <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
+      </div>
+    </div>
+
+    <div class="w3-row">
+      <div class="w3-col m2 text-center">
+        <img class="w3-circle" src="avatar1.png" style="width:96px;height:96px">
+      </div>
+      <div class="w3-col m10 w3-container">
+        <h4>Bo <span class="w3-opacity w3-medium">Sep 28, 2014, 10:15 PM</span></h4>
+        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="w3-container w3-padding-32" style="background-color: aliceblue">
+    <div class="w3-row">
+      <div class="w3-container w3-third">
+        <h5 class="w3-bottombar w3-border-green">Demographic</h5>
+        <p>Language</p>
+        <p>Country</p>
+        <p>City</p>
+      </div>
+      <div class="w3-container w3-third">
+        <h5 class="w3-bottombar w3-border-red">System</h5>
+        <p>Browser</p>
+        <p>OS</p>
+        <p>More</p>
+      </div>
+      <div class="w3-container w3-third">
+        <h5 class="w3-bottombar w3-border-orange">Target</h5>
+        <p>Users</p>
+        <p>Active</p>
+        <p>Geo</p>
+        <p>Interests</p>
+      </div>
+    </div>
+  </div>
+
+  
+
+   End page content -->
+  
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+<script>
+  function myFunction1(id) {
+    var x = document.getElementById(id);
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+  </script>
+<script>
+    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"]; // CHART CONFIG
+    // -----------------------------
+    let chartConfig = {
+      type: 'piano',
+      backgroundColor: '#fff',
+      fillType: 'radial',
+      plot: {
+        valueBox: {
+          visible: false
+        },
+        aspect: 'brightness',
+        rules: [{
+            backgroundColor: '#7000ac',
+            rule: '%v < 200'
+          },
+          {
+            backgroundColor: '#3e99cf',
+            rule: '%v >= 200 && %v < 375'
+          },
+          {
+            backgroundColor: '#d9dde8',
+            rule: '%v >= 375'
+          }
+        ]
+      },
+      plotarea: {
+        margin: '30px 30px 85px 105px',
+        backgroundColor: 'none'
+      },
+      scaleX: {
+        values: ['9 AM', '10 AM', '11 AM', '12 AM', '1 pM', '3 PM', '4PM', ' 5PM', '6 PM', '7 PM'],
+        alpha: 0.5,
+        guide: {
+          visible: false
+        },
+        item: {
+          paddingTop: '5px',
+          fontAngle: -90,
+          fontColor: '#93abc9',
+          fontFamily: 'raleway',
+          fontSize: '10px',
+          rules: [{
+            rule: '%i %2 != 0',
+            visible: false
+          }]
+        },
+        itemsOverlap: true,
+        label: {
+          text: '',
+          paddingTop: '15px',
+          bold: true,
+          fontColor: '#fff',
+          fontFamily: 'raleway',
+          fontSize: '12px'
+        },
+        lineColor: '#000',
+        lineWidth: '2px',
+        maxLabels: 999,
+        textAlign: 'right',
+        tick: {
+          visible: false
+        }
+      },
+      scaleY: {
+        values: ['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+        fontFamily:'raleway',
+        alpha: 0.5,
+        guide: {
+          visible: false
+        },
+        item: {
+          paddingRight: '5px',
+          fontColor: '#93abc9',
+          fontFamily: 'arial',
+          fontSize: '10px',
+          textAlign: 'right'
+        },
+        label: {
+          text: 'Call Center Location',
+          paddingRight: '20px',
+          bold: true,
+          fontColor: '#fff',
+          fontFamily: 'raleway',
+          fontSize: '12px'
+        },
+        lineColor: '#000',
+        lineWidth: '2px',
+        tick: {
+          alpha: 0.5,
+          lineColor: '#000'
+        }
+      },
+      tooltip: {
+        text: 'Work Progress<br>During %k Hour:<br><b>%v</b>',
+        padding: '5px 10px',
+        borderColor: 'none',
+        borderRadius: '8px',
+        borderWidth: '0px',
+        fontColor: '#fff',
+        fontFamily: 'raleway',
+        fontSize: '10px',
+        fontWeight: 'normal',
+        shadow: false
+      },
+      series: [{
+          text: 'San Jose: Sales',
+          values: [106, 122, 203, 245, 261, 202, 309, 410, 451, 304, 203, 425, 191, 206, 263, 284, 251, 382, 391, 405, 321, 298, 302, 194]
+        },
+        {
+          text: 'Dallas: Sales',
+          values: [175, 205, 283, 304, 291, 258, 311, 406, 125, 206, 307, 254, 281, 352, 395, 461, 201, 302, 153, 94, 101, 201, 143, 124]
+        },
+        {
+          text: 'Raleigh: Sales',
+          values: [101, 108, 93, 84, 71, 122, 253, 194, 201, 92, 143, 104, 221, 242, 263, 304, 178, 222, 243, 184, 101, 92, 83, 64]
+        },
+        {
+          text: 'San Jose: Support',
+          values: [301, 402, 433, 294, 406, 382, 325, 407, 198, 208, 298, 498, 401, 452, 397, 485, 508, 594, 493, 454, 321, 382, 403, 204]
+        }, {
+          text: 'Dallas: Support',
+          values: [211, 208, 175, 406, 199, 207, 253, 264, 301, 295, 303, 284, 107, 182, 193, 204, 171, 250, 93, 94, 106, 142, 153, 204]
+        },
+        {
+          text: 'Raleigh: Support',
+          values: [201, 245, 153, 174, 201, 172, 309, 402, 401, 392, 303, 244, 254, 292, 103, 144, 201, 192, 175, 254, 311, 252, 193, 144]
+        }
+      ]
+    };
+
+    // RENDER CHARTS
+    // -----------------------------
+    zingchart.render({
+      id: 'myChart',
+      data: chartConfig
+    });
+  </script>
+</body>
+</html>

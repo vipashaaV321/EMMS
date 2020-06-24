@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html>
+<title>Project_Dashboard</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<script src="https://code.jscharting.com/latest/jscharting.js"></script>
+            <script type="text/javascript" src="https://code.jscharting.com/latest/modules/types.js"></script>
+<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    #i1{
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 19px;
+      text-align: center;
+      color: #006699;
+    }
+    .chart--container {
+      height: 100%;
+      width: 100%;
+      min-height: 530px;
+    }
+
+    .zc-ref {
+      display: none;
+    }
+    #dashWrapper{
+    max-width:900px;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:space-around;
+    align-items:start;
+    margin:0 auto;
+}
+.dashPart{	text-align:center;}
+.vbullets{ display:inline-block; margin:0 6px;}
+    </style>
+  
+   
+    <body class="w3-light-grey">
+    
+    <!-- Top container -->
+    <div class="w3-bar w3-top" style="z-index:3;background-color: #006699">
+      <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+      <span class="w3-bar-item w3-right" style="color: #fff"><i class="fa fa-laptop"></i>  Project Dashboard</span>
+    </div>
+    
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:296px;" id="mySidebar"><br>
+      <div class="w3-container w3-row">
+        <div class="w3-col s4">
+        
+          <img src="hr1.jpg" class="w3-circle w3-margin-right" style="width:60px;">
+        </div>
+        <div class="w3-col s8 w3-bar">
+          <br>
+          <span style="font-size: 17px;"><strong>   Mr.Admin</strong></span><br>
+          <span style="font-size: 13px;"><strong>  <i class="fa fa-user-secret"></i>  Boss</strong></span><br>
+        <!--   <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a> -->
+          <br>
+        </div>
+      </div>
+      
+      <div class="w3-container">
+       
+              
+              
+              
+        <i class="fa fa-facebook-official w3-hover-opacity" id="i1"></i>
+        <i class="fa fa-instagram w3-hover-opacity" id="i1"></i>
+       <i class="fa fa-snapchat w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-twitter w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-linkedin w3-hover-opacity" id="i1"></i>
+                 
+               
+              
+              </div>
+      </div>
+      <hr>
+      <div class="w3-bar-block">
+        <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+        <a href="Admin.html" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-user fa-fw"></i>Dashboard</a>
+        <a href="Admin_personal.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-book fa-fw"></i> Personal Details</a>
+        <a href="Manage_data.html" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-users fa-fw"></i> Manage Employees Data</a>
+        <a href="Admin_attendance.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-card fa-fw"></i>  Attendence & Leaves </a>
+        <!-- <div class="w3-dropdown-hover">
+        
+          <div class="w3-dropdown-content w3-bar-block w3-border">
+            <a href="Dash_proj.html" class="w3-bar-item w3-button">Project Dashboard</a>
+            <a href="Deadline.html" class="w3-bar-item w3-button" style="background-color:#006699;color: #fff">DeadLine Notifier</a>
+            <a href="#" class="w3-bar-item w3-button">Project Report Submission</a>
+          </div> -->
+        <!-- <a href="Admin_project1.html" class="w3-bar-item w3-button w3-padding" style="background-color:#006699;color: #fff"><i class="fa fa-laptop fa-fw"></i>  Projects</a> -->
+        <div class="w3-dropdown-click">
+          <div class="w3-bar-item w3-button w3-padding" onclick="myFunction()"style="background-color:#006699;color: #fff" ><i class="fa fa-laptop fa-fw"></i>Projects</div>
+          <div id="Demo" class="w3-dropdown-content w3-bar-block w3-border">
+            <a href="Admin_project1.html" class="w3-bar-item w3-button">Project_dashboard</a>
+            <a href="Admin_Project2.html" class="w3-bar-item w3-button">Ongoing Projects</a>
+            <a href="Admin_Project_Evaluation.html" class="w3-bar-item w3-button">Project Evalution</a>
+            <a href="Admin_Team_mem_proj.html" class="w3-bar-item w3-button">Project & Team Registration</a>
+            <a href="Admin_Project_Meeting.html" class="w3-bar-item w3-button">Meeting Details</a>
+            <a href="WorkAssignment_pro.html" class="w3-bar-item w3-button">Task Assignment</a>
+            <a href="Admin_proj_repo_noti.html" class="w3-bar-item w3-button">Notifications</a>
+          </div>
+        </div>
+        <!-- <div class="w3-dropdown-click">
+            <div class="w3-bar-item w3-button w3-padding" onclick="myFunction()" ><i class="fa fa-laptop fa-fw"></i>Projects</div>
+            <div id="Demo9" class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="Project.html" class="w3-bar-item w3-button">Your Project Details</a>
+              <a href="Dash_proj.html" class="w3-bar-item w3-button">Ongoing Project Dashboard</a>
+              <a href="Deadline.html" class="w3-bar-item w3-button">Deadline Notifier</a>
+              <a href="report_pro.html" class="w3-bar-item w3-button">Project Report Submission</a>
+            </div>
+          </div> -->
+          <a href="hr.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-male fa-fw"></i>HR Department</a>
+          <!-- <div class="w3-dropdown-click">
+            <div class="w3-bar-item w3-button w3-padding" onclick="myFunction1()"><i class="fa fa-male fa-fw"></i>  HR</div>
+            <div id="Demo10" class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="Project.html" class="w3-bar-item w3-button">HR Dashboard</a>
+              <a href="Dash_proj.html" class="w3-bar-item w3-button">Recruitment</a>
+              <a href="Deadline.html" class="w3-bar-item w3-button">Interview</a>
+              <a href="report_pro.html" class="w3-bar-item w3-button">Training</a>
+            </div>
+          </div> -->
+ 
+        <a href="Admin_Notification.html" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-bell fa-fw" ></i>  Notifications</a>
+        <a href="Admin_daily_details.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-pencil fa-fw"></i>  Daily Details & Report </a>
+        <a href="Accounting1.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-inr fa-fw"></i>  Accounting Department</a> 
+        <a href="client.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-money fa-fw"></i>  Client Management</a> 
+        <a href="Daily_log.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-clock-o fa-fw"></i>  Log History</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Logout</a>
+        <br><br><br>
+       
+    </nav>
+    
+    
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    <div class="w3-main" style="margin-left:300px;margin-top:43px;">
+        <div class="w3-container">
+            <br>
+            <div id="myChart"></div>
+      
+        </div>
+    <div class="w3-container w3-white w3-margin">
+        <div id="chartDivr" style="max-width: 500px;height: 500px;margin: 0px auto"></div>
+    </div>
+    <div class="w3-container w3-white w3-margin">
+      <br>
+      <div class="w3-half"><div id="chartDiv1" style="max-width: 540px;height: 400px;margin: 0px auto"></div></div>
+      <div class="w3-half"><div id="chartDiv" style="max-width: 740px;height: 400px;margin: 0px auto"></div></div>
+  </div>
+  <br>
+  <center>
+    <div class="w3-responsive">
+      <div id="chart_div" style="width: 92%;background-color: #fff;"></div></div>
+  </center>
+  <br><br>
+  <div class="w3-container w3-white">Project TimeLine Generation
+ <embed src="https://docs.google.com/spreadsheets/d/1hmFZa4SxRZu809KieN21fsgpHGetfbOJCm0hNLmZin4/edit?usp=sharing" style="width: 100%;height: 500px;"> 
+</div>
+   </div>  
+ 
+  
+ 
+<script>
+    // Get the Sidebar
+    var mySidebar = document.getElementById("mySidebar");
+    
+    // Get the DIV with overlay effect
+    var overlayBg = document.getElementById("myOverlay");
+    
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+    function w3_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+      } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+      }
+    }
+    
+    // Close the sidebar with the close button
+    function w3_close() {
+      mySidebar.style.display = "none";
+      overlayBg.style.display = "none";
+    }
+    </script>
+  
+  <script>
+    ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+    // DEFINE CHART LOCATIONS (IDS)
+    // -----------------------------
+    // Main chart render location
+    var chartId = 'myChart';
+
+
+    // CHART CONFIG
+    // -----------------------------
+    var myConfig = {
+      type: 'mixed',
+      title: {
+        text: 'Projects_Progress Report',
+        align: 'left',
+        marginLeft: '23%'
+      },
+      legend: {
+        verticalAlign: 'middle',
+        adjustLayout: true
+      },
+      plot: {
+        animation: {
+          effect: 'ANIMATION_SLIDE_TOP',
+          method: 'ANIMATION_BOUNCE_EASE_OUT',
+          sequence: 'ANIMATION_NO_SEQUENCE',
+          speed: 975,
+          delay: 500,
+        },
+      },
+      scaleX: {
+        labels: ['Day <br>1', 'Day 2', 'Day 3', 'Day 4', 'Day 5', 'Day 6', 'Day 7', 'Day 8'], //one label for every datapoint
+      },
+      scaleY: {
+        label: {
+          text: 'Remaing effort (hours)',
+          fontSize: 14
+        },
+        guide: { // dashed lines
+          visible: false
+        }
+      },
+      scaleY2: {
+        minValue: 0,
+        maxValue: 100,
+        step: 25, // can define scale step values or default
+        label: {
+          text: 'Remaing and completed tasks',
+          fontSize: 14
+        }
+      },
+      crosshairX: {
+        lineColor: '#424242',
+        lineStyle: 'dotted',
+        lineGapSize: '4px',
+        plotLabel: {
+          backgroundColor: "white",
+          borderColor: "#e3e3e3",
+          borderRadius: "5px",
+          bold: true,
+          fontSize: "12px",
+          fontFamily: "Lato",
+          fontColor: "#2f2f2f",
+          textAlign: 'right',
+          padding: '15px',
+          shadow: true,
+          shadowAlpha: 0.2,
+          shadowBlur: 5,
+          shadowDistance: 4,
+          shadowColor: "#a1a1a1",
+          textAlign: 'left'
+        },
+        scaleLabel: {
+          backgroundColor: '#424242'
+        }
+      },
+      series: [{
+        type: 'line',
+        values: [35, 42, 67, 89, 25, 34, 67, 85].sort().reverse(),
+        text: 'Remaining Tasks',
+        lineColor: '#42a5f5',
+        marker: {
+          visible: 'false'
+        },
+        scales: 'scale-x, scale-y'
+      }, {
+        type: 'line',
+        values: [25, 32, 57, 79, 15, 24, 57, 75].sort().reverse(),
+        text: 'Remaining Effort',
+        lineColor: '#5c6bc0',
+        marker: {
+          type: 'square',
+          backgroundColor: '#5c6bc0'
+        },
+        scales: 'scale-x, scale-y'
+      }, {
+        type: 'line',
+        values: [90, 80, 70, 60, 50, 40, 30, 20],
+        text: 'Completed Tasks',
+        lineColor: '#66bb6a',
+        marker: {
+          visible: false
+        },
+        scales: 'scale-x, scale-y'
+      }, {
+        type: 'bar',
+        values: [5, 10, 6, 3, 6, 2, 0, 9],
+        text: 'Completed Tasks',
+        backgroundColor: '#ffa726',
+        scales: 'scale-x, scale-y-2'
+      }]
+    };
+
+
+    // RENDER CHART
+    // -----------------------------
+    zingchart.render({
+      id: chartId,
+      data: myConfig,
+      height: 400,
+      width: '100%'
+    });
+  </script>
+    <script>
+        var chart = JSC.chart('chartDivr',{
+  debug: true,
+  defaultSeries_type: 'radar',
+  title: {
+    position: 'center',
+    label: {
+      text: 'Project progress',
+      style: {  fontSize: 15,  fontWeight: 'normal'}
+    }
+  },
+  yAxis_scale: { interval: 50, range_max: 150  },
+  legend: { position: 'bottom', template: '%icon,%name'  },
+  defaultPoint: {
+    marker: {
+      type: 'circle',
+      fill: 'white',
+      outline_width: 2
+    }
+  },
+  series: [
+    {
+      name: 'project_id:01',
+      type: 'area',
+      points: [
+        { name: 'Jan', y: 59  },
+        { name: 'Feb', y: 72  },
+        { name: 'Mar', y: 57  },
+        { name: 'Apr', y: 15  },
+        { name: 'May', y:91  },
+        { name: 'Jun', y: 14  },
+        { name: 'Jul', y: 67  },
+        { name: 'Aug', y: 88  },
+        { name: 'Sep', y: 90  },
+        { name: 'Oct', y: 50  },
+        { name: 'Nov', y: 77  },
+        { name: 'Dec', y: 79  }
+      ]
+    },
+    {
+      name: 'Project id:02',
+      type: 'column',
+      points: [
+        { name: 'Jan', y: 79  },
+        { name: 'Feb', y: 94  },
+        { name: 'Mar', y: 93  },
+        { name: 'Apr', y: 60  },
+        { name: 'May', y: 7  },
+        { name: 'Jun', y: 83  },
+        { name: 'Jul', y: 94  },
+        { name: 'Aug', y: 66  },
+        { name: 'Sep', y: 94  },
+        { name: 'Oct', y: 68  },
+        { name: 'Nov', y: 81  },
+        { name: 'Dec', y: 65  }
+      ]
+    },
+    {
+      name: 'Project id:03',
+      type: 'spline',
+      points: [
+        { name: 'Jan', y: 31  },
+        { name: 'Feb', y: 17  },
+        { name: 'Mar', y: 46  },
+        { name: 'Apr', y: 80  },
+        { name: 'May', y: 10  },
+        { name: 'Jun', y: 28  },
+        { name: 'Jul', y: 78  },
+        { name: 'Aug', y: 27  },
+        { name: 'Sep', y: 49  },
+        { name: 'Oct', y: 10  },
+        { name: 'Nov', y: 65  },
+        { name: 'Dec', y: 84  }
+      ]
+    },
+    {
+      name: 'Project id:04',
+      type: 'line',
+      defaultPoint_marker_visible: false,
+      points: [
+        { name: 'Jan', y: 30  },
+        { name: 'Feb', y: 22  },
+        { name: 'Mar', y: 16  },
+        { name: 'Apr', y: 15  },
+        { name: 'May', y: 17  },
+        { name: 'Jun', y: 91  },
+        { name: 'Jul', y: 12  },
+        { name: 'Aug', y: 64  },
+        { name: 'Sep', y: 5  },
+        { name: 'Oct', y: 53  },
+        { name: 'Nov', y: 66  },
+        { name: 'Dec', y: 59  }
+      ]
+    }
+  ]
+});
+    </script>
+    
+    <script>
+      var chart = JSC.chart('chartDiv', {
+debug: true,
+type: 'column',
+yAxis: {
+scale_type: 'stackedFull',
+visible: false,
+label_text: 'Units Sold'
+},
+defaultPoint: {
+label_text: '{%percentOfGroup:n1}%',
+tooltip: '%xValue %seriesName <b>%yValue</b><hr><b>{%percentOfGroup:n1}%</b> of %xValue<br><b>{%percentOfSeries:n1}%</b> of %seriesName'
+},
+title_label_text: 'project Resource',
+xAxis_label_text: 'Quarter',
+series: [
+{
+  name: 'Resource',
+  id: 's1',
+  points: [
+    { x: 'P1', y: 230  },
+    { x: 'P2', y: 240  },
+    { x: 'P3', y: 267  },
+    { x: 'P4', y: 238  }
+  ]
+},
+{
+  name: 'Hardware',
+  points: [
+    { x: 'P1', y: 325  },
+    { x: 'P2', y: 367  },
+    { x: 'P3', y: 382  },
+    { x: 'P4', y: 371  }
+  ]
+},
+{
+  name: 'Software',
+  points: [
+    { x: 'P1', y: 285  },
+    { x: 'P2', y: 292  },
+    { x: 'P3', y: 267  },
+    { x: 'P4', y: 218  }
+  ]
+},
+{
+  name: 'Others',
+  points: [
+    { x: 'P1', y: 185  },
+    { x: 'P2', y: 192  },
+    { x: 'P3', y: 198  },
+    { x: 'P4', y: 248  }
+  ]
+}
+]
+});</script>
+<script>
+var chart = JSC.chart('chartDiv1',{
+debug: true,
+legend_visible: false,
+xAxis: {
+  defaultTick: {
+    padding: 10,
+    gridLine: {  width: 1,  dashStyle: 'dash'},
+    
+/*Defining label will make it appear.*/
+    label: {}
+  },
+  scale_invert: true,
+  spacingPercentage: 0.3
+},
+yAxis: {
+  scale_interval: 1,
+  
+/*If defined, breaks will be used at tick positions.*/
+  line_breaks: {}
+},
+defaultSeries: {
+  type: 'gauge column',
+  defaultPoint_tooltip: '<b>%name</b> {%yRange:n1}hr/{%target:n1}hr',
+  angle: {start: -180,sweep: 180 },
+  shape_label: {
+    text: '%name',
+    style_fontSize: 24,
+    verticalAlign: 'top'
+  },
+  
+/*Default point marker options. Markers are not visible by default on columns.*/
+  defaultPoint_marker: {
+    fill: '#00c45c',
+    type: {  path: 'M 0 0 L 3 5  0 10 Z'},
+    rotate: 'auto',
+    size: 28
+  }
+},
+series: [
+  {
+    name: 'Project Activity Targets hr/day',
+    palette: 'default',
+    points: [
+      { x: 'Research', y: 6.5, attributes_target: 7  },
+      { x: 'Planning', y: 1.55, attributes_target: 1  },
+      { x: 'Implement', y: 5.8, attributes_target: 3.2  },
+      {
+        name: 'Research Target',
+        x: 'Research',
+        y: 8,
+        marker: {visible: true,fill: '#d81c36' },
+        color: ['none',0 ]
+      },
+      {
+        name: 'Planning Target',
+        x: 'Planning',
+        y: 1,
+        marker_visible: true,
+        color: ['none',0 ]
+      },
+      {
+        name: 'Implement Target',
+        x: 'Implement',
+        y: 3.2,
+        marker: {
+          visible: true,
+          type_path: 'M 3 0 L 3 10  0 5 Z',
+          fill: '#d81c36'
+        },
+        color: ['none',0 ]
+      }
+    ]
+  }
+]
+});</script>
+ <script>
+  function myFunction() {
+    var x = document.getElementById("Demo");
+    if (x.className.indexOf("w3-show") == -1) {
+      x.className += " w3-show";
+    } else { 
+      x.className = x.className.replace(" w3-show", "");
+    }
+  }
+  </script>
+</body>
+</html>

@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html>
+<title>Employees Payroll Details</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+
+    .container {
+  width: 100%;
+  background-color: #ddd;
+}
+   
+#i1{
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+  text-align: center;
+  color: #006699;
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  background-color: #fff;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+
+.skills {
+  text-align: right;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: white;
+}
+
+.html {width: 90%; background-color: #4CAF50;}
+.css {width: 80%; background-color: #2196F3;}
+.js {width: 65%; background-color: #f44336;}
+.php {width: 60%; background-color: #808080;}
+</style>
+<body class="w3-light-grey">
+
+<!-- Top container -->
+<div class="w3-bar w3-top" style="z-index:3;background-color: #006699">
+  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+  <span class="w3-bar-item w3-right" style="color: #fff"><b style="margin-left: 8px;">   Employee Dashboard</b></span>
+</div>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container w3-row">
+    <div class="w3-col s4">
+      <img src="vips.png" class="w3-circle w3-margin-right" style="width:80px;">
+    </div>
+    <div class="w3-col s8 w3-bar">
+      <br>
+      <span style="font-size: 20px;"><strong>   Vipasha Vaghela</strong></span><br>
+      <span style="font-size: 15px;"><strong>  <i class="fa fa-laptop"></i> Front-End Developer</strong></span><br>
+    <!--   <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a> -->
+      <br><br>
+    </div>
+  </div>
+  
+  <div class="w3-container">
+   
+          
+          
+          
+    <i class="fa fa-facebook-official w3-hover-opacity" id="i1"></i>
+    <i class="fa fa-instagram w3-hover-opacity" id="i1"></i>
+   <i class="fa fa-snapchat w3-hover-opacity" id="i1"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity" id="i1"></i>
+  <i class="fa fa-twitter w3-hover-opacity" id="i1"></i>
+  <i class="fa fa-linkedin w3-hover-opacity" id="i1"></i>
+             
+           
+          
+          </div>
+  </div>
+  <hr>
+  <div class="w3-bar-block">
+    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+    <a href="dashb.html" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-user fa-fw"></i>Dashboard</a>
+    <a href="personal.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-book fa-fw"></i> Personal Details</a>
+    <a href="Attendance1.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-card fa-fw"></i>  Attendence & Leaves </a>
+    <a href="Dash_proj.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-laptop fa-fw"></i>  Projects</a>
+    <a href="Achievements.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-trophy fa-fw"></i> Achievements</a>
+    <a href="Notification.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i>  Notifications</a>
+    <a href="Emp_Daily_report.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-pencil fa-fw"></i> Schedule & Report </a>
+    <a href="Payrol.html" class="w3-bar-item w3-button w3-padding"  style="background-color:#006699;color: #fff"><i class="fa fa-inr fa-fw"></i>  Payroll Details</a>
+    <a href="Emp_Training.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-book fa-fw"></i>  Training Details</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Logout</a><br><br>
+  </div>
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px;margin-top:43px;">
+  
+  <div class="w3-container">
+    <div id="chartContainer" style="width: 100%; height: 300px;"></div>
+    <script src="https://canvasjs.com/assets/script/canvasjs.min.js"></script>
+  </div>
+  <div class="w3-container">
+ 
+    <h3>Your Daily Payroll</h3>
+    <br/> Hourly Rate
+    <input type="text" id="daily_rate" name="daily_rate">
+    <br>
+    <br/> Number of hour Work
+    <input type="text" id="no_days_work" name="no_days_work">
+    <br/> Number overTime Hour
+    <input type="text" id="over" name="over">
+    <br>Half Left Hours
+    <input type="text" id="half" name="half">
+    <br>
+    <br>
+    <button onclick="solve_salary()">Solve Salary</button>
+    <br><br>
+    
+    <p id="demo2a"></p>
+    
+    
+      </div>
+  <div class="w3-container">
+      
+    <div class="w3-half w3-padding">
+        <CENTER>
+            <br>
+            <h3><b>Enter Your WorkTime</b></h3><hr style="
+              border: 0;
+              border-top: 2px dotted #8c8c8c;
+            ">
+          <TABLE cellSpacing=0 cellPadding=5 width=350 border=0>
+            <TBODY>
+            <FORM name=ThisForm>
+          
+              <TR><TD>&nbsp;<B>From:</B>&nbsp;</TD>
+              <TD>&nbsp;Hours</TD>
+              <TD><B>:</B></TD>
+              <TD>&nbsp;Minutes</TD>
+              <TD>&nbsp;am / pm</TD>
+              </TR>
+              <TR>
+              <TD></TD>
+              <TD><INPUT compute(document.ThisForm) size=2 class=debu3 name=hour1></TD>
+              <TD><B>:</B></TD>
+              <TD><INPUT compute(document.ThisForm) size=2 class=debu3 name=min1></TD>
+              <TD><SELECT compute(document.ThisForm) class=debu3 name=ADBC1> 
+                  <OPTION selected>am<OPTION>pm</OPTION></SELECT></TD></TR>
+              <TR><TD>&nbsp;<B>To:&nbsp;&nbsp;&nbsp; </B>&nbsp;</TD>
+              <TD>&nbsp;Hours</TD>
+              <TD><B>:</B></TD>
+              <TD>&nbsp;Minutes</TD>
+              <TD>&nbsp;am / pm</TD>
+              </TR>
+              <TR>
+              <TD></TD>
+              <TD><INPUT compute(document.ThisForm) size=2 class=debu3 name=hour2></TD>
+              <TD><B>:</B></TD>
+              <TD><INPUT compute(document.ThisForm) size=2 class=debu3 name=min2></TD>
+              <TD><SELECT compute(document.ThisForm) class=debu3 name=ADBC2> 
+                  <OPTION selected>am<OPTION>pm</OPTION></SELECT></TD></TR>
+          </TBODY></TABLE>
+          <BR>
+          
+          <TABLE><TBODY><TR><br>
+              <TD align=middle><INPUT onclick=compute(this.form) type=button value="Calculate" class="b2t"> 
+              </TD>  <TD><INPUT TYPE="text" NAME="txtResult" class=debu3 SIZE=20 style="padding: 8px" placeholder="Total work-hours"> </TD>
+          
+          <TD align=middle><input type="reset" class="b3t"></TD></TR>
+          </TBODY></TABLE>
+          </FORM></CENTER><BR><BR>
+    </div>
+    <div class="w3-half">
+        <br>
+        <p>Hourly Wage:
+            <input type="text" name="wage" id="txt_wage" value ="0.00"/></p>
+            <p>Enter Workdays
+                <input type="text" name="days" id="workday" value= "0.0"/> </p>
+            <p>Hours Per day:
+            <input type="text" name="hours" id="txt_hours" value= "0.0"/> <br/><br/>
+            
+            <button value="calculate" onclick="calcSalary()">Calculate</button></p>
+            <input type="text" id="results" placeholder="Basic Salary">
+        </div></div>
+  
+ 
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+<script>
+    window.onload = function () {
+    
+    var chart = new CanvasJS.Chart("chartContainer", {
+        theme: "light2", // "light1", "light2", "dark1", "dark2"
+        animationEnabled: true,
+        title: {
+            text: "Monthly Average Workhours Time (Am to Pm)"
+        },
+        axisY: {
+            title: "Timimg",
+            prefix: "",
+            includeZero: false
+        },
+        data: [{
+            type: "rangeColumn",
+            yValueFormatString: "#,##0.00",
+            xValueFormatString: "MMM YYYY",
+            toolTipContent: "{x}<br>Checkin: {y[0]}AM<br>Checkout {y[1]}PM",
+            dataPoints: [		
+                { x: new Date(2020, 0), y: [9, 15] },
+                { x: new Date(2020, 1), y: [10, 18] },
+                { x: new Date(2020, 2), y: [9, 15] },
+                { x: new Date(2020, 3), y: [9, 17] },
+                { x: new Date(2020, 4), y: [10, 16] },
+                { x: new Date(2020, 5), y: [11, 18] },
+                { x: new Date(2020, 6), y: [10, 16] },
+                { x: new Date(2020, 7), y: [9, 15] },
+                { x: new Date(2020, 8), y: [9, 19] },
+                { x: new Date(2020, 9), y: [9, 18] },
+                { x: new Date(2020, 10), y: [10, 18] },
+                { x: new Date(2020, 11), y: [9, 17 ]}
+            ]
+        }]
+    });
+    chart.render();
+    
+    }
+    </script>
+    <script>
+        function calcSalary() {
+      var wage_element = document.getElementById('txt_wage');
+      var wd=document.getElementById('workday');
+      var  workday = parseInt(wd.value);
+      var wage = parseInt(wage_element.value);
+      var hours_element = document.getElementById('txt_hours');
+      var hours = parseInt(hours_element.value);
+      
+      var calculate = wage * hours * workday;
+      document.getElementById('results').value = calculate;
+		}
+       
+        </script>
+    </script>
+    <SCRIPT language=JavaScript>
+ 
+    
+        var hour1=0;
+        var hour2=0;
+        var min1=0;
+        var min2=0;
+        var ADBC1=0;
+        var ADBC2=0;
+        var t1=0;
+        var t2=0;
+        var t3=0;
+        var t4=0;
+        var t5=0;
+        var h1 = 0;
+        var m1 = 0;
+        var h2 = 0;
+        var m2 = 0;
+        
+        function compute(form) {
+            h1 = parseFloat(stripBad(form.hour1.value));
+            m1 = parseFloat(stripBad(form.min1.value));
+            h2 = parseFloat(stripBad(form.hour2.value));
+            m2 = parseFloat(stripBad(form.min2.value));
+            var er3a = parseFloat(form.ADBC1.selectedIndex)
+            var er3b = parseFloat(form.ADBC2.selectedIndex)
+            if ((er3a==0) && (h1==12)) {h1=0}
+        
+            if ((er3a==0) && (er3b==1)) {
+            t1= (60*h1) + m1;
+            if (h2==12) {
+            t2= ((h2) * 60) + m2;}
+            else {
+            t2= ((h2+12) * 60) + m2;}
+            t3= t2-t1;
+            t4= Math.floor(t3/60)
+            t5= t3-(t4*60)
+            }
+            else if ((er3a==1) && (er3b==0)) {
+            if (h2==12) {h2=0}
+            if (h1==12) {h1=0}
+            t1= (60*h1) + m1;
+            t2= ((h2+12) * 60) + m2;
+            t3= t2-t1;
+            t4= Math.floor(t3/60)
+            t5= t3-(t4*60)
+            }
+            else if ((er3a==0) && (er3b==0)) {
+            t1= (h1*60) + m1;
+        
+            if (h2==12) {h2=0}	
+        
+            t2= (h2*60) + m2;
+                if (t2>t1) {
+                t3= t2-t1;
+                t4= Math.floor(t3/60)
+                t5= t3-(t4*60)
+                }
+                else {
+                t2= ((h2+24)*60) + m2;
+                t3= t2-t1;
+                t4= Math.floor(t3/60)
+                t5= t3-(t4*60)
+                }
+            }
+            else if ((er3a==1) && (er3b==1)) {
+                if (h1!=12) {h1=h1+12}
+                if (h2!=12) {h2=h2+12}
+                t1= (h1*60) + m1;
+                t2= (h2*60) + m2;
+                if (t2>t1) {
+                t3= t2-t1;
+                t4= Math.floor(t3/60)
+                t5= t3-(t4*60)
+                }
+                else {
+                t2= ((h2+24)*60) + m2;
+                t3= t2-t1;
+                t4= Math.floor(t3/60)
+                t5= t3-(t4*60)
+                }
+                }
+            
+        
+           form.txtResult.value = "  " + t4  + "  hours  " + "  " + t5 + "  minutes"
+        }
+        
+        function compute2(form) {
+            var mm = "";
+            h1 = parseFloat(stripBad(form.hour1.value));
+            m1 = parseFloat(stripBad(form.min1.value));
+            h2 = parseFloat(stripBad(form.hour2.value));
+            m2 = parseFloat(stripBad(form.min2.value));
+            var er3a = parseFloat(form.ADBC1.selectedIndex)
+            var er3b = parseFloat(form.ADBC2.selectedIndex)
+            if ((er3a==1) && (h1!=12)) {
+            t1 = ((h1 + 12)*60) + m1;}
+            else if ((er3a==0) && (h1==12)) {
+            t1 = m1;}
+            else {
+            t1= (h1*60) + m1;}
+            t2= (h2 * 60) + m2;
+            if (er3b == 1) {
+            t3= t1 - t2;}
+            else {
+            t3= t1 + t2;}
+            if (t3<1) {
+            t3 = t3 + (24*60);}
+            t4= Math.floor(t3/60);
+            t5= t3-(t4*60);
+            t5=pad(t5);
+            if (t4<12) {
+                if (t4==0) {
+                t4=12;}
+                mm = "am"}
+            else if (t4==12) {
+                mm = "pm"}
+            else if ((t4>12) && (t4<24)) {
+                t4=t4-12;
+                mm = "pm"}
+            else if (t4==24) {
+                t4=t4-12;
+                mm = "am"}
+            else if (t4>24) {
+                t4=t4-24;
+                if (t4==0) {
+                t4=12;}
+                mm = "am"}
+        
+           form.txtResult.value = "  " + t4  + ":" + t5 + "  " + mm;
+        }
+        
+        function stripBad(string) {
+            for (var i=0, output='', valid="eE-0123456789."; i<string.length; i++){
+               if (valid.indexOf(string.charAt(i)) != -1){
+                  output += string.charAt(i)}
+                }
+            if (output=='') {output=0}
+            return output;
+        }
+        
+        function pad(n)
+            {
+            
+            if(n < 10)
+                {
+                return "0"+ n;
+                }
+            else
+                {
+                return n;
+                }
+            }
+        
+  
+     function solve_salary() {
+      
+        var daily_rate = document.getElementById("daily_rate").value;
+        var no_days_work = document.getElementById("no_days_work").value;
+        var over=document.getElementById('over').value;
+        var half=document.getElementById('half').value;
+       gross_pay= parseFloat(daily_rate) * no_days_work +(over*100) -(half*20);
+         
+      //  results = "Employee's Name : " + emp_name + ".";
+         results2 ="Daily Basic Salary " + gross_pay.toFixed(2)+".";
+         
+      //  document.getElementById("demoa").innerHTML = results;
+         document.getElementById("demo2a").innerHTML = results2;
+         
+       }   
+       
+      </SCRIPT>
+</body>
+</html>

@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+<title>Achievements</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+
+<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+#i1{
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+  text-align: center;
+  color: #006699;
+}
+.chart--container {
+      height: 100%;
+      width: 100%;
+      min-height: 500px;
+    }
+
+    .zc-ref {
+      display: none;
+    }
+.heading {
+  font-size: 25px;
+  margin-right: 25px;
+}
+
+#fa {
+  font-size: 25px;
+}
+
+.checked {
+  color: rgb(239, 241, 93);
+}
+
+/* Three column layout */
+.side {
+  float: left;
+  width: 15%;
+  margin-left: 15px;
+  margin-top:10px;
+}
+
+.middle {
+  margin-top:10px;
+  float: left;
+  width: 60%;
+}
+
+/* Place text to the right */
+.right {
+  text-align: right;
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.box{
+  width: 100%;
+  padding: 10px;
+  height: 600px;
+  float: right;
+    background-color: #fff;
+}
+
+.bar-container {
+  width: 90%;
+  margin-left: 60px;
+  background-color: #ffff;
+  text-align: center;
+  color: white;
+}
+
+/* Individual bars */
+.bar-5 {width: 50%; height: 18px; background-color: #4CAF50;}
+.bar-4 {width: 80%; height: 18px; background-color: #2196F3;}
+.bar-3 {width: 60%; height: 18px; background-color: #00bcd4;}
+.bar-2 {width: 10%; height: 18px; background-color: #ff9800;}
+.bar-1 {width: 10%; height: 18px; background-color: #f44336;}
+
+
+@media (max-width: 400px) {
+  .side, .middle {
+    width: 100%;
+  }
+  .right {
+    display: none;
+  }
+}
+</style>
+<body class="w3-light-grey">
+
+<!-- Top container -->
+<div class="w3-bar w3-top" style="z-index:3;background-color: #006699">
+  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+  <span class="w3-bar-item w3-right" style="color: #fff"><b style="margin-left: 8px;"> Achievements</b></span>
+</div>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container w3-row">
+    <div class="w3-col s4">
+      <img src="vips.png" class="w3-circle w3-margin-right" style="width:80px;">
+    </div>
+    <div class="w3-col s8 w3-bar">
+      <br>
+      <span style="font-size: 20px;"><strong>   Vipasha Vaghela</strong></span><br>
+      <span style="font-size: 15px;"><strong>  <i class="fa fa-laptop"></i> Front-End Developer</strong></span><br>
+    <!--   <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a> -->
+      <br><br>
+    </div>
+  </div>
+  
+  <div class="w3-container">
+   
+          
+          
+          
+    <i class="fa fa-facebook-official w3-hover-opacity" id="i1"></i>
+    <i class="fa fa-instagram w3-hover-opacity" id="i1"></i>
+   <i class="fa fa-snapchat w3-hover-opacity" id="i1"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity" id="i1"></i>
+  <i class="fa fa-twitter w3-hover-opacity" id="i1"></i>
+  <i class="fa fa-linkedin w3-hover-opacity" id="i1"></i>
+             
+           
+          
+          </div>
+  </div>
+  <hr>
+  <div class="w3-bar-block">
+    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+    <a href="dashb.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-user fa-fw"></i>Dashboard</a>
+    <a href="personal.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-book fa-fw"></i> Personal Details</a>
+    <a href="Attendance1.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-card fa-fw"></i>  Attendence & Leaves </a>
+    <a href="Dash_proj.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-laptop fa-fw"></i>  Projects</a>
+    <a href="Achievements.html" class="w3-bar-item w3-button w3-padding" style="background-color:#006699;color: #fff"><i class="fa fa-trophy fa-fw"></i> Achievements</a>
+    <a href="Notification.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i>  Notifications</a>
+    <a href="Emp_Daily_report.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-pencil fa-fw"></i>  Daily Schedule & Report </a>
+    <a href="Emp_Training.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-book fa-fw"></i>  Training Details</a>
+    <a href="Payrol.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-inr fa-fw"></i>  Payroll Details</a> 
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Logout</a>
+    
+    <br><br>
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px;margin-top:43px;">
+
+  
+
+  
+
+    <div class="w3-card-4" style="width:250px;height: 300px;float: left;margin:35px">
+        <img src="1300688bb7232d360262610fade75893.jpg" alt="Alps" style="width:250px;height: 200px;">
+        <div class="w3-container w3-center w3-padding">
+          <p>Promoted To Training Mentor <br>This Year</p>
+        </div>
+      </div>
+      <div class="w3-card-4" style="width:250px;height: 300px;float: left;margin: 35px;">
+        <img src="f797de7068e290dd37e6d5193a5bccf8.jpg" alt="Alps" style="width:250px;height: 200px;">
+        <div class="w3-container w3-center">
+          <p>25 Projects successfully Done!!<br>
+          10 Global Level project As Leader</p>
+        </div>
+      </div>
+      <div class="w3-card-4" style="width:250px;height: 300px;float: left;margin: 35px;">
+        <img src="5afcca4acd117b613e9cc8efb1b52139.jpg" alt="Alps" style="width:250px;height: 200px;">
+        <div class="w3-container w3-center">
+          <p>Best Web Designer Award Winner<br>
+          (2018-19)</p>
+        </div>
+      </div>
+      
+      <div class="w3-card-4" style="width:250px;height: 300px;float: left;margin:35px">
+        <img src="c943676b7b2f1ac5876481a0e2a30796.jpg" alt="Alps" style="width:250px;height: 200px;">
+        <div class="w3-container w3-center">
+        <p>Total 125 Stars<br>
+        Average Rating 4</p>
+        </div>
+      </div>
+      <div class="w3-card-4" style="width:250px;height: 300px;float: left;margin: 35px;">
+        <img src="emp_trophy.jpg" alt="Alps" style="width:250px;height: 200px;">
+        <div class="w3-container w3-center">
+          <p>30 times<br>
+            Employee Of the Month Winner</p>
+        </div>
+      </div>
+      <div class="w3-card-4" style="width:250px;height: 300px;float: left;margin: 35px;">
+        <img src="7251eb2531936da311e7e4ced4656a5c.jpg" alt="Alps" style="width:250px;height: 200px;">
+        <div class="w3-container w3-center">
+          <br>
+          <p> Interview Observer in WebDev Department</p>
+        </div>
+      </div>
+      <div class="w3-container">
+        <center>        <span class="heading" style="margin-left: 15px;">Rating Analysis</span><br><br>
+        <span class="fa fa-star checked" style="color:rgb(240, 207, 61);" id="fa"></span>
+        <span class="fa fa-star checked" style="color:rgb(240, 207, 61);" id="fa"></span>
+        <span class="fa fa-star checked" style="color:rgb(240, 207, 61);" id="fa"></span>
+        <span class="fa fa-star checked" style="color:rgb(240, 207, 61);" id="fa"></span>
+        <span class="fa fa-star" id="fa"></span>
+        <p>4 average based on 25 reviews.</p>
+      </center>
+        <hr style="border:3px solid #f1f1f1">
+        
+        <div class="row">
+          <div class="side">
+            <div>5 star</div>
+          </div>
+          <div class="middle">
+            <div class="bar-container">
+              <div class="bar-5"></div>
+            </div>
+          </div>
+          <div class="side right">
+            <div>5</div>
+          </div>
+          <div class="side">
+            <div>4 star</div>
+          </div>
+          <div class="middle">
+            <div class="bar-container">
+              <div class="bar-4"></div>
+            </div>
+          </div>
+          <div class="side right">
+            <div>10</div>
+          </div>
+          <div class="side">
+            <div>3 star</div>
+          </div>
+          <div class="middle">
+            <div class="bar-container">
+              <div class="bar-3"></div>
+            </div>
+          </div>
+          <div class="side right">
+            <div>8</div>
+          </div>
+          <div class="side">
+            <div>2 star</div>
+          </div>
+          <div class="middle">
+            <div class="bar-container">
+              <div class="bar-2"></div>
+            </div>
+          </div>
+          <div class="side right">
+            <div>1</div>
+          </div>
+          <div class="side">
+            <div>1 star</div>
+          </div>
+          <div class="middle">
+            <div class="bar-container">
+              <div class="bar-1"></div>
+            </div>
+          </div>
+          <div class="side right">
+            <div>1</div>
+          </div>
+      </div>
+    
+      
+  <div class="w3-container">
+    <div id="myChart" class="chart--container">
+  </div>  
+      
+
+</div>
+
+
+</body>
+<script>
+    // Get the Sidebar
+    var mySidebar = document.getElementById("mySidebar");
+    
+    // Get the DIV with overlay effect
+    var overlayBg = document.getElementById("myOverlay");
+    
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+    function w3_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+      } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+      }
+    }
+    
+    // Close the sidebar with the close button
+    function w3_close() {
+      mySidebar.style.display = "none";
+      overlayBg.style.display = "none";
+    }
+    </script>
+     <script>
+      ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+      var cdata = {
+        "type": "vbar",
+        "backgroundColor": "#eee #eee",
+        "title": {
+          "text": "",
+          "fontSize": 19,
+          "padding": 15,
+          "color": "#000000"
+        },
+        "plotarea": {
+          "margin": "80 40 110 40"
+        },
+        "scaleX": {
+          "values": ["2014","2015","2016","2017","2018","2019","2020"],
+          "maxItems": 9999,
+          "itemsOverlap": true,
+          "lineWidth": 0,
+          "tick": {
+            "visible": false
+          },
+          "item": {
+            "color": "#333333",
+            "offsetY": 65,
+            "width": "80%",
+            "fontSize": 11,
+            "fontWeight": 900,
+            "backgroundColor": "#fff",
+            "textAlpha": 1,
+            "topState": {
+              "x": "+0",
+              "y": "+0",
+              "height": 20,
+              "alpha": 1,
+              "backgroundColor": "none",
+              "offsetY": 35,
+              "callout": true,
+              "calloutWidth": 0,
+              "calloutHeight": 10,
+              "borderLeft": "1px solid #666666",
+              "borderRight": "1px solid #666666",
+              "borderBottom": "1px solid #666666"
+            },
+            "jsRule": "rule_scaleX_item()"
+          }
+        },
+        "scaleY": {
+          "maxItems": 9999,
+          "itemsOverlap": true,
+          "lineWidth": 0,
+          "backgroundColor": "none",
+          "minorTicks": 4,
+          "minorTick": {
+            "visible": true,
+            "lineWidth": 1,
+            "lineColor": "#fff"
+          },
+          "tick": {
+            "lineColor": "#333333"
+          },
+          "guide": {
+            "lineWidth": 0,
+            "items": [{
+                "backgroundColor": "#eee"
+              },
+              {
+                "backgroundColor": "#eee"
+              }
+            ]
+          },
+          "item": {
+            "color": "#333333",
+            "fontSize": 9,
+            "fontWeight": 300
+          }
+        },
+        "plot": {
+          "barsOverlap": "100%",
+          "barsSpaceLeft": 0.1,
+          "barsSpaceRight": 0.1,
+          "borderWidth": 1,
+          "borderColor": "#ffffff",
+          "borderAlpha": 0.8
+        },
+        "tooltip": {
+          "shadow": true,
+          "shadowColor": "#424242",
+          "backgroundColor": "#212121 #424242",
+          "callout": true,
+          "calloutPosition": "bottom",
+          "offsetY": -20,
+          "placement": "node:top",
+          "padding": 10,
+          "fontSize": 15,
+          "color": "#ffffff",
+          "borderWidth": 1,
+          "borderColor": "#000000",
+          "text": "in %scale-key-text you get  %node-value%  %plot-text Rating"
+        },
+        "series": [{
+            "values": [28, 90, 72, 47, 41, 46, 31, 25, 28],
+            "alpha": 0.25,
+            "max-trackers": 0,
+            "jsRule": "rule_series_0()",
+            "valueBox": {
+              "fontSize": 11,
+              "fontWeight": 600,
+              "offsetY": -10,
+              "jsRule": "rule_series_0_valueBox()",
+            }
+          },
+          {
+            "values": [8, 36, 23, 19, 16, 14, 13, 9, 8],
+            "text": "5 Star",
+            "column": "1/3",
+            "jsRule": "rule_series_123()",
+            "zStart": 15,
+            "zEnd": 35,
+            "valueBox": [{
+                "fontSize": 10,
+                "fontWeight": 600,
+                "offsetY": -10,
+                "jsRule": "rule_series_123_valueBox_0()"
+              },
+              {
+                "fontSize": 11,
+                "fontWeight": 400,
+                "text": "%plot-text",
+                "angle": 270,
+                "placement": "bottom",
+                "width": 50,
+                "textAlign": "right",
+                "offsetY": 25
+              }
+            ]
+          },
+          {
+            "values": [5, 36, 28, 15, 15, 17, 8, 6, 10],
+            "text": "4 Star",
+            "column": "2/3",
+            "jsRule": "rule_series_123()",
+            "zStart": 15,
+            "zEnd": 35,
+            "valueBox": [{
+                "fontSize": 10,
+                "fontWeight": 600,
+                "offsetY": -10,
+                "jsRule": "rule_series_123_valueBox_0()"
+              },
+              {
+                "fontSize": 11,
+                "fontWeight": 400,
+                "text": "%plot-text",
+                "angle": 270,
+                "placement": "bottom",
+                "width": 50,
+                "textAlign": "right",
+                "offsetY": 25
+              }
+            ]
+          },
+          {
+            "values": [1, 38, 21, 13, 10, 15, 10, 10, 10],
+            "text": "3 star",
+            "column": "3/3",
+            "jsRule": "rule_series_123()",
+            "zStart": 15,
+            "zEnd": 35,
+            "valueBox": [{
+                "fontSize": 10,
+                "fontWeight": 600,
+                "offsetY": -10,
+                "jsRule": "rule_series_123_valueBox_0()"
+              },
+              {
+                "fontSize": 11,
+                "fontWeight": 400,
+                "text": "%plot-text",
+                "angle": 270,
+                "placement": "bottom",
+                "width": 50,
+                "textAlign": "right",
+                "offsetY": 25
+              }
+            ]
+          }
+        ]
+      };
+  
+      var colorSet0 = ['#D03435', '#913891', '#5238BD'];
+      var colorSet123 = [
+        ['#D33535 #E53B3C', '#E65D35 #EB753E', '#FE8035 #F88746'],
+        ['#843584 #A540A6', '#A46590 #B579AA', '#B3818D #B584A3'],
+        ['#6038B2 #7643BD', '#6D68B5 #7B7FBF', '#7681B2 #7C86BD']
+      ];
+  
+      window.rule_series_0 = function(p) {
+        return {
+          backgroundColor: colorSet0[Math.floor(p.nodeindex / 3)]
+        };
+      };
+  
+      window.rule_series_0_valueBox = function(p) {
+        return {
+          color: colorSet0[Math.floor(p.nodeindex / 3)]
+        };
+      };
+  
+      window.rule_scaleX_item = function(p) {
+        return {
+          color: colorSet0[Math.floor(p.index / 3)]
+        };
+      };
+  
+      window.rule_series_123 = function(p) {
+        return {
+          backgroundColor: colorSet123[Math.floor(p.nodeindex / 3)][Math.floor(p.plotindex / 3)]
+        };
+      };
+  
+      window.rule_series_123_valueBox_0 = function(p) {
+        return {
+          color: colorSet0[Math.floor(p.nodeindex / 3)]
+        };
+      }
+  
+      zingchart.render({
+        id: 'myChart',
+        width: '100%',
+        height: '100%',
+        output: 'svg',
+        data: cdata
+      });
+    </script>
+</html>

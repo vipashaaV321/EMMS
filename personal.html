@@ -1,0 +1,590 @@
+<!DOCTYPE html>
+<html>
+<title>Employees' personal deatils</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<style>
+html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+
+    .container {
+  width: 100%;
+  background-color: #ddd;
+}
+   
+#i1{
+  margin-left: 10px;
+  margin-right: 10px;
+  font-size: 20px;
+  text-align: center;
+  color: #006699;
+}
+input[type=text], select, textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  margin-top: 6px;
+  background-color: #eee;
+  margin-bottom: 10px;
+  resize: vertical;
+}
+
+.skills {
+  text-align: right;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  color: white;
+}
+
+.html {width: 90%; background-color: #4CAF50;}
+.css {width: 80%; background-color: #2196F3;}
+.js {width: 65%; background-color: #f44336;}
+.php {width: 60%; background-color: #f08725;}
+</style>
+<body class="w3-light-grey">
+
+<!-- Top container -->
+<div class="w3-bar w3-top" style="z-index:3;background-color: #006699">
+  <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+  <span class="w3-bar-item w3-right" style="color: #fff"><b style="margin-left: 8px;">   Employee Dashboard</b></span>
+</div>
+
+<!-- Sidebar/menu -->
+<nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+  <div class="w3-container w3-row">
+    <div class="w3-col s4">
+      <img src="vips.png" class="w3-circle w3-margin-right" style="width:80px;">
+    </div>
+    <div class="w3-col s8 w3-bar">
+      <br>
+      <span style="font-size: 20px;"><strong>   Vipasha Vaghela</strong></span><br>
+      <span style="font-size: 15px;"><strong>  <i class="fa fa-laptop"></i> Front-End Developer</strong></span><br>
+    <!--   <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+      <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a> -->
+      <br><br>
+    </div>
+  </div>
+  
+  <div class="w3-container">
+   
+          
+          
+          
+    <i class="fa fa-facebook-official w3-hover-opacity" id="i1"></i>
+    <i class="fa fa-instagram w3-hover-opacity" id="i1"></i>
+   <i class="fa fa-snapchat w3-hover-opacity" id="i1"></i>
+  <i class="fa fa-pinterest-p w3-hover-opacity" id="i1"></i>
+  <i class="fa fa-twitter w3-hover-opacity" id="i1"></i>
+  <i class="fa fa-linkedin w3-hover-opacity" id="i1"></i>
+             
+           
+          
+          </div>
+  </div>
+  <hr>
+  <div class="w3-bar-block">
+    <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+    <a href="dashb.html" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-user fa-fw"></i>Dashboard</a>
+    <a href="personal.html" class="w3-bar-item w3-button w3-padding" style="background-color:#006699;color: #fff"><i class="fa fa-address-book fa-fw"></i> Personal Details</a>
+    <a href="Attendance1.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-card fa-fw"></i>  Attendence & Leaves </a>
+    <a href="Dash_proj.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-laptop fa-fw"></i>  Projects</a>
+    <a href="Achievements.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-trophy fa-fw"></i> Achievements</a>
+    <a href="Notification.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-bell fa-fw"></i>  Notifications</a>
+    <a href="Emp_Daily_report.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-pencil fa-fw"></i> Schedule & Report </a>
+    <a href="Payrol.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-inr fa-fw"></i>  Payroll Details</a>
+    <a href="Emp_Training.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-book fa-fw"></i>  Training Details</a>
+    <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Logout</a><br><br>
+  </div>
+</nav>
+
+
+<!-- Overlay effect when opening sidebar on small screens -->
+<div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-main" style="margin-left:300px;margin-top:43px;">
+  <div class="w3-container">
+    <div class="w3-twothird">
+      <div id='myChart'></div>
+    </div>
+    <div class="w3-third w3-padding w3-white">
+      <p>HTML</p>
+      <div class="container">
+        <div class="skills html">90%</div>
+      </div>
+      
+      <p>CSS</p>
+      <div class="container">
+        <div class="skills css">80%</div>
+      </div>
+      
+      <p>JavaScript</p>
+      <div class="container">
+        <div class="skills js">65%</div>
+      </div>
+      
+      <p>PHP</p>
+      <div class="container">
+        <div class="skills php">60%</div>
+      </div>
+    </div>
+  </div>
+    <div class="w3-container w3-margin w3-white">
+      <table class="w3-table">
+        <tr><td><label for="fname">Full Name</label></td>
+
+        <td> <input type="text" id="fname" name="firstname"value="Vipasha Vaghela"></td> 
+      </tr>
+      <tr>
+        <td><label for="lname">Employee_id</label></td>
+        <td><input type="text" id="lname" name="lastname" value="32017" disabled></td>
+      </tr>
+          <tr>
+            <td>
+              <label for="lname">Department</label>
+            </td>
+            <td><input type="text" id="lname" name="lastname" value="Web-Developement"></td>
+          </tr>
+          <tr>
+            <td> <label for="lname">Department_id</label></td>
+            <td>
+              <input type="text" id="lname" name="lastname" value="01"></td>
+          </tr>
+          <tr>
+            <td>
+              <label for="lname">Hire Date</label>
+            </td>
+            <td>
+              <input type="text" id="lname" name="lastname" value="26/11/2014" disabled>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="lname">Date Of Birth</label>
+            </td>
+            <td>
+              <input type="text" id="lname" name="lastname" value="03/02/1991">
+            </td>
+          </tr>
+          <tr>
+            <td><label for="lname">BirthPlace</label></td>
+            <td> <input type="text" id="lname" name="lastname" value="Baroda"></td>
+          </tr>
+          <tr>
+            <td>
+              <label for="lname">Address</label>
+            </td>
+            <td>
+              <input type="text" id="lname" name="lastname" value="60,Darshan Bunglous,Bopal">
+            </td>
+          </tr>
+          <tr>
+<td>
+  <label for="lname">City</label>
+</td>
+<td>
+
+  <input type="text" id="lname" name="lastname" value="Ahemedabad">
+</td>
+          </tr>
+          <tr>
+            <td>
+              <label for="subject">phone_num</label>             
+            </td>
+            <td>
+              <input type="text" id="lname" name="lastname" value="8160992702">
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <label for="subject">Email_id</label>
+            </td>
+            <td>
+              <input type="text" id="lname" name="lastname" value="vips3201v@gmail.com">
+            </td>
+          </tr>
+        </table>
+      </div>
+      
+  <!-- Header -->
+  <!-- <header class="w3-container" style="padding-top:22px">
+    <h5><b><i class="fa fa-dashboard"></i> My Dashboard</b></h5>
+  </header>
+
+  <div class="w3-row-padding w3-margin-bottom">
+    <div class="w3-quarter">
+      <div class="w3-container w3-red w3-padding-16">
+        <div class="w3-left"><i class="fa fa-user w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <h3>Department</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>WebDevelopement</h4>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-blue w3-padding-16">
+        <div class="w3-left"><i class="fa fa-laptop w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <h3>37</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>Projects</h4>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-teal w3-padding-16">
+        <div class="w3-left"><i class="fa fa-percent w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <h3>97</h3>
+        </div>
+        <div class="w3-clear"></div>
+
+        <h4>Attendence</h4>
+      </div>
+    </div>
+    <div class="w3-quarter">
+      <div class="w3-container w3-orange w3-text-white w3-padding-16">
+        <div class="w3-left"><i class="fa fa-star w3-xxxlarge"></i></div>
+        <div class="w3-right">
+          <h3>125</h3>
+        </div>
+        <div class="w3-clear"></div>
+        <h4>Stars</h4>
+      </div>
+    </div>
+  </div>
+  <hr>
+  <div class="w3-panel">
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-third">
+        <div id="piechart_3d" style="width: 300px;height: 280px "></div> 
+      </div>
+      <div class="w3-twothird">
+        <h5></h5>
+        <table class="w3-table w3-striped w3-white">
+          <tr>
+            <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
+            <td>Employee_id</td>
+            <td><i>32017</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-calendar w3-text-red w3-large"></i></td>
+            <td>Hire Date</td>
+            <td><i>26/11/2014</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-birthday-cake w3-text-yellow w3-large"></i></td>
+            <td>Date Of Birth</td>
+            <td><i>03/02/1994</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-building w3-text-red w3-large"></i></td>
+            <td>Branch</td>
+            <td><i>Bopal</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-map-marker w3-text-blue w3-large"></i></td>
+            <td>Residence</td>
+            <td><i>Ahemedabad</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-phone w3-text-red w3-large"></i></td>
+            <td>Contact Num.</td>
+            <td><i>8160992702</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-envelope w3-text-green w3-large"></i></td>
+            <td>Email Id</td>
+            <td><i>vips3201v@gmail.com</i></td>
+          </tr>
+          
+        </table>
+      </div>
+    </div>
+  </div>
+  <hr>
+ 
+  <div class="w3-container">
+    <h5><b><i class="fa fa-cog"></i>  Experience & Skills</b></h5>
+    <p>Angular WebDevelopement</p>
+    <div class="w3-grey" style="border-radius: 20px;">
+      <div class="w3-container w3-center w3-green" style="width:95%;border-radius: 20px;">95%</div>
+    </div>
+
+    <p>New Users</p>
+    <div class="w3-grey" style="border-radius: 20px;">
+      <div class="w3-container w3-center  w3-orange" style="width:50%;border-radius: 20px;">50%</div>
+    </div>
+
+    <p>Bounce Rate</p>
+    <div class="w3-grey" style="border-radius: 20px;">
+      <div class="w3-container w3-center w3-red" style="width:75%;border-radius: 20px;">75%</div>
+    </div>
+     <p>Bounce Rate</p>
+    <div class="w3-grey" style="border-radius: 20px;">
+      <div class="w3-container w3-center w3-blue" style="width:75%;border-radius: 20px;">75%</div>
+    </div>
+     <p>Bounce Rate</p>
+    <div class="w3-grey" style="border-radius: 20px;">
+      <div class="w3-container w3-center  w3-pink" style="width:75%;border-radius: 20px;">75%</div>
+    </div>
+  </div>
+
+  <div class="w3-panel">
+    <div class="w3-row-padding" style="margin:0 -16px">
+      <div class="w3-third">
+        <br>
+        <div id="donutchart" style="width: 100%; height: 300px;"></div>
+         <h5>Regions</h5>
+        <img src="pic1.jpg" style="width:100%" alt="Google Regional Map"> -->
+      <!-- </div>
+      <div class="w3-third">
+        <br>
+        <div id="piechart" style="width:100%; height: 300px;"></div></div>
+      <div class="w3-third">
+        <br>
+        <div id="donutchart1" style="width: 100%; height: 300px;"></div> -->
+        <!-- <h5></h5>
+        <table class="w3-table w3-striped w3-white">
+          <tr>
+            <td><i class="fa fa-user w3-text-blue w3-large"></i></td>
+            <td>New record, over 90 views.</td>
+            <td><i>10 mins</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-bell w3-text-red w3-large"></i></td>
+            <td>Database error.</td>
+            <td><i>15 mins</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-users w3-text-yellow w3-large"></i></td>
+            <td>New record, over 40 users.</td>
+            <td><i>17 mins</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-comment w3-text-red w3-large"></i></td>
+            <td>New comments.</td>
+            <td><i>25 mins</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-bookmark w3-text-blue w3-large"></i></td>
+            <td>Check transactions.</td>
+            <td><i>28 mins</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-laptop w3-text-red w3-large"></i></td>
+            <td>CPU overload.</td>
+            <td><i>35 mins</i></td>
+          </tr>
+          <tr>
+            <td><i class="fa fa-share-alt w3-text-green w3-large"></i></td>
+            <td>New shares.</td>
+            <td><i>39 mins</i></td>
+          </tr>
+          
+        </table> -->
+      <!-- </div>
+    </div>
+  </div>
+  <hr> -->
+  <!-- <div class="w3-container"> -->
+    <!-- <h5>Countries</h5>
+    <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
+      <tr>
+        <td>United States</td>
+        <td>65%</td>
+      </tr>
+      <tr>
+        <td>UK</td>
+        <td>15.7%</td>
+      </tr>
+      <tr>
+        <td>Russia</td>
+        <td>5.6%</td>
+      </tr>
+      <tr>
+        <td>Spain</td>
+        <td>2.1%</td>
+      </tr>
+      <tr>
+        <td>India</td>
+        <td>1.9%</td>
+      </tr>
+      <tr>
+        <td>France</td>
+        <td>1.5%</td>
+      </tr>
+    </table><br>
+    <button class="w3-button w3-dark-grey">More Countries  <i class="fa fa-arrow-right"></i></button> -->
+  <!-- </div> -->
+
+  <!-- <div class="w3-container">
+    <h5>Managers</h5>
+    <ul class="w3-ul w3-card-4 w3-white">
+      <li class="w3-padding-16">
+        <img src="avatar2.png" class="w3-left w3-circle w3-margin-right" style="width:35px">
+        <span class="w3-large">Mr. Xyz</span><br>
+        <span class="w3-large">Web-Developement Department</span><br>
+      </li>
+      <li class="w3-padding-16">
+        <img src="avatar5.png" class="w3-left w3-circle w3-margin-right" style="width:35px">
+        <span class="w3-large">Mr. pqr</span><br>
+        <span class="w3-large">Angular-Developement Department</span><br>
+       
+      </li>
+     
+    </ul>
+  </div>
+  <hr> --> 
+
+  <!-- <div class="w3-container">
+    <h5>Recent Comments</h5>
+    <div class="w3-row">
+      <div class="w3-col m2 text-center">
+        <img class="w3-circle" src="avatar3.png" style="width:96px;height:96px">
+      </div>
+      <div class="w3-col m10 w3-container">
+        <h4>John <span class="w3-opacity w3-medium">Sep 29, 2014, 9:12 PM</span></h4>
+        <p>Keep up the GREAT work! I am cheering for you!! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
+      </div>
+    </div>
+
+    <div class="w3-row">
+      <div class="w3-col m2 text-center">
+        <img class="w3-circle" src="avatar1.png" style="width:96px;height:96px">
+      </div>
+      <div class="w3-col m10 w3-container">
+        <h4>Bo <span class="w3-opacity w3-medium">Sep 28, 2014, 10:15 PM</span></h4>
+        <p>Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p><br>
+      </div>
+    </div>
+  </div>
+  <br>
+  <div class="w3-container w3-padding-32" style="background-color: aliceblue">
+    <div class="w3-row">
+      <div class="w3-container w3-third">
+        <h5 class="w3-bottombar w3-border-green">Demographic</h5>
+        <p>Language</p>
+        <p>Country</p>
+        <p>City</p>
+      </div>
+      <div class="w3-container w3-third">
+        <h5 class="w3-bottombar w3-border-red">System</h5>
+        <p>Browser</p>
+        <p>OS</p>
+        <p>More</p>
+      </div>
+      <div class="w3-container w3-third">
+        <h5 class="w3-bottombar w3-border-orange">Target</h5>
+        <p>Users</p>
+        <p>Active</p>
+        <p>Geo</p>
+        <p>Interests</p>
+      </div>
+    </div>
+  </div>
+
+  
+
+   End page content -->
+</div>
+
+<script>
+// Get the Sidebar
+var mySidebar = document.getElementById("mySidebar");
+
+// Get the DIV with overlay effect
+var overlayBg = document.getElementById("myOverlay");
+
+// Toggle between showing and hiding the sidebar, and add overlay effect
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+    overlayBg.style.display = "none";
+  } else {
+    mySidebar.style.display = 'block';
+    overlayBg.style.display = "block";
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+  mySidebar.style.display = "none";
+  overlayBg.style.display = "none";
+}
+</script>
+<script>
+  ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
+  var myConfig = {
+    "layout": "1x3",
+    "graphset": [{
+        "type": "nestedpie",
+        "series": [{
+            "values": [59, 55, 30]
+          },
+          {
+            "values": [60, 50, 35]
+          },
+          {
+            "values": [50, 40, 30]
+          },
+          {
+            "values": [50, 40, 30]
+          }
+        ]
+      },
+      {
+        "type": "nestedpie",
+        "title": {
+          "text": "Experience & Skills & Mentoring(202020000"
+        },
+        "series": [{
+            "values": [59, 55, 30]
+          },
+          {
+            "values": [60, 50, 35]
+          },
+          {
+            "values": [60, 50, 35]
+          },
+          {
+            "values": [50, 40, 30]
+          }
+        ]
+      },
+      {
+        "type": "nestedpie",
+        "series": [{
+            "values": [59, 55, 30]
+          },
+          {
+            "values": [60, 50, 35]
+          },
+          {
+            "values": [60, 50, 35]
+          },
+          {
+            "values": [50, 40, 30]
+          }
+        ]
+      }
+    ]
+  };
+
+  zingchart.render({
+    id: 'myChart',
+    data: myConfig,
+    height: 352,
+    width: "100%"
+  });
+</script>
+</body>
+</html>

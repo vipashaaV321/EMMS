@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+<html>
+<title>Daily reports</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<script src="https://code.jscharting.com/latest/jscharting.js"></script>
+            <script type="text/javascript" src="https://code.jscharting.com/latest/modules/types.js"></script>
+<script src="https://cdn.zingchart.com/zingchart.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+    html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
+    #i1{
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 19px;
+      text-align: center;
+      color: #006699;
+    }
+    @import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+    .chart--container {
+      height: 100%;
+      width: 100%;
+      min-height: 530px;
+    }
+
+    .zc-ref {
+      display: none;
+    }
+    </style>
+  
+   
+    <body class="w3-light-grey">
+    
+    <!-- Top container -->
+    <div class="w3-bar w3-top" style="z-index:3;background-color: #006699">
+      <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
+      <span class="w3-bar-item w3-right" style="color: #fff">Admin Dashboard</span>
+    </div>
+    
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:296px;" id="mySidebar"><br>
+      <div class="w3-container w3-row">
+        <div class="w3-col s4">
+        
+          <img src="hr1.jpg" class="w3-circle w3-margin-right" style="width:60px;">
+        </div>
+        <div class="w3-col s8 w3-bar">
+          <br>
+          <span style="font-size: 17px;"><strong>   Mr.Admin</strong></span><br>
+          <span style="font-size: 13px;"><strong>  <i class="fa fa-user-secret"></i>  Boss</strong></span><br>
+        <!--   <a href="#" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i></a>
+          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-user"></i></a>
+          <a href="#" class="w3-bar-item w3-button"><i class="fa fa-cog"></i></a> -->
+          <br>
+        </div>
+      </div>
+      
+      <div class="w3-container">
+       
+              
+              
+              
+        <i class="fa fa-facebook-official w3-hover-opacity" id="i1"></i>
+        <i class="fa fa-instagram w3-hover-opacity" id="i1"></i>
+       <i class="fa fa-snapchat w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-pinterest-p w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-twitter w3-hover-opacity" id="i1"></i>
+      <i class="fa fa-linkedin w3-hover-opacity" id="i1"></i>
+                 
+               
+              
+              </div>
+      </div>
+      <hr>
+      <div class="w3-bar-block">
+        <a href="#" class="w3-bar-item w3-button w3-padding-16 w3-hide-large w3-dark-grey w3-hover-black" onclick="w3_close()" title="close menu"><i class="fa fa-remove fa-fw"></i>  Close Menu</a>
+        <a href="Admin.html" class="w3-bar-item w3-button w3-padding" style="background-color:#006699;color: #fff"><i class="fa fa-user fa-fw"></i>Dashboard</a>
+        <a href="Admin_personal.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-book fa-fw"></i> Personal Details</a>
+        <a href="Manage_data.html" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-users fa-fw"></i> Manage Employees Data</a>
+        <a href="Admin_attendance.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-address-card fa-fw"></i>  Attendence & Leaves </a>
+        <!-- <div class="w3-dropdown-hover">
+        
+          <div class="w3-dropdown-content w3-bar-block w3-border">
+            <a href="Dash_proj.html" class="w3-bar-item w3-button">Project Dashboard</a>
+            <a href="Deadline.html" class="w3-bar-item w3-button" style="background-color:#006699;color: #fff">DeadLine Notifier</a>
+            <a href="#" class="w3-bar-item w3-button">Project Report Submission</a>
+          </div> -->
+        <a href="Admin_project1.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-laptop fa-fw"></i>  Projects</a>
+        <!-- <div class="w3-dropdown-click">
+            <div class="w3-bar-item w3-button w3-padding" onclick="myFunction()" ><i class="fa fa-laptop fa-fw"></i>Projects</div>
+            <div id="Demo9" class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="Project.html" class="w3-bar-item w3-button">Your Project Details</a>
+              <a href="Dash_proj.html" class="w3-bar-item w3-button">Ongoing Project Dashboard</a>
+              <a href="Deadline.html" class="w3-bar-item w3-button">Deadline Notifier</a>
+              <a href="report_pro.html" class="w3-bar-item w3-button">Project Report Submission</a>
+            </div>
+          </div> -->
+          <a href="hr.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-male fa-fw"></i>HR Department</a>
+          <!-- <div class="w3-dropdown-click">
+            <div class="w3-bar-item w3-button w3-padding" onclick="myFunction1()"><i class="fa fa-male fa-fw"></i>  HR</div>
+            <div id="Demo10" class="w3-dropdown-content w3-bar-block w3-border">
+              <a href="Project.html" class="w3-bar-item w3-button">HR Dashboard</a>
+              <a href="Dash_proj.html" class="w3-bar-item w3-button">Recruitment</a>
+              <a href="Deadline.html" class="w3-bar-item w3-button">Interview</a>
+              <a href="report_pro.html" class="w3-bar-item w3-button">Training</a>
+            </div>
+          </div> -->
+ 
+        <a href="Admin_Notification.html" class="w3-bar-item w3-button w3-padding" ><i class="fa fa-bell fa-fw" ></i>  Notifications</a>
+        <a href="Admin_daily_details.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-pencil fa-fw"></i>  Daily Details & Report </a>
+        <a href="Accounting1.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-inr fa-fw"></i>  Accounting Department</a> 
+        <a href="client.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-money fa-fw"></i>  Client Management</a> 
+        <a href="Daily_log.html" class="w3-bar-item w3-button w3-padding"><i class="fa fa-clock-o fa-fw"></i>  Log History</a>
+        <a href="#" class="w3-bar-item w3-button w3-padding"><i class="fa fa-cog fa-fw"></i>  Logout</a>
+        <br><br><br>
+       
+    </nav>
+    
+    
+    <!-- Overlay effect when opening sidebar on small screens -->
+    <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    <div class="w3-main" style="margin-left:300px;margin-top:43px;"><div class="w3-container w3-white w3-margin w3-padding"><br>
+        <div id="myChart" class="chart--container">
+<br><br></div>
+<div class="w3-container">
+    <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTvdXSofLsNjIHMPB0dqpn-fQVxNrVQt-JcSYyOJr2nuBsM3kwY4EwwD4rNX8M7GGBVzCdBdDNVzI-d/pubhtml?widget=true&amp;headers=false" style="width: 100%;height: 500px;"></iframe>
+    </div>
+    <br>
+    <div class="w3-container w3-white">
+        <h3>Employees' Daily Progress Report</h3>
+        <form action="">
+            Number of rows to show:
+            <select onChange="setOption('pageSize', parseInt(this.value, 10))">
+              <option value="0">0</option>
+              <option value="3">3</option>
+              <option selected=selected value="5">5</option>
+              <option value="8">8</option>
+              <option value="-1">-1</option>
+            </select>
+          </form>
+          <br />
+          <div class="w3-responsive">  <div class="w3-table" id="table"></div></div>
+        
+    </div>
+</div>
+  
+ 
+  
+ 
+<script>
+    // Get the Sidebar
+    var mySidebar = document.getElementById("mySidebar");
+    
+    // Get the DIV with overlay effect
+    var overlayBg = document.getElementById("myOverlay");
+    
+    // Toggle between showing and hiding the sidebar, and add overlay effect
+    function w3_open() {
+      if (mySidebar.style.display === 'block') {
+        mySidebar.style.display = 'none';
+        overlayBg.style.display = "none";
+      } else {
+        mySidebar.style.display = 'block';
+        overlayBg.style.display = "block";
+      }
+    }
+    
+    // Close the sidebar with the close button
+    function w3_close() {
+      mySidebar.style.display = "none";
+      overlayBg.style.display = "none";
+    }
+    </script>
+     <script>
+        ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"]; // CHART CONFIG
+        // -----------------------------
+        let chartConfig = {
+          globals: {
+            fontFamily: 'Raleway'
+          },
+          graphset: [{
+            type: 'piano',
+            theme: 'classic',
+            backgroundColor: '#fff',
+            title: {
+              text: 'Event Calender',
+              adjustLayout: true,
+              paddingBottom: '25px',
+              backgroundColor: 'none',
+              fontColor: '#05636c',
+              fontSize: '24px'
+            },
+            subtitle: {
+              text: 'Event Scedules',
+              backgroundColor: 'none',
+              fontColor: '#05636c',
+              fontSize: '14px',
+              height: '25px',
+              x: '-9.5px',
+              y: '38.5px'
+            },
+            legend: {
+              align: 'center',
+              borderWidth: '0px',
+              footer: {
+                backgroundColor: 'none',
+                borderColor: 'none',
+                fontColor: '#05636c',
+                fontSize: '14px',
+                textAlign: 'center'
+              },
+              item: {
+                borderColor: 'none',
+                fontColor: '#05636c',
+                size: '13px'
+              },
+              layout: 'x6',
+              marker: {
+                type: 'square',
+                borderColor: 'none',
+                borderRadius: '8px',
+                size: '13px'
+              },
+              shadow: false,
+              toggleAction: 'none',
+              verticalAlign: 'bottom',
+              width: '80%'
+            },
+            plot: {
+              tooltip: {
+                text: '',
+                fontColor: 'white',
+                fontSize: '14px',
+                textAlign: 'left'
+              },
+              aspect: 'none',
+              borderColor: '#eeeeee',
+              borderRadius: '7px',
+              borderWidth: '2px',
+              rules: [{
+                  backgroundColor: '#081D58',
+                  fontColor: '#05636c',
+                  rule: '%node-value > 6'
+                },
+                {
+                  backgroundColor: '#253494',
+                  fontColor: '#05636c',
+                  rule: '%node-value > 4 && %node-value <= 5'
+                },
+                {
+                  backgroundColor: '#225EA8',
+                  fontColor: '#05636c',
+                  rule: '%node-value > 3 && %node-value <= 4'
+                },
+                {
+                  backgroundColor: '#1D91C0',
+                  fontColor: '#05636c',
+                  rule: '%node-value > 2 && %node-value <= 3'
+                },
+                {
+                  backgroundColor: '#41B6C4',
+                  fontColor: '#05636c',
+                  rule: '%node-value > 1 && %node-value <= 2'
+                },
+                {
+                  backgroundColor: '#7FCDBB',
+                  fontColor: '#05636c',
+                  rule: '%node-value > 0 && %node-value <= 1'
+                }
+              ]
+            },
+            plotarea: {
+              margin: 'dynamic'
+            },
+            scaleX: {
+              values: ['9 AM', '10 AM', '11 AM', '12 AM', '1 PM', '2 PM', '3 PM', '4 PM', '5 PM', '6 PM', '7 PM'],
+              guide: {
+                visible: false
+              },
+              item: {
+                borderColor: 'none',
+                fontColor: '#05636c',
+                size: '13px'
+              },
+              lineWidth: '0px',
+              placement: 'opposite',
+              tick: {
+                visible: false
+              },
+              zooming: true,
+              zoomSnap: true
+            },
+            scaleY: {
+              values: ['Mon', 'Tues', 'Wed', 'Thu', 'Fri', 'Sat'],
+              guide: {
+                visible: false
+              },
+              item: {
+                borderColor: 'none',
+                fontColor: '#05636c',
+                size: '13px'
+              },
+              lineWidth: '0px',
+              mirrored: true,
+              tick: {
+                visible: false
+              },
+              zooming: true
+            },
+            zoom: {
+              alpha: 0.75,
+              backgroundColor: '#e5e8ea',
+              borderColor: '#009',
+              borderWidth: '2px',
+              preserveZoom: true
+            },
+            scrollX: {
+              bar: {
+                alpha: .5,
+                backgroundColor: '#01579B',
+                borderRadius: '3px'
+              },
+              handle: {
+                backgroundColor: '#01579B',
+                borderRadius: '5px',
+                borderTop: 'none',
+                borderRight: 'none',
+                borderBottom: 'none',
+                borderLeft: 'none'
+              }
+            },
+            scrollY: {
+              bar: {
+                alpha: .5,
+                backgroundColor: '#01579B',
+                borderRadius: '3px'
+              },
+              handle: {
+                backgroundColor: '#01579B',
+                borderRadius: '5px',
+                borderTop: 'none',
+                borderRight: 'none',
+                borderBottom: 'none',
+                borderLeft: 'none'
+              }
+            },
+            series: [{
+                text: 'Bday<br>Celebration',
+                values: [1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 2, 2, 2, 1, 2, 1, 2, 2, 1, 2],
+                legendMarker: {
+                  backgroundColor: '#7FCDBB'
+                }
+              },
+              {
+                text: 'Interview',
+                values: [1, 2, 2, 2, 2, 2, 3, 3, 3, 2, 2, 3, 3, 3, 3, 2, 2, 2, 2, 1, 2, 3],
+                legendMarker: {
+                  backgroundColor: '#41B6C4'
+                }
+              },
+              {
+                text: 'General<br>conference',
+                values: [1, 2, 2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 3, 3, 3, 2],
+                legendMarker: {
+                  backgroundColor: '#1D91C0'
+                }
+              },
+              {
+                text: 'Meeting',
+                values: [1, 3, 3, 2, 3, 3, 3, 4, 5, 4, 4, 5, 4, 4, 5, 4, 4, 3, 3, 3, 3, 3],
+                legendMarker: {
+                  backgroundColor: '#225EA8'
+                }
+              },
+              {
+                text: 'Training<br>schedule',
+                values: [1, 2, 3, 2, 3, 3, 4, 4, 4, 5, 5, 5, 5, 4, 4, 5, 4, 3, 2, 3, 4, 4],
+                legendMarker: {
+                  backgroundColor: '#253494'
+                }
+              },
+              {
+                text: 'Client Deal',
+                values: [1, 3, 5, 6, 5, 6, 5, 6, 5, 6, 6, 6, 6, 5, 6, 5, 6, 4, 5, 4, 4, 4],
+                legendMarker: {
+                  backgroundColor: '#081D58'
+                }
+              },
+             
+            ]
+          }]
+        };
+    
+        // RENDER CHARTS
+        // -----------------------------
+        zingchart.render({
+          id: 'myChart',
+          data: chartConfig
+        });
+      </script>
+
+
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript" src="tablequerywrapper.js"></script>
+<script type="text/javascript">
+    google.charts.load('current', {'packages' : ['table']});
+    google.charts.setOnLoadCallback(init);
+
+    var dataSourceUrl ='https://docs.google.com/spreadsheets/d/1H5FRj3T_9P1no4NgEntgEIQjNVFXOVLzrjy2k5GoHDE/edit?usp=sharing';
+    var query, options, container;
+
+    function init() {
+      query = new google.visualization.Query(dataSourceUrl);
+      container = document.getElementById("table");
+      options = {'pageSize': 5};
+      sendAndDraw();
+    }
+
+    function sendAndDraw() {
+      query.abort();
+      var tableQueryWrapper = new TableQueryWrapper(query, container, options);
+      tableQueryWrapper.sendAndDraw();
+    }
+
+    function setOption(prop, value) {
+      options[prop] = value;
+      sendAndDraw();
+    }
+
+  </script>
+
+<script>
+    var TableQueryWrapper = function(query, container, options) {
+
+this.table = new google.visualization.Table(container);
+this.query = query;
+this.sortQueryClause = '';
+this.pageQueryClause = '';
+this.container = container;
+this.currentDataTable = null;
+
+var self = this;
+var addListener = google.visualization.events.addListener;
+addListener(this.table, 'page', function(e) {self.handlePage(e)});
+addListener(this.table, 'sort', function(e) {self.handleSort(e)});
+
+options = options || {};
+options = TableQueryWrapper.clone(options);
+
+options['sort'] = 'event';
+options['page'] = 'event';
+options['showRowNumber'] = true;
+var buttonConfig = 'pagingButtonsConfiguration';
+options[buttonConfig] = options[buttonConfig] || 'both';
+options['pageSize'] = (options['pageSize'] > 0) ? options['pageSize'] : 10;
+this.pageSize = options['pageSize'];
+this.tableOptions = options;
+this.currentPageIndex = 0;
+this.setPageQueryClause(0);
+};
+
+TableQueryWrapper.prototype.sendAndDraw = function() {
+  this.query.abort();
+  var queryClause = this.sortQueryClause + ' ' + this.pageQueryClause;
+  this.query.setQuery(queryClause);
+  this.table.setSelection([]);
+  var self = this;
+  this.query.send(function(response) {self.handleResponse(response)});
+};
+
+
+/** Handles the query response after a send returned by the data source. */
+TableQueryWrapper.prototype.handleResponse = function(response) {
+  this.currentDataTable = null;
+  if (response.isError()) {
+    google.visualization.errors.addError(this.container, response.getMessage(),
+        response.getDetailedMessage(), {'showInTooltip': false});
+  } else {
+    this.currentDataTable = response.getDataTable();
+    this.table.draw(this.currentDataTable, this.tableOptions);
+  }
+};
+
+
+/** Handles a sort event with the given properties. Will page to page=0. */
+TableQueryWrapper.prototype.handleSort = function(properties) {
+  var columnIndex = properties['column'];
+  var isAscending = properties['ascending'];
+  this.tableOptions['sortColumn'] = columnIndex;
+  this.tableOptions['sortAscending'] = isAscending;
+  // dataTable exists since the user clicked the table.
+  var colID = this.currentDataTable.getColumnId(columnIndex);
+  this.sortQueryClause = 'order by `' + colID + (!isAscending ? '` desc' : '`');
+  // Calls sendAndDraw internally.
+  this.handlePage({'page': 0});
+};
+
+
+/** Handles a page event with the given properties. */
+TableQueryWrapper.prototype.handlePage = function(properties) {
+  var localTableNewPage = properties['page']; // 1, -1 or 0
+  var newPage = 0;
+  if (localTableNewPage != 0) {
+    newPage = this.currentPageIndex + localTableNewPage;
+  }
+  if (this.setPageQueryClause(newPage)) {
+    this.sendAndDraw();
+  }
+};
+
+
+/**
+ * Sets the pageQueryClause and table options for a new page request.
+ * In case the next page is requested - checks that another page exists
+ * based on the previous request.
+ * Returns true if a new page query clause was set, false otherwise.
+ */
+TableQueryWrapper.prototype.setPageQueryClause = function(pageIndex) {
+  var pageSize = this.pageSize;
+
+  if (pageIndex < 0) {
+    return false;
+  }
+  var dataTable = this.currentDataTable;
+  if ((pageIndex == this.currentPageIndex + 1) && dataTable) {
+    if (dataTable.getNumberOfRows() <= pageSize) {
+      return false;
+    }
+  }
+  this.currentPageIndex = pageIndex;
+  var newStartRow = this.currentPageIndex * pageSize;
+  // Get the pageSize + 1 so that we can know when the last page is reached.
+  this.pageQueryClause = 'limit ' + (pageSize + 1) + ' offset ' + newStartRow;
+  // Note: row numbers are 1-based yet dataTable rows are 0-based.
+  this.tableOptions['firstRowNumber'] = newStartRow + 1;
+  return true;
+};
+
+
+/** Performs a shallow clone of the given object. */
+TableQueryWrapper.clone = function(obj) {
+  var newObj = {};
+  for (var key in obj) {
+    newObj[key] = obj[key];
+  }
+  return newObj;
+};
+</script>
+</body>
+</html>
