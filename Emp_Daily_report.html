@@ -8,6 +8,15 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <script src="https://cdn.zingchart.com/zingchart.min.js"></script>
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script>
+  // Ignore this in your implementation
+  window.isMbscDemo = true;
+</script>
+
+<!-- Mobiscroll JS and CSS Includes -->
+<link rel="stylesheet" href="css/mobiscroll.javascript.min.css">
+<script src="js/mobiscroll.javascript.min.js"></script>
+
 <style>
 html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 #i1{
@@ -31,6 +40,8 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
 
 <!-- Top container -->
 <div class="w3-bar w3-top" style="z-index:3;background-color: #006699">
+  <button class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-light-grey w3-text-white" onclick="w3_open();"><b>EMMS</b></button>
+
   <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
   <span class="w3-bar-item w3-right" style="color: #fff"><b style="margin-left: 8px;">   Employee Daily Report</b></span>
 </div>
@@ -115,9 +126,11 @@ html,body,h1,h2,h3,h4,h5 {font-family: "Raleway", sans-serif}
  
   <hr>
   <div class="w3-container  w3-white w3-padding w3-margin">
-      <h4>Weekly Timeline</h4>
-    <div id="myChart" class="chart--container">
+    <div mbsc-page class="demo-desktop-month-view">
+      <div style="height:100%">
+          <div id="demo-desktop-month-view"></div>
       </div>
+    </div>
     <!-- <h5>Countries</h5>
     <table class="w3-table w3-striped w3-bordered w3-border w3-hoverable w3-white">
       <tr>
@@ -375,5 +388,32 @@ function w3_close() {
       data: chartConfig
     });
   </script>
+  <script>
+    mobiscroll.setOptions({
+        theme: 'ios',
+        locale: mobiscroll.localeEn
+    });
+
+    var inst = mobiscroll.eventcalendar('#demo-desktop-month-view', {
+        locale: mobiscroll.localeEn,            // Specify language like: locale: mobiscroll.localePl or omit setting to use default
+        theme: 'ios',                           // Specify theme like: theme: 'ios' or omit setting to use default
+        themeVariant: 'light',                  // More info about themeVariant: https://docs.mobiscroll.com/5-7-2/javascript/eventcalendar#opt-themeVariant
+        height: 697,                            // More info about height: https://docs.mobiscroll.com/5-7-2/javascript/eventcalendar#opt-height
+        view: {                                 // More info about view: https://docs.mobiscroll.com/5-7-2/javascript/eventcalendar#opt-view
+            calendar: { labels: true }
+        },
+        onEventClick: function (event, inst) {  // More info about onEventClick: https://docs.mobiscroll.com/5-7-2/javascript/eventcalendar#event-onEventClick
+            mobiscroll.toast({ 
+                
+                message: event.event.title
+            });
+        }
+    });
+    
+    mobiscroll.util.http.getJson('https://trial.mobiscroll.com/events/?vers=5', function (events) {
+        inst.setEvents(events);
+    }, 'jsonp');
+</script>
+
 </body>
 </html>

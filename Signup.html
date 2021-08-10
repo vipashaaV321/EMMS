@@ -1,0 +1,154 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button,p {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-laptop {font-size:200px}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Add padding to containers */
+.container {
+  padding: 13px;
+  background-color: white;
+ 
+}
+
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Overwrite default styles of hr */
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for the submit button */
+.registerbtn {
+  background-color: #006699;
+  color: white;
+  padding: 16px 20px;
+  margin: 4px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 1;
+}
+
+.registerbtn:hover {
+  opacity: 1;
+  background-color: #ccc;
+  color: #000;
+}
+
+/* Add a blue text color to links */
+a {
+  color: dodgerblue;
+}
+
+/* Set a grey background color and center the text of the "sign in" section */
+.signin {
+  background-color: #f1f1f1;
+  text-align: center;
+  height: 70px;
+}
+.nav{
+
+display:flex;
+flex-wrap:wrap;
+width:100%;
+background:#006699;
+}
+.nav{
+  top:0px;display:flex;background:#006699;}
+  .nav a{padding: 14px 20px ;color:#FFF;text-decoration:none;}
+.nav a{
+padding:11px 11px;
+color:#fff;
+text-decoration:none;
+font-size: 16px;
+}
+.nav a:hover{
+background:#ddd;
+color:#000;
+}
+</style>
+</head>
+<body>
+  <div class="w3-top">
+    <div class="w3-bar  w3-card w3-left-align w3-medium" style="background-color: #006699;color: #fff">
+      <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+      <a href="./EMMS_HOME.html" class="w3-bar-item w3-button w3-padding-large w3-light-grey"><i class="fa fa-home"></i></a>
+      <a href="./ContactUs.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contact</a>
+      <a href="./Login.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Login</a>
+      <a href="./Signup.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Signup</a>
+    </div>
+  
+    <!-- Navbar on small screens -->
+    <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+      <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 1</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 2</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 3</a>
+      <a href="#" class="w3-bar-item w3-button w3-padding-large">Link 4</a>
+    </div>
+  </div>
+  
+  <!-- Header -->
+  <br/>
+<form style="width:500px;width:500px;margin-left: 400px;margin-top: 30px;border-radius: 7px">
+  <header class="w3-container w3-white w3-center w3-margin-top">
+    <img src="emms.png" class="w3-image" style="width: 180px;height: 180px">
+   
+  </header>
+  <div class="container" style="text-align: center;">
+    <h1 style="color: #006699;">SIGNUP TO EMMS</h1>
+  
+    <hr>
+    <input type="text" placeholder="Enter Employee-id" required>
+    
+    <input type="text" placeholder="Enter Email" required>
+
+   
+    <input type="password" placeholder="Enter Password"  required>
+
+   
+    <input type="password" placeholder="Repeat Password"  required>
+    <hr>
+    
+
+    <button  class="registerbtn" onclick="alert('now you are part of emms! Login to continue in emms')">SIGNUP</button>
+  </div>
+  
+  <div class="container signin" style="background-color: #fff;">
+    <p>Already a part of emms? <a href="login.html">LOGIN</a>.</p>
+  </div>
+</form>
+<script>
+    function signup(){
+        alert('NOW you are part of emms,now login to continue in emms')
+    }
+</script>
+</body>
+</html>

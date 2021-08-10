@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>emmss-login</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+body,h1,h2,h3,h4,h5,h6 {font-family: "Lato", sans-serif}
+.w3-bar,h1,button,p {font-family: "Montserrat", sans-serif}
+.fa-anchor,.fa-laptop {font-size:200px}
+
+.input-container {
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+.icon {
+  padding: 10px;
+  background: #006699;
+  color: white;
+  min-width: 50px;
+  text-align: center;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  outline: none;
+  border:1px solid rgb(201, 199, 199)
+}
+
+.input-field:focus {
+  border: 2px solid #006699;
+}
+
+/* Set a style for the submit button */
+.btn {
+  background-color: #006699;
+  color: white;
+  padding: 15px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  /* opacity: 0.9; */
+  /* margin: 5px; */
+  float: left;
+}
+
+.btn:hover {
+  opacity: 1;
+  background-color: #ccc;
+  color:black;
+}
+button a{
+    text-decoration: none;
+    color:#fff;
+}
+.logbox{
+    width:600px;
+    height: 500px;
+    margin-left: 330px;
+    background-color:rgb(253, 253, 253);
+    padding-top: 20px;
+    border-radius: 7px;
+    /* box-shadow: 5px 5px rgba(117, 116, 116, 0.1); */
+    margin-top:150px;
+}
+</style>
+<body>
+
+<!-- Navbar -->
+<div class="w3-top">
+  <div class="w3-bar  w3-card w3-left-align w3-medium" style="background-color: #006699;color: #fff">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="./EMMS_HOME.html" class="w3-bar-item w3-button w3-padding-large w3-light-grey"><i class="fa fa-home"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contact</a>
+    <a href="./Login.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Login</a>
+    <a href="./Signup.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Signup</a>
+  </div>
+
+  <!-- Navbar on small screens -->
+  <div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-large">
+    <a class="w3-bar-item w3-button w3-hide-medium w3-hide-large w3-right w3-padding-large w3-hover-white w3-large w3-red" href="javascript:void(0);" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+    <a href="./EMMS_HOME.html" class="w3-bar-item w3-button w3-padding-large w3-light-grey"><i class="fa fa-home"></i></a>
+    <a href="#" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Contact</a>
+    <a href="./Login.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Login</a>
+    <a href="./Signup.html" class="w3-bar-item w3-button w3-hide-small w3-padding-large w3-hover-white">Signup</a>
+  </div>
+</div>
+
+
+  
+<div class="logbox">
+    <header class="w3-container w3-white w3-center">
+        <img src="emms.png" class="w3-image" style="width: 180px;height: 180px">
+      </header>
+    <form style="max-width:500px;margin:auto">
+      <h1 style="text-align: center;color: #006699;">LOGIN</h1>
+      <div class="input-container">
+        <i class="fa fa-user icon"></i>
+        <input class="input-field" type="text" placeholder="Username" id="u">
+      </div>
+      
+      <div class="input-container">
+        <i class="fa fa-key icon"></i>
+        <input class="input-field" type="password" placeholder="Password"  id="p"> <i class="fa fa-eye icon" onclick="myFunction()" aria-hidden="true" style="background-color: #fff;color: #006699;border:1px solid rgb(201, 199, 199)"></i> 
+        
+      </div>
+     
+      <button class="btn" onclick="log(this.form)">LOGIN</button>
+     <!-- <button class="btn" onclick="back(this.form)"></a>CLOSE</button><br><br> -->
+     
+    </form>
+    </div>
+    <script>
+      function log(form){
+        // alert("hey");
+        if(form.u.value=="" || form.p.value==""){
+         
+      
+          alert("plz enter all the fields");
+        }
+        if(form.u.value!="" || form.p.value!=""){
+        if(form.u.value == "admin" && form.p.value == "admin") {
+                        alert("logged in successfully")
+                        window.open('Admin.html')/*opens the target page while Id & password matches*/
+                    }
+                   
+      
+      
+        else if(form.u.value == "xyz" && form.p.value == "xyz") {
+                        alert("logged in successfully")
+                        window.open('mrxyz_mainprofile.html')/*opens the target page while Id & password matches*/
+                    }
+                  
+      else {
+                        alert("Error Password or Username")/*displays error message*/
+                    }}}
+      function back(form){
+        confirm("Are you sure to go back?");
+        window.open("log_emms1.html")
+      }
+      function myFunction() {
+      var x = document.getElementById("p");
+      if (x.type === "password") {
+        x.type = "text";
+      } else {
+        x.type = "password";
+      }
+    } 
+    </script>
+
+
+</body>
+</html>

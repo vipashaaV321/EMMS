@@ -34,6 +34,82 @@
     align-items:start;
     margin:0 auto;
 }
+.todo-timeline {
+  margin-top: 65px;
+  max-width: 320px;
+}
+.todo-timeline .timeline-text {
+  display: flex;
+  justify-content: space-between;
+}
+.todo-timeline .timeline-text .timeline-number {
+  margin-right: 60px;
+}
+.todo-timeline .todo-title {
+  font-size: 50px;
+  color: #006699;
+  font-weight: bold;
+  white-space: nowrap;
+}
+.todo-timeline .v-timeline {
+  margin-top: 30px;
+}
+.todo-timeline .v-timeline ul {
+  position: relative;
+}
+.todo-timeline .v-timeline li {
+  list-style-type: none;
+  padding: 0 0 30px;
+  position: relative;
+  overflow: hidden;
+}
+.todo-timeline .v-timeline li .top-bold-label {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.todo-timeline .v-timeline li .mid-paragraph {
+  font-size: 1.4rem;
+}
+.todo-timeline .v-timeline li .bottom-link {
+  color: #006699;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+.todo-timeline .v-timeline .pl-30 {
+  padding-left: 30px;
+}
+.todo-timeline .v-timeline .v-timeline-icon:before {
+  content: " ";
+  height: 27px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 27px;
+  border-radius: 50%;
+  background: #006699;
+}
+.todo-timeline .v-timeline .v-timeline-icon:after {
+  content: " ";
+  border-left: 2px solid #006699;
+  display: inline-block;
+  position: absolute;
+  left: 12px;
+  height: 400px;
+  z-index: 400;
+  top: 27px;
+}
+.todo-timeline .v-timeline .v-timeline-icon.v-last:before {
+  background: #d9e5d6;
+}
+.todo-timeline .v-timeline .v-timeline-icon.v-last:after {
+  height: 0;
+}
+.todo-timeline .v-timeline .v-timeline-icon.v-not:before {
+  color: #006699;
+}
+.todo-timeline .v-timeline .v-timeline-icon.v-line-color:after {
+  border-left: 2px dashed #d9e5d6;
+}
 .dashPart{	text-align:center;}
 .vbullets{ display:inline-block; margin:0 6px;}
     </style>
@@ -43,6 +119,8 @@
     
     <!-- Top container -->
     <div class="w3-bar w3-top" style="z-index:3;background-color: #006699">
+      <button class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-light-grey w3-text-white" onclick="w3_open();"><b>EMMS</b></button>
+
       <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
       <span class="w3-bar-item w3-right" style="color: #fff"><i class="fa fa-laptop"></i>  Project Dashboard</span>
     </div>
@@ -142,11 +220,64 @@
     <!-- Overlay effect when opening sidebar on small screens -->
     <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
     <div class="w3-main" style="margin-left:300px;margin-top:43px;">
-        <div class="w3-container">
-            <br>
-            <div id="myChart"></div>
-      
-        </div>
+     
+        <div class="w3-container w3-white w3-margin">
+          <div class="todo-timeline mb-5 offset-5">
+            <div class="row">
+              <div class="col-7">
+                <h4 class="todo-title">Project Timeline</h4>
+              </div>
+              <div class="row">
+                <ul class="v-timeline">
+                  <li class="col">
+                    <span class="v-timeline-icon"></span>
+                    <span class="pl-30 top-bold-label">Research</span>
+                    <p class="pl-30 mid-paragraph">DONE! (Project: 1&2)</p>
+                  </li>
+                  <li class="col">
+                    <i class="v-timeline-icon v-not"></i>
+                    <div class="timeline-text">
+                      <div class="timeline-valutation">
+                        <span class="pl-30 top-bold-label">Prototype </span>
+                        <span class="pl-30 mid-paragraph">DONE!</span>
+                      </div>
+                      <div class="timeline-number">
+                        <span class="pl-30 bottom-link"></span>
+                      </div>
+                    </div>
+                    <p>
+                      <p class="pl-30 bottom-link" aria-label="Rate" title="valuta">Project 1 & 2</p>
+                    </p>
+                  </li>
+                  <li class="col">
+                    <span class="v-timeline-icon v-not v-line-color"></span>
+                    <div class="timeline-text">
+                      <div class="timeline-valutation">
+                        <span class="pl-30 top-bold-label">Development </span>
+                        <span class="pl-30 mid-paragraph">In Progress</span>
+                      </div>
+                      <div class="timeline-number">
+                        <span class="pl-30 bottom-link"></span>
+                      </div>
+                    </div>
+                    <p>
+                      <p class="pl-30 bottom-link" aria-label="Condividi" title="Share">Project 1 & 2</p>
+                    </p>
+                  </li>
+                  <li class="col">
+                    <span class="v-timeline-icon v-last"></span>
+                    <span class="pl-30 top-bold-label">Complete!</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+      </div>
+      <div class="w3-container">
+        <br>
+        <div id="myChart"></div>
+  
+    </div>
     <div class="w3-container w3-white w3-margin">
         <div id="chartDivr" style="max-width: 500px;height: 500px;margin: 0px auto"></div>
     </div>

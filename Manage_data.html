@@ -45,6 +45,25 @@
 #myTable tr.header, #myTable tr:hover {
   background-color: #f1f1f1;
 }
+.d1{
+    height:500px;
+    width:550px;
+    float: left;
+    
+}
+.d2{
+    height:500px;
+    width:800px;
+
+   
+    background-color: #fff;
+}
+img{
+width:60%;
+height:80%;
+margin-left: 15%;
+margin-top: 80px;
+}
     </style>
   
    
@@ -52,6 +71,8 @@
     
     <!-- Top container -->
     <div class="w3-bar w3-top" style="z-index:3;background-color: #006699">
+      <button class="w3-bar-item w3-button w3-hide-small w3-hover-none w3-hover-text-light-grey w3-text-white" onclick="w3_open();"><b>EMMS</b></button>
+
       <button class="w3-bar-item w3-button w3-hide-large w3-hover-none w3-hover-text-light-grey" onclick="w3_open();"><i class="fa fa-bars"></i>  Menu</button>
       <span class="w3-bar-item w3-right" style="color: #fff">Admin Dashboard</span>
     </div>
@@ -139,6 +160,14 @@
     <!-- Overlay effect when opening sidebar on small screens -->
     <div class="w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
     <div class="w3-main" style="margin-left:300px;margin-top:43px;">
+      <div class="w3-container">
+        <button onclick="myFunction('Demo1')" class="w3-button w3-block w3-left-align">
+          Open Section 1</button>
+          
+          <div id="Demo1" class="w3-container w3-hide">
+            <p>Some text..</p>
+          </div>
+      </div>
       <div class="w3-container">
         <input type="text" id="myInput" onkeyup="myFunction1()" placeholder="Search for names.." title="Type in a name">
 
@@ -252,8 +281,296 @@
     </div>
     <div class="w3-container">
       
+      
     </div> -->
+    <div class="w3-container">
+      <button onclick="document.getElementById('id01').style.display='block'" class="w3-button w3-black">
+        <h3>Add Employee Details</h3>
+      
+      </button>
+    
+      <div id="id01" class="w3-modal">
+        <div class="w3-modal-content">
+          <div class="w3-container">
+            <span onclick="document.getElementById('id01').style.display='none'" class="w3-button w3-display-topright">&times;</span>
+           
+            <div class="main">
+              <h3 style="color: #006699;text-align: center;">REGISTER EMPLOYEE TO EMMS</h3>
+                      <!-- <hr style="border: 1px solid #006699;box-shadow: 3px 3px 3px #ccc;"> -->
+                      <div class="line" style="width:100%;height:2px;background-color:#0a4f88;"></div>
+                    <div class="l">
+                    <div class="im" style="margin-left:25%;">
+                    <img src="admin_blank.jpg" style="width:180px;height:210px;"><br><br>
+                    <button style="margin-left:19%;">ADD IMAGE</button>
+            
+                    <br>
+                    <br>
+                    <br>
+                    <form action="mailto:vipashavaghela321@gmail.com" method="post" enctype="text/plain">
+                        <table>
+                            <tr >
+                            
+                                
+                                <td>
+                                    <input type="text" name="Your Assigned Employee ID is:" id="eid" placeholder="EMP_ID" style="width: 100px;margin-left: 38px;"><input type="submit" value="SEND MAIL" style="margin-left: 0;width: 120px;margin-left: 28px;"></td>
+                                
+                                
+                            </tr>
+                            
+                          
+                        </table>
+                    </form>
+                     </div>
+                    </div>
+                    <div class="r">
+                        <form>
+                    <table style="width: 100%;margin-top: 20px;">
+                        <tr>
+                            
+                            <td id="t1" onclick="fn()" id="f" >
+                                FULL NAME
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            
+                            <td id="t1">
+                                EMPLOYEE ID
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            
+                            <td id="t1">
+                                DATE OF BIRTH
+                            </td>
+                            <td>
+                                <div class="s">
+                                <input type="date">
+                                </div>
+                            </td>
+                            <tr>
+                            
+                                <td id="t1">
+                                    HIRE DATE
+                                </td>
+                                <td>
+                                    <div class="s">
+                                    <input type="date">
+                                    </div>
+                                </td>
+                        </tr>
+                        <tr>
+                            
+                            <td id="t1">
+                                PHONE NUMBER
+                            </td>
+                            <td>
+                                <input type="text">
+                                
+                            </td>
+                        </tr>
+                         <tr>
+                            
+                        <td id="t1">
+                            EMAIL ID
+                        </td>
+                        <td>
+                            <input type="text">
+                            
+                        </td>
+                        </tr>
+                        <tr>
+                            
+                            <td id="t1">
+                                GENDER
+                            </td>
+                            <td>
+                                <div class="s">
+                                    <input type="radio" name="favourite_colour"
+                                    value="orange"> MALE
+                                    <input type="radio" name="favourite_colour"
+                                    value="pink"> FEMALE</div>
+                                </div>
+                            </td>
+                        </tr
+                        >
+                        <tr>
+                            
+                            <td id="t1">
+                                DEPARTMENT
+                            </td>
+                            <td>
+                                <div class="s">
+                                    <input type="checkbox" name="favourite_colour"
+                                    value="orange" style="margin-left: 5px;"> MANAGING
+                                    <input type="checkbox" name="favourite_colour"
+                                    value="orange" style="margin-left: 5px;"> HR
+                                    <input type="checkbox" name="favourite_colour"
+                                    value="orange" style="margin-left: 5px;"> ACCOUNTING
+                                    <input type="checkbox" name="favourite_colour"
+                                    value="orange" style="margin-left: 5px;"> R&D
+                                    <input type="checkbox" name="favourite_colour"
+                                    value="pink" style="margin-left: 5px;"> PROJECT</div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            
+                            <td id="t1">
+                                JOB EXPERIENCE
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            
+                            <td id="t1">
+                                QUALIFICATION
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr>
+                            
+                            <td id="t1">
+                                ADDRESS
+                            </td>
+                            <td>
+                                <input type="text">
+                            </td>
+                        </tr>
+                        <tr>
+            <td id="t1">
+                CITY
+            </td>
+            <td>
+                <select id="city" name="city">
+                <option value="AHMEDABAD">AHMEDABAD</option>
+                <option value="MUMBAI">MUMBAI</option>   
+                  </select>
+            </td>
+                        </tr>
+                        <tr>
+                            <td id="t1">
+                                STATE
+                            </td>
+                            <td>
+                                <select id="country" name="country">
+                                <option value="GUJRAT">GUJRAT</option>
+                                <option value="MH">MH</option>
+                                  </select>
+                            </td>
+                        </tr>
+                                       
+                    </table>
+                </form>
+                    <br>
+                    
+                    <input type="submit" value="ADD TO EMMS" onclick="hey()"><br>
+                   
+                    </div>
+                   
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="w3-container">
+      <h3 class="text-center">Biometric Attendance Record</h3>
+      <div class="w3-row  w3-white">
+        <div class="w3-col m4">
+          <img src="fp2.jpg">
+      </div>
+      <div class="w3-col  m8">
+          <div class="w3-container" >
+              <div class="table-responsive"  style="margin-top: 100px;
+              ">          
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>EID</th>
+                        <th>name</th>
+                        <th>DID</th>
+                        <th>DATE</th>
+                        <th>ARRIVAL TIME</th>
+                        <th>DEPARTURE TIME</th>
+                        <th>LATE</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>3217</td>
+                        <td>vipasha</td>
+                        <td>01</td>
+                        <td>24/2/2020</td>
+                        <td>8:55</td>
+                        <td>17:00</td>
+                        <td> 
+                         <i class="fa fa-times" aria-hidden="true"></i></td>
+                      </tr>
+                      <tr>
+                          <td>3217</td>
+                          <td>vipasha</td>
+                          <td>01</td>
+                          <td>25/2/2020</td>
+                          <td>9:01</td>
+                          <td>17:00</td>
+                          <td><i class="fa fa-check" aria-hidden="true" style="color: red;" onclick="alert('100 rs. cut from EID:3217')"></i></td>
+                      </tr>
+                      <tr>
+                          <td>32017</td>
+                          <td>mr xyz</td>
+                          <td>01</td>
+                          <td>24/2/2020</td>
+                          <td>8:56</td>
+                          <td>17:00</td>
+                          <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                      </tr>
+                      <tr>
+                          <td>32017</td>
+                          <td>mr xyz</td>
+                          <td>01</td>
+                          <td>25/2/2020</td>
+                          <td>9:02</td>
+                          <td>17:00</td>
+                          <td><i class="fa fa-check" aria-hidden="true" style="color: red;"  onclick="alert('100 rs. cut from EID:32017')"></i></td>
+                      </tr>
+                      <tr>
+                          <td>321</td>
+                          <td>miss xyz</td>
+                          <td>01</td>
+                          <td>24/2/2020</td>
+                          <td>8:57</td>
+                          <td>17:00</td>
+                          <td><i class="fa fa-times" aria-hidden="true"></i></td>
+                      </tr>
+                      <tr>
+                          <td>321</td>
+                          <td>miss xyz</td>
+                          <td>01</td>
+                          <td>25/2/2020</td>
+                          <td>9:57</td>
+                          <td>17:00</td>
+                          <td><i class="fa fa-check" aria-hidden="true" style="color: red;"  onclick="alert('100 rs. cut from EID:321')"></i></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </div>
+          </div>
+      </div>
+        </div>
+      </div>
+     
   </div>
+  <br/>
+
       <script>
         ZC.LICENSE = ["569d52cefae586f634c54f86dc99e6a9", "b55b025e438fa8a98e32482b5f768ff5"];
         let chartConfig = {
@@ -482,6 +799,7 @@
           height: '100%',
           width: '100%',
         });
+        
       </script>
   
  
